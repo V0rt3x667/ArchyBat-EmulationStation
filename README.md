@@ -1,3 +1,5 @@
+THIS PROJECT IS NOT CURRENTLY READY FOR USE!
+
 EmulationStation
 ================
 
