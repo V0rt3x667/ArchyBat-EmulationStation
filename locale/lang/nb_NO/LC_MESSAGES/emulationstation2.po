@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-04-12 16:18+0200\n"
+"PO-Revision-Date: 2025-01-24 18:02+0100\n"
 "Last-Translator: Svein Jakobsen <svein.jakobsen@gmail.com>\n"
 "Language-Team: Bokmål\n"
 "Language: nb\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Loco-Source-Locale: nb_NO\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Loco-Parser: loco_parse_po\n"
 
 msgid "SCANNING BLUETOOTH"
@@ -22,7 +22,7 @@ msgid "Searching for devices..."
 msgstr "Søker etter enheter..."
 
 msgid "BLUETOOTH SCAN IS ALREADY RUNNING."
-msgstr "BLUETOOTH SCANNING PÅGÅR ALLEREDE."
+msgstr "BLUETOOTH SKANNING PÅGÅR ALLEREDE."
 
 msgid "FORMATTING DEVICE"
 msgstr "FORMATERER ENHET"
@@ -407,6 +407,36 @@ msgstr "INGEN WI-FI-NETTVERK FUNNET"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "SØKER WI-FI-NETTVERK"
 
+msgid "DEVICE OPTIONS"
+msgstr "ENHETSVALG"
+
+msgid "DISCONNECT"
+msgstr "FRAKOBLE"
+
+msgid "CONNECT"
+msgstr "TILKOBLE"
+
+msgid "FORGET"
+msgstr "GLEM"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr "ER DU SIKKER PÅ AT DU VIL GLEMME '%s' ?"
+
+msgid "YES"
+msgstr "JA"
+
+msgid "NO"
+msgstr "NEI"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr "ER DU SIKKER PÅ AT DU VIL KOBLE TIL '%s' ?"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr "ER DU SIKKER PÅ AT DU VIL KOBLE FRA '%s' ?"
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "PAD TIL TASTATUR KONFIGURASJON"
 
@@ -440,9 +470,6 @@ msgstr "MUSEPEKER"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "EMULER MUSEPEKER"
 
-msgid "NO"
-msgstr "NEI"
-
 msgid "LEFT ANALOG STICK"
 msgstr "VENSTRE ANALOG PINNE"
 
@@ -454,9 +481,6 @@ msgstr "REDIGER BESKRIVELSE"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "ER DU SIKKER PÅ AT DU VIL SLETTE DENNE ?"
-
-msgid "YES"
-msgstr "JA"
 
 msgid "DELETE MAPPING"
 msgstr "SLETT KARTLEGGING"
@@ -520,6 +544,24 @@ msgstr "MONTREAL"
 
 msgid "SAO PAULO"
 msgstr "SAO PAULO"
+
+msgid "CUSTOM"
+msgstr "EGENDEFINERT"
+
+msgid "CUSTOM RELAY SERVER"
+msgstr "EGENDEFINERT RELAY SERVER"
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr "VIS KUN RELAY-SERVER SPILL"
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr "Relay-server-spill har tilgangen større sjanse for å lykkes."
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "VIS UTILGJENGELIGE SPILL"
@@ -640,6 +682,25 @@ msgstr "Se RetroAchievement-statistikken din rett fra hovedmenyen!"
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "KUNNE IKKE AKTIVERE RETROACHIEVEMENTS:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr "BLUETOOTH ENHETSLISTE"
+
+msgid "REMOVE ALL"
+msgstr "FJERN ALL"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "INGEN BLUETOOTH ENHETER FUNNET"
+
+msgid " (Connected)"
+msgstr " (Tilkoblet)"
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "BLUETOOTH ENHETER HAR BLITT SLETTET."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "ER DU SIKKER PÅ AT DU VIL SLETTE '%s'?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "RAMME PROSJEKTET"
@@ -783,14 +844,20 @@ msgstr "UGYLDIGE PARAMETRE"
 msgid "fade"
 msgstr "falme"
 
+msgid "fast fade"
+msgstr "rask falming"
+
 msgid "slide"
 msgstr "lysbilde"
 
-msgid "instant"
-msgstr "øyeblikk"
+msgid "fast slide"
+msgstr "raskt lysbilde"
 
 msgid "fade & slide"
 msgstr "falme & glid"
+
+msgid "instant"
+msgstr "øyeblikk"
 
 msgid "System"
 msgstr "System"
@@ -824,6 +891,39 @@ msgstr "Cpu maks frekvens"
 
 msgid "Cpu feature"
 msgstr "CPU egenskaper"
+
+msgid "Available Memory"
+msgstr "Tilgjengelig Minne"
+
+msgid "Display Resolution"
+msgstr "Skjermoppløsning"
+
+msgid "Display Refresh Rate"
+msgstr "Oppdateringsfrekvens"
+
+msgid "OpenGL Driver Version"
+msgstr "OpenGL Driver Versjon"
+
+msgid "Vulkan Driver Name"
+msgstr "Vulkan Driver Navn"
+
+msgid "Vulkan Driver Version"
+msgstr "Vulkan Driver Versjon"
+
+msgid "Data Partition Format"
+msgstr "Datapartisjon Formater"
+
+msgid "Data Partition Available Space"
+msgstr "Datapartisjon tilgjengelig plass"
+
+msgid "Network IP Address"
+msgstr "Nettverk IP Addresse"
+
+msgid "UEFI Boot"
+msgstr "UEFI Boot"
+
+msgid "Secure Boot"
+msgstr "Secure Boot"
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -962,12 +1062,6 @@ msgstr "AUTO"
 msgid "dmd matrix size"
 msgstr "dmd matrise størrelse"
 
-msgid "MATRIX"
-msgstr "MATRISE"
-
-msgid "rgb dmd order"
-msgstr "rgb dmd rekkefølge"
-
 msgid "BRIGHTNESS"
 msgstr "LYSSTYRKE"
 
@@ -987,7 +1081,7 @@ msgid "BACKGLASS / INFORMATION SCREEN"
 msgstr "BAKGLASS / INFORMASJONS-SKJERM"
 
 msgid "THEME"
-msgstr ""
+msgstr "TEMA"
 
 msgid "VIDEO OUTPUT"
 msgstr "VIDEOUTGANG"
@@ -1020,10 +1114,10 @@ msgid "DMD SCREEN"
 msgstr "DMD SKJERM"
 
 msgid "FRONTEND DEVELOPER OPTIONS"
-msgstr "FRONTEND UTVIKLER ALTERNATIVER"
+msgstr "FRONTEND UTVIKLER-VALG"
 
 msgid "VIDEO OPTIONS"
-msgstr "VIDEO ALTERNATIV"
+msgstr "VIDEO-VALG"
 
 msgid "VRAM LIMIT"
 msgstr "VRAM GRENSE"
@@ -1039,9 +1133,6 @@ msgstr "VSYNC"
 
 msgid "OVERSCAN"
 msgstr "OVERSKANN"
-
-msgid "Sets the display's resolution for emulationstation."
-msgstr "Stiller inn skjermens oppløsning for EmulationStation."
 
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "BRUK OMX PLAYER (HARDWARE ACCELERATED)"
@@ -1089,8 +1180,8 @@ msgstr "Rengjør"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "TILBAKESTILL BRUKSDATA FOR SPILL-LISTER"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
-msgstr "Tilbakestill verdiene for GameTime, PlayCount og LastPlayed metadata."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
+msgstr "Reset verdier for Spilletid, Ganger spilt og Sist spilt metadata."
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "NULLSTILL FILENDELSER"
@@ -1144,7 +1235,7 @@ msgid ""
 "Whether to show or hide game filtering related settings in the view options."
 msgstr ""
 "Om du vil vise eller skjule spillfiltreringsrelaterte innstillinger i "
-"visningsalternativene."
+"visningsvalg."
 
 msgid "SAVE METADATA ON EXIT"
 msgstr "LAGRE METADATA VED AVSLUTT"
@@ -1174,6 +1265,9 @@ msgstr "Karusell overganger"
 msgid "QUICK SYSTEM SELECT"
 msgstr "RASKT PLATTFORM VALG"
 
+msgid "QUICK JUMP LETTER"
+msgstr "HURTIG-HOPP BOKSTAV"
+
 msgid "ON-SCREEN KEYBOARD"
 msgstr "Tastatur (På Skjermen)"
 
@@ -1193,14 +1287,13 @@ msgid "Switches the South and East buttons' functionality"
 msgstr "Bytter Sør og Øst-knappenes funksjoner"
 
 msgid "ACCESS GAME OPTIONS WITH NORTH BUTTON"
-msgstr "FÅ TILGANG TIL SPILL VALG MED NORD-KNAPPEN"
+msgstr "FÅ TILGANG TIL SPILL-VALG MED NORD-KNAPPEN"
 
 msgid ""
 "Switches to short-press North for Savestates & long-press South button for "
 "Game Options"
 msgstr ""
-"Bytter til kort-trykk Nord for Savestates & lang-trykk Sør for Spill-"
-"innstillinger"
+"Bytter til kort-trykk Nord for Savestates & lang-trykk Sør for Spill-valg"
 
 msgid "CONTROL EMULATIONSTATION WITH FIRST JOYSTICK ONLY"
 msgstr "KONTROLLER EMULATIONSTATION KUN MED FØRSTE JOYSTICK"
@@ -1333,8 +1426,7 @@ msgid ""
 "To unlock and return to the full user interface, enter this code:"
 msgstr ""
 "Du endrer brukergrensesnittet til en begrenset modus:\n"
-"Dette vil skjule de fleste menyalternativer for å forhindre endringer i "
-"systemet.\n"
+"Dette vil skjule de fleste menyvalg for å forhindre endringer i systemet.\n"
 "For å låse opp og gå tilbake til hele brukergrensesnittet, skriv inn denne "
 "koden:"
 
@@ -1353,6 +1445,9 @@ msgstr "KODI VED OPPSTART"
 msgid "HARDWARE"
 msgstr "MASKINVARE"
 
+msgid "Sets the display's resolution for emulationstation."
+msgstr "Stiller inn skjermens oppløsning for EmulationStation."
+
 msgid "AUDIO OUTPUT"
 msgstr "LYDUTGANG"
 
@@ -1360,7 +1455,7 @@ msgid "AUDIO PROFILE"
 msgstr "LYDPROFIL"
 
 msgid "Available options can change depending on current audio output."
-msgstr "Tilgjengelige alternativer kan endres avhengig av gjeldende lydutgang."
+msgstr "Tilgjengelige valg kan endres avhengig av gjeldende lydutgang."
 
 msgid "BOOT SPLASH"
 msgstr "OPPSTART SPLASH"
@@ -1432,7 +1527,7 @@ msgid "OVERCLOCK"
 msgstr "OVERKLOKKING"
 
 msgid "LED HARDWARE"
-msgstr ""
+msgstr "LED MASKINVARE"
 
 msgid "RED"
 msgstr "RØD"
@@ -1444,7 +1539,7 @@ msgid "BLUE"
 msgstr "BLÅ"
 
 msgid "LED BRIGHTNESS"
-msgstr ""
+msgstr "LED LYSSTYRKE"
 
 msgid "STORAGE"
 msgstr "LAGRING"
@@ -1702,16 +1797,16 @@ msgid "DEFAULT GRID SIZE"
 msgstr "STANDARD RUTENETTSTØRRELSE"
 
 msgid "GAMELIST THEME OPTIONS"
-msgstr "SPILLELISTE TEMA ALTERNATIVER"
+msgstr "SPILLELISTE TEMAVALG"
 
 msgid "THEME OPTIONS"
-msgstr "TEMA ALTERNATIV"
+msgstr "TEMAVALG"
 
 msgid "DEFAULT VALUE"
 msgstr "STANDARDVERDI"
 
 msgid "GAMELIST OPTIONS"
-msgstr "SPILLELISTE ALTERNATIVER"
+msgstr "SPILLELISTE-VALG"
 
 msgid "SHOW FAVORITES ON TOP"
 msgstr "VIS FAVORITTER PÅ TOPPEN"
@@ -1758,6 +1853,12 @@ msgstr "VIS PISTOL IKON"
 msgid "SHOW WHEEL ICON"
 msgstr "VIS WHEEL ICON"
 
+msgid "SHOW TRACKBALL ICON"
+msgstr "VIS TRACKBALL IKON"
+
+msgid "SHOW SPINNER ICON"
+msgstr "VIS SPINNER IKON"
+
 msgid "SHOW FILENAMES INSTEAD"
 msgstr "VIS FILNAVN ISTEDET"
 
@@ -1780,7 +1881,7 @@ msgid "grid"
 msgstr "rutenett"
 
 msgid "DISPLAY OPTIONS"
-msgstr "Visningsalternativer"
+msgstr "VISNINGSVALG"
 
 msgid "SCREENSAVER SETTINGS"
 msgstr "SKJERMSPARERINNSTILLINGER"
@@ -1819,7 +1920,7 @@ msgid "IGNORE LEADING ARTICLES WHEN SORTING"
 msgstr "IGNORER LEDENDE ARTIKLER VED SORTERING"
 
 msgid "Ignore 'The' and 'A' if at the start."
-msgstr "Ignorer 'The' og 'A' hvis i starten."
+msgstr "Ignorer 'The' og 'A' på starten."
 
 msgid "VOLUME"
 msgstr "VOLUM"
@@ -2007,7 +2108,7 @@ msgid "FORMAT NOW"
 msgstr "FORMATER NÅ"
 
 msgid "SELECTED OPTIONS ARE INVALID"
-msgstr "VALGTE ALTERNATIVER ER UGYLDIGE"
+msgstr "VALGENE ER UGYLDIGE"
 
 msgid "ARE YOU SURE YOU WANT TO FORMAT THIS DRIVE?"
 msgstr "ER DU SIKKER PÅ AT DU VIL FORMATERE DENNE DISKEN?"
@@ -2016,7 +2117,7 @@ msgid "Points"
 msgstr "Poeng"
 
 msgid "Unlocked on"
-msgstr "Låst opp på"
+msgstr "Låst-opp på"
 
 msgid "THIS GAME HAS NO ACHIEVEMENTS YET"
 msgstr "DETTE SPILLET HAR INGEN PRESTASJONER ENDA"
@@ -2068,16 +2169,16 @@ msgid "OPEN"
 msgstr "ÅPNE"
 
 msgid "START A NETPLAY GAME"
-msgstr "START ET NETPLAY-SPILL"
+msgstr "START ET NETTSPILL"
 
 msgid "NETPLAY"
-msgstr "NETPLAY"
+msgstr "NETTSPILL"
 
 msgid "START GAME"
 msgstr "START SPILL"
 
 msgid "HOST A NETPLAY GAME"
-msgstr "VERT ET NETPLAY SPILL"
+msgstr "VERT ET NETTSPILL"
 
 msgid "PUBLICLY ANNOUNCE GAME"
 msgstr "OFFENTLIG KUNNGJØR SPILLET"
@@ -2105,7 +2206,7 @@ msgstr ""
 "ER DU SIKKER?"
 
 msgid "COLLECTIONS"
-msgstr "Samlinger"
+msgstr "SAMLINGER"
 
 #, c-format
 msgid "REMOVE FROM %s"
@@ -2128,7 +2229,7 @@ msgid "SCRAPE"
 msgstr "SØK"
 
 msgid "ADVANCED GAME OPTIONS"
-msgstr "AVANSERTE SPILL VALG"
+msgstr "AVANSERTE SPILLVALG"
 
 msgid "EDIT FOLDER METADATA"
 msgstr "REDIGER MAPPE METADATA"
@@ -2191,7 +2292,7 @@ msgid "PREFERED REGION"
 msgstr "FORTRUKKET REGION"
 
 msgid "OVERWRITE NAMES"
-msgstr ""
+msgstr "SKRIV OVER NAVN"
 
 msgid "OVERWRITE DESCRIPTIONS"
 msgstr "SKRIV OVER BESKRIVELSER"
@@ -2307,6 +2408,9 @@ msgstr "VIS SPILL FRA SKJULTE SYSTEM I SAMLINGER"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "VIS TOMME SPILLSYSTEM"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr "IKKE VIS GRUPPER MED KUN ETT SYSTEM"
+
 msgid "Loading..."
 msgstr "Laster..."
 
@@ -2371,7 +2475,7 @@ msgid "COPY TO FREE SLOT"
 msgstr "KOPIER TIL LEDIG PLASS"
 
 msgid "VIEW OPTIONS"
-msgstr "VIS ALTERNATIVER"
+msgstr "VIS VALG"
 
 msgid "NAVIGATION"
 msgstr "NAVIGASJON"
@@ -2401,7 +2505,7 @@ msgid "COLLECTION"
 msgstr "SAMLING"
 
 msgid "ADVANCED SYSTEM OPTIONS"
-msgstr "AVANSERTE SYSTEMALTERNATIVER"
+msgstr "AVANSERTE SYSTEMVALG"
 
 msgid "RESET FILTERS"
 msgstr "NULLSTILL FILTRE"
@@ -2420,22 +2524,6 @@ msgstr "oppdater"
 
 msgid "NO MISSING BIOS"
 msgstr "INGEN MANGLENDE BIOS"
-
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "GLØM BLUETOOTH ENHET"
-
-msgid "REMOVE ALL"
-msgstr "FJERN ALL"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "INGEN BLUETOOTH ENHETER FUNNET"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "BLUETOOTH ENHETER HAR BLITT SLETTET."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "ER DU SIKKER PÅ AT DU VIL SLETTE '%s'?"
 
 msgid "ZOOM OUT"
 msgstr "ZOOM OUT"
@@ -2466,7 +2554,7 @@ msgid "CONNECT TO NETPLAY"
 msgstr "KOBLE TIL NETPLAY"
 
 msgid "Select a game lobby to join"
-msgstr "Velg en spilllobby å bli med"
+msgstr "Velg en spill-lobby å bli med i"
 
 msgid "FAILED"
 msgstr "FEILET"
@@ -2482,6 +2570,12 @@ msgstr "SAMME ROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "UTILGJENGELIG KJERNE"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "TILGJENGELIGE SPILL"
@@ -2562,6 +2656,15 @@ msgstr "VIS KONTROLLER AKTIVITET"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "VIS KONTROLLER BATTERYNIVÅ"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr "DRAW GUN CROSSHAIR"
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "standard"
 
@@ -2594,6 +2697,9 @@ msgstr "RAMME FARGE"
 
 msgid "WHITE"
 msgstr "HVIT"
+
+msgid "BORDER RATIO"
+msgstr "KANTFORHOLD"
 
 msgid "CAMERA CONTRAST"
 msgstr "KAMERA KONTRAST"
@@ -2736,6 +2842,15 @@ msgstr "BRUK OMX SPILLER FOR SKJERMSPARER"
 msgid "SHOW GAME INFO"
 msgstr "VIS SPILL INFORMASJON"
 
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
+
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "BRUK MARQUEE SOM SPILL INFO"
 
@@ -2752,7 +2867,7 @@ msgid "SCREENSAVER CONTROLS"
 msgstr "SKJERMSPARER KONTROLL"
 
 msgid "USE CUSTOM VIDEOS"
-msgstr "BRUKE EGENDEFINERTE VIDEOER"
+msgstr "BRUK EGENDEFINERTE VIDEOER"
 
 msgid "CUSTOM VIDEO DIRECTORY"
 msgstr "EGENDEFINERT VIDEO MAPPE"
@@ -2813,10 +2928,10 @@ msgid "SAVE STATES (HOLD)"
 msgstr "LAGRINGSTILSTAND (HOLD)"
 
 msgid "GAME OPTIONS (HOLD)"
-msgstr "SPILLALTERNATIVER (HOLD)"
+msgstr "SPILLVALG (HOLD)"
 
 msgid "GAME OPTIONS"
-msgstr "SPILLALTERNATIVER"
+msgstr "SPILLVALG"
 
 msgid "FAVORITE"
 msgstr "FAVORITT"
@@ -2957,6 +3072,12 @@ msgstr "LYSVÅPEN"
 msgid "STEERING WHEEL"
 msgstr "RATT"
 
+msgid "TRACKBALL"
+msgstr "TRACKBALL"
+
+msgid "SPINNER"
+msgstr "SPINNER"
+
 msgid "HAVING MEDIAS"
 msgstr "HAR MEDIA"
 
@@ -2981,8 +3102,8 @@ msgstr "OPPDATER SPILLLISTE FOR Å BRUKE ENDRINGER."
 msgid "Loading system config..."
 msgstr "Laster systemkonfigurasjon..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "LAGRER METADATA. VENNLIGST VENT."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr "LAGRER METADATA. VENNLIGST VENT..."
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "EMULATOREN SLUTTET UVENTET"
@@ -3004,6 +3125,9 @@ msgstr "KJERNE MANGLER"
 
 msgid "UKNOWN ERROR"
 msgstr "Ukjent feil"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "alle spill"
@@ -3037,6 +3161,12 @@ msgstr "lysvåpen spill"
 
 msgid "wheel games"
 msgstr "rattspill"
+
+msgid "trackball games"
+msgstr "trackball-spill"
+
+msgid "spinner games"
+msgstr "spinner-spill"
 
 msgid "collections"
 msgstr "samlinger"
@@ -3443,6 +3573,40 @@ msgid ""
 msgstr ""
 "KALIBRERER PISTOL\n"
 "Skyt på mål for å kalibrere"
+
+#~ msgid "SHOW NETPLAY OPTIONS WHEN LAUNCHING GAME"
+#~ msgstr "VIS NETTSPILL-VALG VED OPPSTART AV SPILL"
+
+#~ msgid "Allows choice of online, offline, or joining another game."
+#~ msgstr "Tillater valg av online, offline eller bli med i et annet spill."
+
+#~ msgid "Select a game lobby to create or join"
+#~ msgstr "Velg en spill-lobby å lage eller bli med i"
+
+#~ msgid "PLAY ONLINE AS HOST"
+#~ msgstr "SPILL ONLINE SOM VERT"
+
+#~ msgid "PLAY OFFLINE"
+#~ msgstr "SPILL OFFLINE"
+
+#~ msgid "JOIN EXISTING GAME"
+#~ msgstr "BLI MED I EKSISTERENDE SPILL"
+
+#~ msgid "MATRIX"
+#~ msgstr "MATRISE"
+
+#~ msgid "rgb dmd order"
+#~ msgstr "rgb dmd rekkefølge"
+
+#~ msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+#~ msgstr ""
+#~ "Tilbakestill verdiene for GameTime, PlayCount og LastPlayed metadata."
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "LAGRER METADATA. VENNLIGST VENT."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "GLØM BLUETOOTH ENHET"
 
 #~ msgid "-10 for auto"
 #~ msgstr "-10 for auto"

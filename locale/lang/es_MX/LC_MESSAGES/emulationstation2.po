@@ -407,6 +407,36 @@ msgstr "NO SE ENCONTRARON REDES INALÁMBRICAS"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "BUSCANDO REDES INALÁMBRICAS"
 
+msgid "DEVICE OPTIONS"
+msgstr ""
+
+msgid "DISCONNECT"
+msgstr ""
+
+msgid "CONNECT"
+msgstr ""
+
+msgid "FORGET"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr ""
+
+msgid "YES"
+msgstr "SÍ"
+
+msgid "NO"
+msgstr "NO"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr ""
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "CONFIGURACIÓN DE MANDO A TECLADO"
 
@@ -440,9 +470,6 @@ msgstr "CURSOR DE RATÓN"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "EMULAR CURSOR DEL RATÓN"
 
-msgid "NO"
-msgstr "NO"
-
 msgid "LEFT ANALOG STICK"
 msgstr "STICK ANALÓGICO IZQUIERDO"
 
@@ -454,9 +481,6 @@ msgstr "EDITAR DESCRIPCIÓN"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "¿ESTÁS SEGURO QUE DESEAS BORRAR ESTE ELEMENTO?"
-
-msgid "YES"
-msgstr "SÍ"
 
 msgid "DELETE MAPPING"
 msgstr "BORRAR MAPEO"
@@ -520,6 +544,24 @@ msgstr "MONTREAL"
 
 msgid "SAO PAULO"
 msgstr "SAO PAULO"
+
+msgid "CUSTOM"
+msgstr ""
+
+msgid "CUSTOM RELAY SERVER"
+msgstr ""
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr ""
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr ""
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "MOSTRAR JUEGOS NO DISPONIBLES"
@@ -647,6 +689,25 @@ msgstr ""
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "NO ES POSIBLE ACTIVAR RETROACHIEVEMENTS:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr ""
+
+msgid "REMOVE ALL"
+msgstr "DESVINCULAR TODO"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "NO SE ENCONTRARON DISPOSITIVOS BLUETOOTH"
+
+msgid " (Connected)"
+msgstr ""
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "SE HAN DESVINCULADO LOS DISPOSITIVOS BLUETOOTH."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "¿ESTÁS SEGURO QUE QUIERES ELIMINAR ‘%s’?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "PROYECTO BISEL"
@@ -790,14 +851,20 @@ msgstr "VALORES NO VÁLIDOS"
 msgid "fade"
 msgstr "fundido"
 
+msgid "fast fade"
+msgstr ""
+
 msgid "slide"
 msgstr "deslizar"
 
-msgid "instant"
-msgstr "instantáneo"
+msgid "fast slide"
+msgstr ""
 
 msgid "fade & slide"
 msgstr "fundido y deslizar"
+
+msgid "instant"
+msgstr "instantáneo"
 
 msgid "System"
 msgstr "Sistema"
@@ -831,6 +898,39 @@ msgstr "Frecuencia máxima del procesador"
 
 msgid "Cpu feature"
 msgstr "Característica del procesador"
+
+msgid "Available Memory"
+msgstr ""
+
+msgid "Display Resolution"
+msgstr ""
+
+msgid "Display Refresh Rate"
+msgstr ""
+
+msgid "OpenGL Driver Version"
+msgstr ""
+
+msgid "Vulkan Driver Name"
+msgstr ""
+
+msgid "Vulkan Driver Version"
+msgstr ""
+
+msgid "Data Partition Format"
+msgstr ""
+
+msgid "Data Partition Available Space"
+msgstr ""
+
+msgid "Network IP Address"
+msgstr ""
+
+msgid "UEFI Boot"
+msgstr ""
+
+msgid "Secure Boot"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -969,12 +1069,6 @@ msgstr "AUTO"
 msgid "dmd matrix size"
 msgstr ""
 
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
-
 msgid "BRIGHTNESS"
 msgstr "BRILLO"
 
@@ -1048,9 +1142,6 @@ msgstr "SINCRONIZACIÓN VERTICAL (VSYNC)"
 msgid "OVERSCAN"
 msgstr "SOBREESCALADO (OVERSCAN)"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr "Establece la resolución de pantalla para emulationstation."
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "USAR REPRODUCTOR OMX (ACELERADO POR HARDWARE)"
 
@@ -1099,7 +1190,7 @@ msgstr "Limpiando"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr ""
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
 
 msgid "RESET FILE EXTENSIONS"
@@ -1185,6 +1276,9 @@ msgstr "TRANSICIONES DE CARRUSEL"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "SELECCIÓN RÁPIDA DE SISTEMA"
+
+msgid "QUICK JUMP LETTER"
+msgstr ""
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "TECLADO EN PANTALLA"
@@ -1362,6 +1456,9 @@ msgstr "INICIAR KODI AL ARRANCAR EL SISTEMA"
 
 msgid "HARDWARE"
 msgstr "HARDWARE"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr "Establece la resolución de pantalla para emulationstation."
 
 msgid "AUDIO OUTPUT"
 msgstr "SALIDA DE AUDIO"
@@ -1766,6 +1863,12 @@ msgid "SHOW GUN ICON"
 msgstr ""
 
 msgid "SHOW WHEEL ICON"
+msgstr ""
+
+msgid "SHOW TRACKBALL ICON"
+msgstr ""
+
+msgid "SHOW SPINNER ICON"
 msgstr ""
 
 msgid "SHOW FILENAMES INSTEAD"
@@ -2317,6 +2420,9 @@ msgstr "MOSTRAR JUEGOS DE SISTEMAS OCULTOS EN COLECCIONES"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "MOSTRAR SISTEMAS VACIOS (SIN JUEGOS)"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr ""
+
 msgid "Loading..."
 msgstr "Cargando..."
 
@@ -2431,22 +2537,6 @@ msgstr ""
 msgid "NO MISSING BIOS"
 msgstr "NO FALTAN BIOS"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "DESVINCULAR UN DISPOSITIVO BLUETOOTH"
-
-msgid "REMOVE ALL"
-msgstr "DESVINCULAR TODO"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "NO SE ENCONTRARON DISPOSITIVOS BLUETOOTH"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "SE HAN DESVINCULADO LOS DISPOSITIVOS BLUETOOTH."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "¿ESTÁS SEGURO QUE QUIERES ELIMINAR ‘%s’?"
-
 msgid "ZOOM OUT"
 msgstr "ALEJAR"
 
@@ -2493,6 +2583,12 @@ msgstr "LA ROM ES IGUAL"
 
 msgid "UNAVAILABLE CORE"
 msgstr "NÚCLEO NO DISPONIBLE"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "JUEGOS DISPONIBLES"
@@ -2574,6 +2670,15 @@ msgstr "MOSTRAR ACTIVIDAD DEL MANDO EN PANTALLA"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "MOSTRAR EL NIVEL DE BATERÍA DEL MANDO"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr ""
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "predeterminado"
 
@@ -2606,6 +2711,9 @@ msgstr "COLOR DE BORDE"
 
 msgid "WHITE"
 msgstr "BLANCO"
+
+msgid "BORDER RATIO"
+msgstr ""
 
 msgid "CAMERA CONTRAST"
 msgstr "CONTRASTE DE CÁMARA"
@@ -2747,6 +2855,15 @@ msgstr "USAR REPRODUCTOR OMX EN SALVAPANTALLAS"
 
 msgid "SHOW GAME INFO"
 msgstr "MOSTRAR INFORMACIÓN DEL JUEGO"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "USAR MARQUESINA COMO INFORMACIÓN DEL JUEGO"
@@ -2968,6 +3085,12 @@ msgstr "PISTOLA (LIGHTGUN)"
 msgid "STEERING WHEEL"
 msgstr "VOLANTE"
 
+msgid "TRACKBALL"
+msgstr ""
+
+msgid "SPINNER"
+msgstr ""
+
 msgid "HAVING MEDIAS"
 msgstr ""
 
@@ -2992,8 +3115,8 @@ msgstr "ACTUALIZAR LISTAS DE JUEGOS PARA APLICAR LOS CAMBIOS."
 msgid "Loading system config..."
 msgstr "Cargando la configuración del sistema..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "GUARDANDO METADATOS. POR FAVOR, ESPERA…"
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr ""
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "EL EMULADOR SE CERRÓ INESPERADAMENTE"
@@ -3015,6 +3138,9 @@ msgstr "FALTA EL NÚCLEO"
 
 msgid "UKNOWN ERROR"
 msgstr "ERROR DESCONOCIDO"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "todos los juegos"
@@ -3048,6 +3174,12 @@ msgstr "juegos de pistola lightgun"
 
 msgid "wheel games"
 msgstr "juegos de volante"
+
+msgid "trackball games"
+msgstr ""
+
+msgid "spinner games"
+msgstr ""
 
 msgid "collections"
 msgstr "colecciones"
@@ -3454,6 +3586,12 @@ msgid ""
 msgstr ""
 "CALIBRANDO PISTOLA\n"
 "Dispara a los objetivos para calibrar"
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "GUARDANDO METADATOS. POR FAVOR, ESPERA…"
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "DESVINCULAR UN DISPOSITIVO BLUETOOTH"
 
 #~ msgid "Achievements won"
 #~ msgstr "Trofeos conseguidos"

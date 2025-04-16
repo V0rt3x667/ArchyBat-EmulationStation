@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.6\n"
 
 msgid "SCANNING BLUETOOTH"
 msgstr "BLUETOOTH СКАНИРОВАНИЕ"
@@ -407,6 +407,36 @@ msgstr "СЕТЬ WIFI НЕ НАЙДЕНА"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "ПОИСК WIFI СЕТИ"
 
+msgid "DEVICE OPTIONS"
+msgstr "ОПЦИИ УСТРОЙСТВА"
+
+msgid "DISCONNECT"
+msgstr "ОТКЛЮЧИТЬ"
+
+msgid "CONNECT"
+msgstr "ПОДКЛЮЧИТЬ"
+
+msgid "FORGET"
+msgstr "ЗАБЫТЬ"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr "ВЫ УВЕРЕНЫ, ЧТО ХОТИТЕ ЗАБЫТЬ '%s' ?"
+
+msgid "YES"
+msgstr "ДА"
+
+msgid "NO"
+msgstr "НЕТ"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr "ВЫ УВЕРЕНЫ, ЧТО ХОТИТЕ ПОДКЛЮЧИТЬ '%s' ?"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr "ВЫ УВЕРЕНЫ, ЧТО ХОТИТЕ ОТКЛЮЧИТЬ '%s' ?"
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "НАСТРОЙКИ PADTOKEY"
 
@@ -440,9 +470,6 @@ msgstr "КУРСОР МЫШИ"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "ЭМУЛЯЦИЯ КУРСОРА МЫШИ"
 
-msgid "NO"
-msgstr "НЕТ"
-
 msgid "LEFT ANALOG STICK"
 msgstr "ЛЕВЫЙ СТИК"
 
@@ -454,9 +481,6 @@ msgstr "ИЗМЕНИТЬ ОПИСАНИЕ"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "ВЫ УВЕРЕНЫ, ЧТО ХОТИТЕ УДАЛИТЬ ЭТОТ ОБЪЕКТ?"
-
-msgid "YES"
-msgstr "ДА"
 
 msgid "DELETE MAPPING"
 msgstr "УДАЛИТЬ СОПОСТАВЛЕНИЕ"
@@ -504,7 +528,7 @@ msgid "PORT"
 msgstr "ПОРТ"
 
 msgid "USE RELAY SERVER"
-msgstr "ИСП. СЕРВЕР РЕТРАНСЛЯЦИИ"
+msgstr "ИСПОЛЬЗОВАТЬ RELAY-СЕРВЕР"
 
 msgid "NONE"
 msgstr "НЕТ"
@@ -520,6 +544,24 @@ msgstr "МОНРЕАЛЬ"
 
 msgid "SAO PAULO"
 msgstr "САН-ПАУЛУ"
+
+msgid "CUSTOM"
+msgstr "ПОЛЬЗОВАТЕЛЬСКИЙ"
+
+msgid "CUSTOM RELAY SERVER"
+msgstr "ПОЛЬЗОВАТЕЛЬСКИЙ RELAY-СЕРВЕР"
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr "АВТОМАТИЧЕСКИ СОЗДАВАТЬ ЛОББИ"
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr "Автоматически создает лобби Netplay при начале игры."
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr "ПОКАЗАТЬ ТОЛЬКО ИГРЫ RELAY-СЕРВЕРА"
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr "Игры на relay-серверах имеют больше шансов на успешное подключение."
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "ПОКАЗАТЬ НЕДОСТУПНЫЕ ИГРЫ"
@@ -544,11 +586,11 @@ msgstr "ПОИСК"
 
 #, c-format
 msgid "%d of %d softcore points"
-msgstr ""
+msgstr "%d из %d очков софткора"
 
 #, c-format
 msgid "%d of %d hardcore points"
-msgstr ""
+msgstr "%d из %d очков хардкора"
 
 #, c-format
 msgid "%d%% (%d of %d)"
@@ -643,6 +685,25 @@ msgstr "Показать свою статистику RetroAchievement прям
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "НЕВОЗМОЖНО АКТИВИРОВАТЬ РЕТРОДОСТИЖЕНИЯ:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr "СПИСОК BLUETOOTH УСТРОЙСТВ"
+
+msgid "REMOVE ALL"
+msgstr "УДАЛИТЬ ВСЕ"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "BLUETOOTH УСТРОЙСТВА НЕ НАЙДЕНЫ"
+
+msgid " (Connected)"
+msgstr " (Подключено)"
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "BLUETOOTH УСТРОЙСТВО УДАЛЕНО."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "ВЫ УВЕРЕНЫ, ЧТО ХОТИТЕ УДАЛИТЬ '%s'?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "НАБОР РАМОК (ОВЕРЛЕЕВ)"
@@ -786,14 +847,20 @@ msgstr "НЕВЕРНЫЕ ПАРАМЕТРЫ"
 msgid "fade"
 msgstr "затухание"
 
+msgid "fast fade"
+msgstr "быстрое затухание"
+
 msgid "slide"
 msgstr "слайд"
 
-msgid "instant"
-msgstr "мгновенно"
+msgid "fast slide"
+msgstr "быстрое скольжение"
 
 msgid "fade & slide"
 msgstr "затухание и слайд"
+
+msgid "instant"
+msgstr "мгновенно"
 
 msgid "System"
 msgstr "Система"
@@ -827,6 +894,39 @@ msgstr "Макс. частота CPU"
 
 msgid "Cpu feature"
 msgstr "Функции CPU"
+
+msgid "Available Memory"
+msgstr "Доступная память"
+
+msgid "Display Resolution"
+msgstr "Разрешение экрана"
+
+msgid "Display Refresh Rate"
+msgstr "Частота обновления экрана"
+
+msgid "OpenGL Driver Version"
+msgstr "OpenGL версия драйвера"
+
+msgid "Vulkan Driver Name"
+msgstr "Vulkan название драйвера"
+
+msgid "Vulkan Driver Version"
+msgstr "Vulkan версия драйвера"
+
+msgid "Data Partition Format"
+msgstr "Формат раздела данных"
+
+msgid "Data Partition Available Space"
+msgstr "Доступное место раздела данных"
+
+msgid "Network IP Address"
+msgstr "Сетевой IP-адрес"
+
+msgid "UEFI Boot"
+msgstr "UEFI Boot"
+
+msgid "Secure Boot"
+msgstr "Secure Boot"
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -939,58 +1039,52 @@ msgid "SERVICES"
 msgstr "СЕРВИСЫ"
 
 msgid "DMD"
-msgstr ""
+msgstr "DMD"
 
 msgid "SERVER"
-msgstr ""
+msgstr "СЕРВЕР"
 
 msgid "DISABLED"
 msgstr "ОТКЛЮЧЕНО"
 
 msgid "DMDSERVER (for real dmd)"
-msgstr ""
+msgstr "DMDSERVER (для настоящего dmd)"
 
 msgid "SIMULATOR (for web dmd)"
-msgstr ""
+msgstr "SIMULATOR (для web dmd)"
 
 msgid "dmd server"
-msgstr ""
+msgstr "dmd сервер"
 
 msgid "FORMAT"
-msgstr ""
+msgstr "ФОРМАТ"
 
 msgid "AUTO"
 msgstr "АВТО"
 
 msgid "dmd matrix size"
-msgstr ""
-
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
+msgstr "dmd размер матрицы"
 
 msgid "BRIGHTNESS"
 msgstr "ЯРКОСТЬ"
 
 msgid "DMDSERVER stopped"
-msgstr ""
+msgstr "DMDSERVER остановлен"
 
 msgid "DMDSERVER restarted"
-msgstr ""
+msgstr "DMDSERVER перезапущен"
 
 msgid "DMDSERVER started"
-msgstr ""
+msgstr "DMDSERVER запущен"
 
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "МУЛЬТИЭКРАНЫ"
 
 msgid "BACKGLASS / INFORMATION SCREEN"
-msgstr ""
+msgstr "ЗАДНЕЕ СТЕКЛО / ЭКРАН ИНФОРМАЦИИ"
 
 msgid "THEME"
-msgstr ""
+msgstr "ТЕМА"
 
 msgid "VIDEO OUTPUT"
 msgstr "ВИДЕО ВЫХОД"
@@ -999,10 +1093,10 @@ msgid "VIDEO MODE"
 msgstr "РАЗРЕШЕНИЕ"
 
 msgid "Sets the display's resolution."
-msgstr ""
+msgstr "Устанавливает разрешение экрана."
 
 msgid "ROTATION"
-msgstr ""
+msgstr "ПОВОРОТ"
 
 msgid "0 DEGREES"
 msgstr "0 ГРАДУСОВ"
@@ -1020,7 +1114,7 @@ msgid "SCREEN ROTATION"
 msgstr "ПОВОРОТ ЭКРАНА"
 
 msgid "DMD SCREEN"
-msgstr ""
+msgstr "DMD ЭКРАН"
 
 msgid "FRONTEND DEVELOPER OPTIONS"
 msgstr "НАСТРОЙКИ РАЗРАБОТЧИКА"
@@ -1042,9 +1136,6 @@ msgstr "VSYNC"
 
 msgid "OVERSCAN"
 msgstr "ВЫЛЕТЫ РАЗВЁРТКИ"
-
-msgid "Sets the display's resolution for emulationstation."
-msgstr "Устанавливает разрешение экрана для emulationstation."
 
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "ИСП. OMX ПЛЕЕР (АППАРАТНОЕ УСКОРЕНИЕ)"
@@ -1085,22 +1176,24 @@ msgid "CLEAN GAMELISTS & REMOVE UNUSED MEDIA"
 msgstr "ОЧИСТИТЬ СПИСОК ИГР И УДАЛИТЬ НЕ ИСПОЛЬЗУЕМЫЕ МЕДИА"
 
 msgid "Remove unused entries, and clean references to missing medias."
-msgstr ""
+msgstr "Удаляет неиспользуемые записи и очищает ссылки на отсутствующие медиа."
 
 msgid "Cleaning"
 msgstr "Очистка"
 
 msgid "RESET GAMELISTS USAGE DATA"
-msgstr ""
+msgstr "СБРОС СТАТИСТИКИ ИСП. ГЕЙМЛИСТОВ"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
+"Сбросить значения метаданных о времени игры, кол-ве запусков и дате посл. "
+"запуска."
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "СБРОСИТЬ РАСШИРЕНИЕ ФАЙЛОВ"
 
 msgid "Reset customized file extensions filters to default."
-msgstr ""
+msgstr "Сбросить настроенные фильтры расширений файлов по умолчанию."
 
 msgid "REDETECT ALL GAMES' LANG/REGION"
 msgstr "ПЕРЕОПРЕДЕЛИТЬ ЯЗЫК/РЕГИОН ИГР"
@@ -1118,22 +1211,22 @@ msgid "Building image cache"
 msgstr "Создание кэша изображений"
 
 msgid "DISPLAY SETTINGS"
-msgstr ""
+msgstr "НАСТРОЙКИ ЭКРАНА"
 
 msgid "MENU FONT SCALE"
-msgstr ""
+msgstr "МАСШТАБ ШРИФТОВ МЕНЮ"
 
 msgid "FONT SCALE"
-msgstr ""
+msgstr "МАСШТАБ ШРИФТОВ"
 
 msgid "THEME FONT SCALE"
-msgstr ""
+msgstr "МАСШТАБ ШРИФТОВ ТЕМЫ"
 
 msgid "FULL SCREEN MENUS"
-msgstr ""
+msgstr "ПОЛНОЭКРАННОЕ МЕНЮ"
 
 msgid "FORCE SMALL SCREEN THEMING"
-msgstr ""
+msgstr "ПРИНУДИТЕЛЬНО МАЛЕНЬКИЙ ЭКРАН ТЕМЫ"
 
 msgid "DATA MANAGEMENT"
 msgstr "УПРАВЛЕНИЕ ДАННЫМИ"
@@ -1180,6 +1273,9 @@ msgstr "АНИМАЦИЯ КАРУСЕЛИ"
 msgid "QUICK SYSTEM SELECT"
 msgstr "БЫСТРОЕ ПЕРЕКЛЮЧЕНИЕ СИСТЕМ"
 
+msgid "QUICK JUMP LETTER"
+msgstr "QUICK JUMP LETTER"
+
 msgid "ON-SCREEN KEYBOARD"
 msgstr "ЭКРАННАЯ КЛАВИАТУРА"
 
@@ -1215,10 +1311,10 @@ msgid "GUN MOVE TOLERENCE"
 msgstr "ДОПУСТИМОСТЬ ПЕРЕМЕЩЕНИЯ ПИСТОЛЕТА"
 
 msgid "ENABLE PS3 CONTROLLER SUPPORT"
-msgstr ""
+msgstr "ВКЛЮЧИТЬ ПОДДЕРЖКУ PS3 КОНТРОЛЛЕРА"
 
 msgid "Might have negative impact on security."
-msgstr ""
+msgstr "Может оказать негативное влияние на безопасность."
 
 msgid "ENABLE HID JOYSTICK DRIVERS"
 msgstr "ВКЛЮЧИТЬ HID ДРАЙВЕРЫ ДЖОЙСТИКОВ"
@@ -1354,6 +1450,9 @@ msgstr "АВТОЗАПУСК KODI"
 msgid "HARDWARE"
 msgstr "ЖЕЛЕЗО"
 
+msgid "Sets the display's resolution for emulationstation."
+msgstr "Устанавливает разрешение экрана для emulationstation."
+
 msgid "AUDIO OUTPUT"
 msgstr "АУДИО ВЫХОД"
 
@@ -1433,7 +1532,7 @@ msgid "OVERCLOCK"
 msgstr "РАЗГОН"
 
 msgid "LED HARDWARE"
-msgstr ""
+msgstr "LED HARDWARE"
 
 msgid "RED"
 msgstr "КРАСНЫЙ"
@@ -1445,7 +1544,7 @@ msgid "BLUE"
 msgstr "СИНИЙ"
 
 msgid "LED BRIGHTNESS"
-msgstr ""
+msgstr "LED ЯРКОСТЬ"
 
 msgid "STORAGE"
 msgstr "МЕСТО ХРАНЕНИЯ"
@@ -1519,10 +1618,10 @@ msgid "UPDATE GAMELISTS"
 msgstr "ОБНОВИТЬ СПИСОК ИГР"
 
 msgid "ACCOUNTS"
-msgstr ""
+msgstr "АККАУНТЫ"
 
 msgid "BIOS SETTINGS"
-msgstr ""
+msgstr "НАСТРОЙКИ BIOS"
 
 msgid "SAVESTATES"
 msgstr "БЫСТРЫЕ СОХРАНЕНИЯ"
@@ -1748,13 +1847,19 @@ msgid "SHOW MANUAL ICON"
 msgstr "ПОКАЗАТЬ ИКОНКУ РУКОВОДСТВА В СПИСКАХ"
 
 msgid "SHOW RETROACHIEVEMENTS ICON"
-msgstr ""
+msgstr "ПОКАЗАТЬ ИКОНКУ РЕТРОДОСТИЖЕНИЙ"
 
 msgid "SHOW GUN ICON"
-msgstr ""
+msgstr "ПОКАЗАТЬ ИКОНКУ ПИСТОЛЕТА"
 
 msgid "SHOW WHEEL ICON"
-msgstr ""
+msgstr "ПОКАЗАТЬ ИКОНКУ РУЛЯ"
+
+msgid "SHOW TRACKBALL ICON"
+msgstr "ПОКАЗАТЬ ИКОНКУ ТРЕКБОЛА"
+
+msgid "SHOW SPINNER ICON"
+msgstr "ПОКАЗАТЬ ЗНАЧОК СПИННЕРА"
 
 msgid "SHOW FILENAMES INSTEAD"
 msgstr "ПОКАЗАТЬ НАСТОЯЩЕЕ НАЗВАНИЕ ФАЙЛА"
@@ -1811,10 +1916,10 @@ msgid "ICON AND TEXT"
 msgstr "ИКОНКА И ТЕКСТ"
 
 msgid "SHOW FOLDERS FIRST"
-msgstr ""
+msgstr "ПОКАЗЫВАТЬ ПАПКИ ПЕРВЫМИ"
 
 msgid "IGNORE LEADING ARTICLES WHEN SORTING"
-msgstr "ИГНОРИРОВАТЬ АРТИКЛЬ ПРИ СОРТИРОВКИ"
+msgstr "ИГНОРИРОВАТЬ АРТИКЛЬ ПРИ СОРТИРОВКЕ"
 
 msgid "Ignore 'The' and 'A' if at the start."
 msgstr "Игнорует 'The' и 'A', если они находятся в начале."
@@ -1907,10 +2012,10 @@ msgid "VIEW USER MANUAL"
 msgstr "РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ"
 
 msgid "DISABLE PLANE MODE"
-msgstr "ОТКЛЮЧИТЬ РЕЖИМ ПЛОСКОСТИ"
+msgstr "ОТКЛЮЧИТЬ АВИАРЕЖИМ"
 
 msgid "ENABLE PLANE MODE"
-msgstr "ВКЛЮЧИТЬ РЕЖИМ ПЛОСКОСТИ"
+msgstr "ВКЛЮЧИТЬ АВИАРЕЖИМ"
 
 msgid "RESTART SYSTEM"
 msgstr "ПЕРЕЗАГРУЗИТЬ СИСТЕМУ"
@@ -2020,10 +2125,10 @@ msgid "THIS GAME HAS NO ACHIEVEMENTS YET"
 msgstr "ИГРА НЕ ИМЕЕТ ДОСТИЖЕНИЙ"
 
 msgid "Achievements (softcore)"
-msgstr ""
+msgstr "Достижения (софткор)"
 
 msgid "Achievements (hardcore)"
-msgstr ""
+msgstr "Достижения (хардкор)"
 
 #, c-format
 msgid "%d%% complete"
@@ -2186,16 +2291,16 @@ msgid "MARQUEE"
 msgstr "БАНЕР"
 
 msgid "PREFERED REGION"
-msgstr ""
+msgstr "ПРЕДПОЧИТАЕМЫЙ РЕГИОН"
 
 msgid "OVERWRITE NAMES"
-msgstr ""
+msgstr "ПЕРЕЗАПИСЫВАТЬ НАЗВАНИЯ"
 
 msgid "OVERWRITE DESCRIPTIONS"
-msgstr ""
+msgstr "ПЕРЕЗАПИСЫВАТЬ ОПИСАНИЯ"
 
 msgid "OVERWRITE MEDIAS"
-msgstr ""
+msgstr "ПЕРЕЗАПИСЫВАТЬ МЕДИА"
 
 msgid "SCRAPE FOR"
 msgstr "ЗАГРУЗКА ДЛЯ"
@@ -2228,7 +2333,7 @@ msgid "PADTOKEY SETTINGS"
 msgstr "НАСТРОЙКИ PADTOKEY"
 
 msgid "ACCOUNT"
-msgstr ""
+msgstr "АККАУНТ"
 
 msgid "NO DEVICE FOUND"
 msgstr "УСТРОЙСТВО НЕ НАЙДЕНО"
@@ -2249,10 +2354,10 @@ msgid "New Collection Name"
 msgstr "Название новой коллекции"
 
 msgid "ENTER NAME"
-msgstr ""
+msgstr "ВВЕДИТЕ ИМЯ"
 
 msgid "CREATE FROM THEME"
-msgstr ""
+msgstr "СОЗДАТЬ ИЗ ТЕМЫ"
 
 msgid "CREATE NEW EDITABLE COLLECTION"
 msgstr "СОЗДАТЬ НОВУЮ КОЛЛЕКЦИЮ"
@@ -2291,10 +2396,10 @@ msgid "START ON GAMELIST"
 msgstr "НАЧИНАТЬ СО СПИСКА ИГР"
 
 msgid "GROUP CUSTOM COLLECTIONS"
-msgstr ""
+msgstr "ГРУППИРОВАТЬ СВОИ КОЛЛЕКЦИИ"
 
 msgid "UNTHEMED"
-msgstr ""
+msgstr "БЕЗ ТЕМЫ"
 
 msgid "SHOW SYSTEM NAME IN COLLECTIONS"
 msgstr "ОТОБРАЖАТЬ СИСТЕМУ В НАЗВАНИИ"
@@ -2304,6 +2409,9 @@ msgstr "ПОКАЗАТЬ ИГРЫ ИЗ СПРЯТАННЫХ СИСТЕМ В КО
 
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "ОТОБРАЖАТЬ ПУСТЫЕ СИСТЕМЫ"
+
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr "НЕ ПОКАЗЫВАТЬ ГРУППЫ С ОДНОЙ СИСТЕМОЙ"
 
 msgid "Loading..."
 msgstr "Загрузка..."
@@ -2411,29 +2519,13 @@ msgid "NO MISSING BIOS FILES"
 msgstr "НЕТ ОТСУТСТВУЮЩИХ БИОСОВ"
 
 msgid "Installed systems"
-msgstr ""
+msgstr "Установленные системы"
 
 msgid "refresh"
-msgstr ""
+msgstr "обновить"
 
 msgid "NO MISSING BIOS"
 msgstr "НЕТ ОТСУТСТВУЮЩИХ БИОСОВ"
-
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "УДАЛЕНИЕ BLUETOOTH УСТРОЙСТВ"
-
-msgid "REMOVE ALL"
-msgstr "УДАЛИТЬ ВСЕ"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "BLUETOOTH УСТРОЙСТВА НЕ НАЙДЕНЫ"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "BLUETOOTH УСТРОЙСТВО УДАЛЕНО."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "ВЫ УВЕРЕНЫ, ЧТО ХОТИТЕ УДАЛИТЬ '%s'?"
 
 msgid "ZOOM OUT"
 msgstr "УМЕНЬШИТЬ"
@@ -2480,6 +2572,12 @@ msgstr "ОДИНАКОВЫЙ ROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "НЕДОСТУПНОЕ ЯДРО"
+
+msgid "LAN GAMES"
+msgstr "ИГРЫ ПО ЛОКАЛЬНОЙ СЕТИ"
+
+msgid "ONLINE GAMES"
+msgstr "СЕТЕВЫЕ ИГРЫ"
 
 msgid "AVAILABLE GAMES"
 msgstr "ДОСТУПНЫЕ ИГРЫ"
@@ -2543,7 +2641,7 @@ msgid "BLUETOOTH"
 msgstr "BLUETOOTH"
 
 msgid "ENABLE BLUETOOTH"
-msgstr ""
+msgstr "ВКЛЮЧИТЬ BLUETOOTH"
 
 msgid "PAIR BLUETOOTH PADS AUTOMATICALLY"
 msgstr "АВТОМАТИЧЕСКОЕ СОПРЯЖЕНИЕ BLUETOOTH УСТРОЙСТВ"
@@ -2552,13 +2650,22 @@ msgid "PAIR A BLUETOOTH DEVICE MANUALLY"
 msgstr "РУЧНОЕ СОПРЯЖЕНИЕ BLUETOOTH УСТРОЙСТВ"
 
 msgid "SHOW CONTROLLER NOTIFICATIONS"
-msgstr ""
+msgstr "ПОКАЗЫВАТЬ УВЕДОМЛЕНИЯ КОНТРОЛЛЕРА"
 
 msgid "SHOW CONTROLLER ACTIVITY"
 msgstr "ПОКАЗАТЬ АКТИВНОСТЬ КОНТРОЛЛЕРА"
 
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "ПОКАЗАТЬ УРОВЕНЬ ЗАРЯДА КОНТРОЛЛЕРА"
+
+msgid "DRAW GUN CROSSHAIR"
+msgstr "ОТОБРАЖАТЬ ПЕРЕКРЕСТИЕ ПИСТОЛЕТА"
+
+msgid "BEHAVIOR"
+msgstr "ПОВЕДЕНИЕ"
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr "ОГРАНИЧИТЬ ХОТКЕИ ДЛЯ ВЫХОДА"
 
 msgid "default"
 msgstr "по умолчанию"
@@ -2592,6 +2699,9 @@ msgstr "ЦВЕТ РАМКИ"
 
 msgid "WHITE"
 msgstr "БЕЛЫЙ"
+
+msgid "BORDER RATIO"
+msgstr "СООТНОШЕНИЕ РАМКИ"
 
 msgid "CAMERA CONTRAST"
 msgstr "КОНТРАСТ КАМЕРЫ"
@@ -2734,6 +2844,15 @@ msgstr "ИСПОЛЬЗОВАТЬ OMX ПЛЕЕР ДЛЯ ЗАСТАВКИ"
 msgid "SHOW GAME INFO"
 msgstr "ПОКАЗАТЬ ИНФОРМАЦИЮ ОБ ИГРЕ"
 
+msgid "SHOW DATE TIME"
+msgstr "ПОКАЗАТЬ ДАТУ И ВРЕМЯ"
+
+msgid "DATE FORMAT"
+msgstr "ФОРМАТ ДАТЫ"
+
+msgid "TIME FORMAT"
+msgstr "ФОРМАТ ВРЕМЕНИ"
+
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "ИСПОЛЬЗОВАТЬ БАНЕР КАК ИНФОРМАЦИЮ О ИГРЕ"
 
@@ -2824,7 +2943,7 @@ msgstr "СЛУЧАЙНО"
 
 #, c-format
 msgid "Back to %s"
-msgstr ""
+msgstr "Назад к %s"
 
 msgid "No Entries Found"
 msgstr "Игр не найдено"
@@ -2957,11 +3076,17 @@ msgstr "СВЕТОВОЙ ПИСТОЛЕТ"
 msgid "STEERING WHEEL"
 msgstr "РУЛЬ"
 
+msgid "TRACKBALL"
+msgstr "ТРЕКБОЛ"
+
+msgid "SPINNER"
+msgstr "СПИННЕР"
+
 msgid "HAVING MEDIAS"
-msgstr ""
+msgstr "ИМЕЮЩИЕ МЕДИА"
 
 msgid "MISSING MEDIAS"
-msgstr ""
+msgstr "ОТСУТСТВУЮЩИЕ МЕДИА"
 
 msgid "DO YOU WANT TO SWITCH THE SCREEN ?"
 msgstr "ВЫ ХОТИТЕ ПЕРЕКЛЮЧИТЬ ЭКРАН?"
@@ -2981,8 +3106,8 @@ msgstr "ОБНОВИТЕ СПИСОК ИГР, ЧТОБЫ ПРИМЕНИТЬ ИЗ
 msgid "Loading system config..."
 msgstr "Загрузка системных настроек..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "СОХРАНЕНИЕ МЕТАДАННЫХ. ПОЖАЛУЙСТА ПОДОЖДИТЕ..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr "СОХРАНЕНИЕ МЕТАДАННЫХ. ПОДОЖДИТЕ..."
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "ЭМУЛЯТОР НЕОЖИДАННО ПРЕКРАТИЛ РАБОТУ"
@@ -3004,6 +3129,9 @@ msgstr "ЯДРО ОТСУТСТВУЕТ"
 
 msgid "UKNOWN ERROR"
 msgstr "НЕИЗВЕСТНАЯ ОШИБКА"
+
+msgid "Interlaced"
+msgstr "Чересстрочной"
 
 msgid "all games"
 msgstr "все игры"
@@ -3037,6 +3165,12 @@ msgstr "световой пистолет"
 
 msgid "wheel games"
 msgstr "игры с рулём"
+
+msgid "trackball games"
+msgstr "трекбол игры"
+
+msgid "spinner games"
+msgstr "спиннер игры"
 
 msgid "collections"
 msgstr "коллекции"
@@ -3185,9 +3319,9 @@ msgstr "%d сек"
 #, c-format
 msgid "%d year ago"
 msgid_plural "%d years ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d год назад"
+msgstr[1] "%d года назад"
+msgstr[2] "%d лет назад"
 
 #, c-format
 msgid "%d day ago"
@@ -3250,7 +3384,7 @@ msgstr "снять выбор"
 #, c-format
 msgid "%i SELECTED"
 msgid_plural "%i SELECTED"
-msgstr[0] "%i ВЫБРАНА"
+msgstr[0] "%i ВЫБРАН"
 msgstr[1] "%i ВЫБРАНО"
 msgstr[2] "%i ВЫБРАНО"
 
@@ -3277,10 +3411,10 @@ msgid "HOLD A BUTTON ON YOUR DEVICE TO CONFIGURE IT."
 msgstr "УДЕРЖИВАЙТЕ КНОПКУ НА УСТРОЙСТВЕ ДЛЯ НАСТРОЙКИ."
 
 msgid "PRESS ESC TO CANCEL."
-msgstr ""
+msgstr "НАЖМИТЕ ESC ДЛЯ ОТМЕНЫ."
 
 msgid "PRESS ESC OR A HOTKEY TO CANCEL."
-msgstr ""
+msgstr "НАЖМИТЕ ESC ИЛИ ХОТКЕЙ ДЛЯ ОТМЕНЫ."
 
 msgid "SHIFTS FOR UPPER,LOWER, AND SPECIAL"
 msgstr "SHIFT ДЛЯ РЕГИСТРА И СИМВОЛОВ"
@@ -3417,8 +3551,8 @@ msgid ""
 "NO HOTKEY BUTTON HAS BEEN ASSIGNED. THIS IS REQUIRED FOR EXITING GAMES WITH "
 "A CONTROLLER. DO YOU WANT TO USE THE SELECT BUTTON AS YOUR HOTKEY?"
 msgstr ""
-"ХОТКЕЙ НЕ НАЗНАЧЕН. ЭТО НЕОБХОДИМО ДЛЯ ВЫХОДА ИЗ ИГР С ПОМОЩЬЮ КОНТРОЛЛЕРА. "
-"ВЫ ХОТИТЕ УСТАНОВИТЬ ХОТКЕЙ НА КНОПКУ SELECT?"
+"ХОТКЕЙ НЕ НАЗНАЧЕН. ЭТО НЕОБХОДИМО ДЛЯ ВЫХОДА ИЗ ИГР ПРИ ПОМОЩИ КОМБИНАЦИИ "
+"КНОПОК. ВЫ ХОТИТЕ УСТАНОВИТЬ ХОТКЕЙ НА КНОПКУ SELECT?"
 
 msgid "SET SELECT AS HOTKEY"
 msgstr "УСТАНОВИТЬ ХОТКЕЙ НА SELECT"
@@ -3451,6 +3585,41 @@ msgid ""
 msgstr ""
 "КАЛИБРОВКА ПИСТОЛЕТА\n"
 "Стреляйте по мишеням для калибровки"
+
+#~ msgid "SHOW NETPLAY OPTIONS WHEN LAUNCHING GAME"
+#~ msgstr "ПОКАЗЫВАТЬ NETPLAY ОПЦИИ ПРИ ЗАПУСКЕ ИГРЫ"
+
+#~ msgid "Allows choice of online, offline, or joining another game."
+#~ msgstr "Позволяет выбрать онлайн, офлайн или присоединиться к другой игре."
+
+#~ msgid "Select a game lobby to create or join"
+#~ msgstr "Выберите игровое лобби, чтобы создать или присоединиться к нему"
+
+#~ msgid "PLAY ONLINE AS HOST"
+#~ msgstr "ИГРАТЬ ОНЛАЙН В КАЧЕСТВЕ ХОСТА"
+
+#~ msgid "PLAY OFFLINE"
+#~ msgstr "ИГРАТЬ ОФФЛАЙН"
+
+#~ msgid "JOIN EXISTING GAME"
+#~ msgstr "ПРИСОЕДИНИТЬСЯ К СУЩЕСТВУЮЩЕЙ ИГРЕ"
+
+#~ msgid "MATRIX"
+#~ msgstr "МАТРИЦА"
+
+#~ msgid "rgb dmd order"
+#~ msgstr "порядок rgb dmd"
+
+#~ msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+#~ msgstr ""
+#~ "Сбросить значения о времени игры, кол-ве запусков и дате посл. запуска "
+#~ "(GameTime, PlayCount, LastPlayed)."
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "СОХРАНЕНИЕ МЕТАДАННЫХ. ПОЖАЛУЙСТА ПОДОЖДИТЕ..."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "УДАЛЕНИЕ BLUETOOTH УСТРОЙСТВ"
 
 #~ msgid "Achievements won"
 #~ msgstr "Достижений получено"

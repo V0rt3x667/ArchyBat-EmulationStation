@@ -45,7 +45,7 @@
 #include "guis/GuiTextEditPopup.h"
 #include "guis/GuiWifi.h"
 #include "guis/GuiBluetoothPair.h"
-#include "guis/GuiBluetoothForget.h"
+#include "guis/GuiBluetoothDevices.h"
 #include "scrapers/ThreadedScraper.h"
 #include "FileSorts.h"
 #include "ThreadedHasher.h"
@@ -65,9 +65,11 @@
 #endif
 
 #define fake_gettext_fade _("fade")
+#define fake_gettext_fastfade _("fast fade")
 #define fake_gettext_slide _("slide")
-#define fake_gettext_instant _("instant")
+#define fake_gettext_fastslide _("fast slide")
 #define fake_gettext_fadeslide _("fade & slide")
+#define fake_gettext_instant _("instant")
 
 #define fake_gettext_system       _("System")
 #define fake_gettext_architecture _("Architecture")
@@ -80,6 +82,18 @@
 #define fake_gettext_cpu_number   _("Cpu number")
 #define fake_gettext_cpu_frequency _("Cpu max frequency")
 #define fake_gettext_cpu_feature  _("Cpu feature")
+
+#define fake_gettext_available_memory               _("Available Memory")
+#define fake_gettext_display_resolution             _("Display Resolution")
+#define fake_gettext_display_refresh_rate           _("Display Refresh Rate")
+#define fake_gettext_opengl_driver_version          _("OpenGL Driver Version")
+#define fake_gettext_vulkan_driver_name             _("Vulkan Driver Name")
+#define fake_gettext_vulkan_driver_version          _("Vulkan Driver Version")
+#define fake_gettext_data_partition_format          _("Data Partition Format")
+#define fake_gettext_data_partition_available_space _("Data Partition Available Space")
+#define fake_gettext_network_ip_address             _("Network IP Address")
+#define fake_gettext_uefi_boot                      _("UEFI Boot")
+#define fake_gettext_secure_boot                    _("Secure Boot")
 
 #define fake_gettext_simple_bilinear_simple	pgettext("game_options", "SHARP-BILINEAR-SIMPLE")
 #define fake_gettext_scanlines				pgettext("game_options", "SCANLINES")
@@ -439,29 +453,18 @@ void GuiMenu::openDmdSettings()
 
 	s->addGroup("ZEDMD");
 
-	// zedmd.matrix
-	auto zedmd_matrix = std::make_shared< OptionListComponent<std::string> >(window, _("MATRIX"), false);
-	std::string current_zedmd_matrix = SystemConf::getInstance()->get("dmd.zedmd.matrix");
-	zedmd_matrix->addRange({ { _("AUTO"), "" }, { "RGB", "rgb" }, { "RBG", "rbg" }, { "BRG", "brg" }, { "BGR", "bgr" }, { "GRB", "grb" }, { "GBR", "gbr" } }, current_zedmd_matrix);
-	s->addWithDescription(_("MATRIX"), _("rgb dmd order"), zedmd_matrix);
-
 	// zedmd.brightness
 	auto zedmd_brightness = std::make_shared< OptionListComponent<std::string> >(window, _("BRIGHTNESS"), false);
 	std::string current_zedmd_brightness = SystemConf::getInstance()->get("dmd.zedmd.brightness");
 	zedmd_brightness->addRange({ { _("AUTO"), "" }, { "0", "0" }, { "1", "1" }, { "2", "2" }, { "3", "3" }, { "4", "4" }, { "5", "5" }, { "6", "6" }, { "7", "7" }, { "8", "8" }, { "9", "9" }, { "10", "10" }, { "11", "11" }, { "12", "12" }, { "13", "13" }, { "14", "14" }, { "15", "15" } }, current_zedmd_brightness);
 	s->addWithLabel(_("BRIGHTNESS"), zedmd_brightness);
 
-	s->addSaveFunc([window, server, format, zedmd_matrix, zedmd_brightness, current_server, current_format, current_zedmd_matrix, current_zedmd_brightness] {
+	s->addSaveFunc([window, server, format, zedmd_brightness, current_server, current_format, current_zedmd_brightness] {
 	  bool needRestart = false;
 	  bool needSave    = false;
 
 	  if(current_format != format->getSelected()) {
 	    SystemConf::getInstance()->set("dmd.format", format->getSelected());
-	    needSave = true;
-	  }
-	  if(current_zedmd_matrix != zedmd_matrix->getSelected()) {
-	    SystemConf::getInstance()->set("dmd.zedmd.matrix", zedmd_matrix->getSelected());
-	    needRestart = true;
 	    needSave = true;
 	  }
 	  if(current_zedmd_brightness != zedmd_brightness->getSelected()) {
@@ -559,8 +562,10 @@ void GuiMenu::openMultiScreensSettings()
 				vfound = true;
 		}
 
-		if (!vfound)
+		if (!vfound && currentDevice2 != "none")
 			optionsVideo2->add(currentDevice2, currentDevice2, true);
+		// add the none value
+		optionsVideo2->add(_("NONE"), "none", currentDevice2 == "none");
 
 		s->addWithLabel(_("VIDEO OUTPUT"), optionsVideo2);
 		s->addSaveFunc([this, optionsVideo2, currentDevice2, s] 
@@ -727,14 +732,6 @@ void GuiMenu::openDeveloperSettings()
 			ApiSystem::getInstance()->setOverscan(overscan_enabled->getState());
 		}
 	});
-
-	// es resolution
-	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::RESOLUTION))
-	  {
-	    auto videoModeOptionList = createVideoResolutionModeOptionList(mWindow, "es", "resolution");
-	    s->addWithDescription(_("VIDEO MODE"), _("Sets the display's resolution for emulationstation."), videoModeOptionList);
-	    s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("es.resolution", videoModeOptionList->getSelected()); });
-	  }
 #endif
 
 #ifdef _RPI_
@@ -854,7 +851,7 @@ void GuiMenu::openDeveloperSettings()
 		}, _("NO"), nullptr));
 	});
 
-	s->addWithDescription(_("RESET GAMELISTS USAGE DATA"), _("Reset values of GameTime, PlayCount and LastPlayed metadatas."), nullptr, [this, s]
+	s->addWithDescription(_("RESET GAMELISTS USAGE DATA"), _("Reset values of GameTime, PlayCount and LastPlayed metadata."), nullptr, [this, s]
 		{
 			mWindow->pushGui(new GuiMsgBox(mWindow, _("ARE YOU SURE?"), _("YES"), [&]
 				{
@@ -1028,6 +1025,12 @@ void GuiMenu::openDeveloperSettings()
 	quick_sys_select->setState(Settings::getInstance()->getBool("QuickSystemSelect"));
 	s->addWithLabel(_("QUICK SYSTEM SELECT"), quick_sys_select);
 	s->addSaveFunc([quick_sys_select] { Settings::getInstance()->setBool("QuickSystemSelect", quick_sys_select->getState()); });
+
+	// quick jump next letter (R2/L2 in game list view)
+	auto quick_jump_letter = std::make_shared<SwitchComponent>(mWindow);
+	quick_jump_letter->setState(Settings::getInstance()->getBool("QuickJumpLetter"));
+	s->addWithLabel(_("QUICK JUMP LETTER"), quick_jump_letter);
+	s->addSaveFunc([quick_jump_letter] { Settings::getInstance()->setBool("QuickJumpLetter", quick_jump_letter->getState()); });
 
 	// Enable OSK (On-Screen-Keyboard)
 	auto osk_enable = std::make_shared<SwitchComponent>(mWindow);
@@ -1278,7 +1281,7 @@ void GuiMenu::openUpdatesSettings()
 
 bool GuiMenu::checkNetwork()
 {
-	if (ApiSystem::getInstance()->getIpAdress() == "NOT CONNECTED")
+	if (ApiSystem::getInstance()->getIpAddress() == "NOT CONNECTED")
 	{
 		mWindow->pushGui(new GuiMsgBox(mWindow, _("YOU ARE NOT CONNECTED TO A NETWORK"), _("OK"), nullptr));
 		return false;
@@ -1319,6 +1322,7 @@ void GuiMenu::openSystemSettings()
 	language_choice->add("EUSKARA",               "eu_ES", language == "eu_ES");
 	language_choice->add("SUOMI",                "fi_FI", language == "fi_FI");
 	language_choice->add("FRANÇAIS",             "fr_FR", language == "fr_FR" || language == "fr");
+	language_choice->add("GALEGO",               "gl_ES", language == "gl_ES");
 	language_choice->add("עברית",                "he_IL", language == "he_IL");
 	language_choice->add("HUNGARIAN",            "hu_HU", language == "hu_HU");
 	language_choice->add("BAHASA INDONESIA",     "id_ID", language == "id_ID");
@@ -1332,6 +1336,7 @@ void GuiMenu::openSystemSettings()
 	language_choice->add("POLISH",               "pl_PL", language == "pl_PL");
 	language_choice->add("PORTUGUÊS BRASILEIRO", "pt_BR", language == "pt_BR");
 	language_choice->add("PORTUGUÊS PORTUGAL",   "pt_PT", language == "pt_PT");
+	language_choice->add("ROMÂNĂ",               "ro_RO", language == "ro_RO");
 	language_choice->add("РУССКИЙ",              "ru_RU", language == "ru_RU");
 	language_choice->add("SLOVENČINA", 	     "sk_SK", language == "sk_SK");
 	language_choice->add("SVENSKA", 	     "sv_SE", language == "sv_SE");
@@ -1506,6 +1511,13 @@ void GuiMenu::openSystemSettings()
 			}
 		});
 	}
+	// es resolution
+	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::RESOLUTION))
+	{
+	    auto videoModeOptionList = createVideoResolutionModeOptionList(mWindow, "es", "resolution");
+	    s->addWithDescription(_("VIDEO MODE"), _("Sets the display's resolution for emulationstation."), videoModeOptionList);
+	    s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("es.resolution", videoModeOptionList->getSelected()); });
+	}
 #endif
 
 	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::AUDIODEVICE))
@@ -1523,7 +1535,7 @@ void GuiMenu::openSystemSettings()
 			bool afound = false;
 			for (auto it = availableAudio.begin(); it != availableAudio.end(); it++)
 			{
-				std::vector<std::string> tokens = Utils::String::split(*it, ' ');
+				std::vector<std::string> tokens = Utils::String::split(*it, '\t');
 
 				if (selectedAudio == tokens.at(0))
 					afound = true;
@@ -1572,19 +1584,32 @@ void GuiMenu::openSystemSettings()
 			bool afound = false;
 			for (auto it = availableAudioProfiles.begin(); it != availableAudioProfiles.end(); it++)
 			{
-				std::vector<std::string> tokens = Utils::String::split(*it, ' ');
+				std::vector<std::string> tokens = Utils::String::split(*it, '\t');
 
 				if (selectedAudioProfile == tokens.at(0))
 					afound = true;
 
+				std::string vname = "";
 				if (tokens.size() >= 2)
 				{
-					// concatenat the ending words
-					std::string vname = "";
-					for (unsigned int i = 1; i < tokens.size(); i++)
+					// Check if the profile contains "bluez_card" and remove it from the display name
+					if (tokens.at(1).find("bluez_card") != std::string::npos)
 					{
-						if (i > 2) vname += " ";
-						vname += tokens.at(i);
+						// Skip the "bluez_card" token and use the remaining tokens for the display name
+						for (unsigned int i = 2; i < tokens.size(); i++)
+						{
+							if (i > 2) vname += " ";
+							vname += tokens.at(i);
+						}
+					}
+					else
+					{
+						// Normal concatenation for other profiles
+						for (unsigned int i = 1; i < tokens.size(); i++)
+						{
+							if (i > 1) vname += " ";
+							vname += tokens.at(i);
+						}
 					}
 					optionsAudioProfile->add(vname, tokens.at(0), selectedAudioProfile == tokens.at(0));
 				}
@@ -1641,26 +1666,35 @@ void GuiMenu::openSystemSettings()
 	std::string soundSplash   = SystemConf::getInstance()->get("splash.screen.sound");
 
 	std::string selectedSplash = "auto";
-	if(enabledSplash == "0")      selectedSplash = "nosplash";
-	else if(soundSplash   == "0") selectedSplash = "silentsplash";
+	if(enabledSplash == "1") {
+	  selectedSplash = "splash";
+	  if(soundSplash   == "0") selectedSplash = "silentsplash";
+	} else {
+	  if(enabledSplash == "0") selectedSplash = "nosplash";
+	}
 
-	optionsSplash->add(_("DEFAULT VIDEO/USER SET SPLASH"),          "auto", selectedSplash == "auto");
-	optionsSplash->add(_("SILENT VIDEO/USER SET SPLASH"), "silentsplash", selectedSplash == "silentsplash");
-	optionsSplash->add(_("BATOCERA SPLASH IMAGE"),     "nosplash", selectedSplash == "nosplash");
+	optionsSplash->add(_("AUTO"), "auto", selectedSplash == "auto");
+	optionsSplash->add(_("DEFAULT VIDEO/USER SET SPLASH"), "splash",       selectedSplash == "splash");
+	optionsSplash->add(_("SILENT VIDEO/USER SET SPLASH"),  "silentsplash", selectedSplash == "silentsplash");
+	optionsSplash->add(_("BATOCERA SPLASH IMAGE"),         "nosplash",     selectedSplash == "nosplash");
 
 	s->addWithLabel(_("SPLASH SETTING"), optionsSplash);
 
 	s->addSaveFunc([this, optionsSplash, selectedSplash]
 	{
 	  if (optionsSplash->changed()) {
-	    if(optionsSplash->getSelected() == "nosplash") {
-	      SystemConf::getInstance()->set("splash.screen.enabled", "0");
+	    if(optionsSplash->getSelected() == "auto") {
+	      SystemConf::getInstance()->set("splash.screen.enabled", "");
 	    } else {
-	      SystemConf::getInstance()->set("splash.screen.enabled", "1");
-	      if(optionsSplash->getSelected() == "silentsplash") {
-		SystemConf::getInstance()->set("splash.screen.sound", "0");
+	      if(optionsSplash->getSelected() == "nosplash") {
+		SystemConf::getInstance()->set("splash.screen.enabled", "0");
 	      } else {
-		SystemConf::getInstance()->set("splash.screen.sound", "1");
+		SystemConf::getInstance()->set("splash.screen.enabled", "1");
+		if(optionsSplash->getSelected() == "silentsplash") {
+		  SystemConf::getInstance()->set("splash.screen.sound", "0");
+		} else {
+		  SystemConf::getInstance()->set("splash.screen.sound", "1");
+		}
 	      }
 	    }
 	    SystemConf::getInstance()->saveSystemConf();
@@ -1796,9 +1830,7 @@ void GuiMenu::openSystemSettings()
 #endif
 
 #ifdef BATOCERA
-#ifdef X86_64
         s->addEntry(_("MULTISCREENS"), true, [this] { openMultiScreensSettings(); });
-#endif
 #endif
 
 #ifdef BATOCERA
@@ -2103,6 +2135,12 @@ void GuiMenu::addFeatureItem(Window* window, GuiSettings* settings, const Custom
 		return;
 	}
 
+	if (feat.preset == "files")
+	{
+		settings->addFileBrowser(pgettext("game_options", feat.name.c_str()), storageName, GuiFileBrowser::FILES);
+		return;
+	}
+
 	std::string storedValue = SystemConf::getInstance()->get(storageName);
 	
 	std::string inheritedValue;
@@ -2143,7 +2181,7 @@ void GuiMenu::addFeatureItem(Window* window, GuiSettings* settings, const Custom
 		}
 	}
 
-	if (feat.preset == "switch")
+	if (feat.preset == "switch" || feat.preset == "switch_default_off")
 	{
 		auto switchComponent = std::make_shared<SwitchComponent>(window);
 		switchComponent->setState(storedValue == "1");
@@ -2157,7 +2195,23 @@ void GuiMenu::addFeatureItem(Window* window, GuiSettings* settings, const Custom
 		return;
 	}
 
-	if (feat.preset == "switchon")
+	if (feat.preset == "switchauto")
+	{
+		auto switchComponent = std::make_shared<SwitchComponent>(window);
+		switchComponent->setHasAuto(true);
+		switchComponent->setAutoState(storedValue == "");
+		switchComponent->setState(storedValue == "1");
+
+		if (!feat.description.empty())
+			settings->addWithDescription(pgettext("game_options", feat.name.c_str()), pgettext("game_options", feat.description.c_str()), switchComponent);
+		else
+			settings->addWithLabel(pgettext("game_options", feat.name.c_str()), switchComponent);
+
+		settings->addSaveFunc([storageName, switchComponent] { SystemConf::getInstance()->set(storageName, switchComponent->getAutoState() ? "" : (switchComponent->getState() ? "1" : "0")); });
+		return;
+	}
+
+	if (feat.preset == "switchon" || feat.preset == "switch_default_on")
 	{
 		auto switchComponent = std::make_shared<SwitchComponent>(window);
 		switchComponent->setState(storedValue != "0");
@@ -2171,7 +2225,7 @@ void GuiMenu::addFeatureItem(Window* window, GuiSettings* settings, const Custom
 		return;
 	}
 
-	if (feat.preset == "switchoff")
+	if (feat.preset == "switchoff" || feat.preset == "switch_default_off_reverse_value")
 	{
 		auto switchComponent = std::make_shared<SwitchComponent>(window);
 		switchComponent->setState(storedValue != "1");
@@ -2214,6 +2268,58 @@ void GuiMenu::addFeatureItem(Window* window, GuiSettings* settings, const Custom
 			settings->addWithLabel(pgettext("game_options", feat.name.c_str()), sliderComponent);
 
 		settings->addSaveFunc([storageName, sliderComponent] { SystemConf::getInstance()->set(storageName, std::to_string(sliderComponent->getValue())); });
+		return;
+	}
+
+	if (feat.preset == "sliderauto")
+	{
+		std::vector<std::string> tokens = Utils::String::split(feat.preset_parameters, ' ');
+		float slider_from = 0.0f;
+		float slider_to = 100.0f;
+		float slider_step = 1.0f;
+		std::string slider_suffix = "";
+
+		// Parse parameters from the preset
+		if (tokens.size() >= 1) slider_from = Utils::String::toFloat(tokens.at(0));
+		if (tokens.size() >= 2) slider_to = Utils::String::toFloat(tokens.at(1));
+		if (tokens.size() >= 3) slider_step = Utils::String::toFloat(tokens.at(2));
+		if (tokens.size() >= 4) slider_suffix = tokens.at(3);
+
+		auto sliderComponent = std::make_shared<SliderComponent>(window, slider_from, slider_to, slider_step, slider_suffix, true);
+
+		if (storedValue.empty())
+		{
+			// Set to AUTO if no saved value exists
+			sliderComponent->setAuto(true);
+		}
+		else
+		{
+			// Set to the stored value
+			sliderComponent->setValue(Utils::String::toFloat(storedValue));
+		}
+
+		// Add the slider to the settings menu
+		if (!feat.description.empty())
+			settings->addWithDescription(pgettext("game_options", feat.name.c_str()), pgettext("game_options", feat.description.c_str()), sliderComponent);
+		else
+			settings->addWithLabel(pgettext("game_options", feat.name.c_str()), sliderComponent);
+
+		// Save the slider value
+		settings->addSaveFunc([storageName, sliderComponent] {
+			float value = sliderComponent->getValue();
+
+			// If the value is AUTO, save an empty string
+			if (sliderComponent->getAuto())
+			{
+				SystemConf::getInstance()->set(storageName, "");
+			}
+			else
+			{
+				// Save the actual slider value
+				SystemConf::getInstance()->set(storageName, std::to_string(value));
+			}
+			});
+
 		return;
 	}
 
@@ -2349,6 +2455,21 @@ static std::string getFeatureMenuDescription(const std::string& configName, cons
 					storedValue = ch.name;
 					break;
 				}
+			}
+
+			if (item.preset == "switchoff" || item.preset == "switch_default_off_reverse_value")
+			{
+				if (storedValue == "0")
+					storedValue = _("ON");
+				else if (storedValue == "1")
+					storedValue = _("OFF");
+			}
+			else if (Utils::String::startsWith(item.preset, "switch"))
+			{
+				if (storedValue == "0")
+					storedValue = _("OFF");
+				else if (storedValue == "1")
+					storedValue = _("ON");
 			}
 
 			text += " : " + Utils::String::toUpper(storedValue);
@@ -3383,6 +3504,34 @@ void GuiMenu::openThemeConfiguration(Window* mWindow, GuiComponent* s, std::shar
 					themeconfig->setVariable("reloadAll", true);
 			});
 
+		// Show trackball icons
+		auto defTI = Settings::getInstance()->getBool("ShowTrackballIconOnGames") ? _("YES") : _("NO");
+		auto curTI = Settings::getInstance()->getString(system->getName() + ".ShowTrackballIconOnGames");
+		auto showTrackball = std::make_shared<OptionListComponent<std::string>>(mWindow, _("SHOW TRACKBALL ICON"), false);
+		showTrackball->add(_("AUTO"), "", curTI == "" || curTI == "auto");
+		showTrackball->add(_("YES"), "1", curTI == "1");
+		showTrackball->add(_("NO"), "0", curTI == "0");
+		themeconfig->addWithDescription(_("SHOW TRACKBALL ICON"), _("DEFAULT VALUE") + " : " + defTI, showTrackball);
+		themeconfig->addSaveFunc([themeconfig, showTrackball, system]
+			{
+				if (Settings::getInstance()->setString(system->getName() + ".ShowTrackballIconOnGames", showTrackball->getSelected()))
+					themeconfig->setVariable("reloadAll", true);
+			});
+
+		// Show spinner icons
+		auto defSI = Settings::getInstance()->getBool("ShowSpinnerIconOnGames") ? _("YES") : _("NO");
+		auto curSI = Settings::getInstance()->getString(system->getName() + ".ShowSpinnerIconOnGames");
+		auto showSpinner = std::make_shared<OptionListComponent<std::string>>(mWindow, _("SHOW SPINNER ICON"), false);
+		showSpinner->add(_("AUTO"), "", curSI == "" || curSI == "auto");
+		showSpinner->add(_("YES"), "1", curSI == "1");
+		showSpinner->add(_("NO"), "0", curSI == "0");
+		themeconfig->addWithDescription(_("SHOW SPINNER ICON"), _("DEFAULT VALUE") + " : " + defSI, showSpinner);
+		themeconfig->addSaveFunc([themeconfig, showSpinner, system]
+			{
+				if (Settings::getInstance()->setString(system->getName() + ".ShowSpinnerIconOnGames", showSpinner->getSelected()))
+					themeconfig->setVariable("reloadAll", true);
+			});
+
 		// Show filenames
 		auto defFn = Settings::getInstance()->getBool("ShowFilenames") ? _("YES") : _("NO");
 		auto curFn = Settings::getInstance()->getString(system->getName() + ".ShowFilenames");
@@ -3700,8 +3849,8 @@ void GuiMenu::openUISettings()
 
 	s->addGroup(_("DISPLAY OPTIONS"));
 	s->addEntry(_("SCREENSAVER SETTINGS"), true, std::bind(&GuiMenu::openScreensaverOptions, this));
-	s->addOptionList(_("LIST TRANSITION"), { { _("auto"), "auto" },{ _("fade") , "fade" },{ _("slide"), "slide" },{ _("fade & slide"), "fade & slide" },{ _("instant"), "instant" } }, "TransitionStyle", true);
-	s->addOptionList(_("GAME LAUNCH TRANSITION"), { { _("auto"), "auto" },{ _("fade") , "fade" },{ _("slide"), "slide" },{ _("instant"), "instant" } }, "GameTransitionStyle", true);
+	s->addOptionList(_("LIST TRANSITION"), { { _("auto"), "auto" },{ _("fade"), "fade" },{ _("slide"), "slide" },{ _("fade & slide"), "fade & slide" },{ _("instant"), "instant" } }, "TransitionStyle", true);
+	s->addOptionList(_("GAME LAUNCH TRANSITION"), { { _("auto"), "auto" },{ _("fade"), "fade" },{ _("fast fade"), "fast fade" },{ _("slide"), "slide" },{ _("fast slide"), "fast slide" },{ _("instant"), "instant" } }, "GameTransitionStyle", true);
 
 	s->addSwitch(_("GAME MEDIAS DURING FAST SCROLLING"), "ScrollLoadMedias", false); 
 
@@ -3723,6 +3872,8 @@ void GuiMenu::openUISettings()
 	s->addSwitch(_("SHOW RETROACHIEVEMENTS ICON"), "ShowCheevosIcon", true, [s] { s->setVariable("reloadAll", true); });
 	s->addSwitch(_("SHOW GUN ICON"), "ShowGunIconOnGames", true, [s] { s->setVariable("reloadAll", true); });
 	s->addSwitch(_("SHOW WHEEL ICON"), "ShowWheelIconOnGames", true, [s] { s->setVariable("reloadAll", true); });
+	s->addSwitch(_("SHOW TRACKBALL ICON"), "ShowTrackballIconOnGames", true, [s] { s->setVariable("reloadAll", true); });
+	s->addSwitch(_("SHOW SPINNER ICON"), "ShowSpinnerIconOnGames", true, [s] { s->setVariable("reloadAll", true); });
 	s->addSwitch(_("SHOW FILENAMES INSTEAD"), "ShowFilenames", true, [s] 
 		{
 			SystemData::resetSettings();
@@ -3843,7 +3994,7 @@ void GuiMenu::openNetworkSettings(bool selectWifiEnable)
 	auto s = new GuiSettings(mWindow, _("NETWORK SETTINGS").c_str());
 	s->addGroup(_("INFORMATION"));
 
-	auto ip = std::make_shared<TextComponent>(mWindow, ApiSystem::getInstance()->getIpAdress(), font, color);
+	auto ip = std::make_shared<TextComponent>(mWindow, ApiSystem::getInstance()->getIpAddress(), font, color);
 	s->addWithLabel(_("IP ADDRESS"), ip);
 
 	auto status = std::make_shared<TextComponent>(mWindow, ApiSystem::getInstance()->ping() ? _("CONNECTED") : _("NOT CONNECTED"), font, color);

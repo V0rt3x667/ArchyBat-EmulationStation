@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: batocera-es v34beta(2022/04/06)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-05-20 21:22+0800\n"
+"PO-Revision-Date: 2025-03-17 09:15+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: mikakunin,王二,monyxie\n"
 "Language: zh_CN\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "SCANNING BLUETOOTH"
 msgstr "正在扫描蓝牙设备"
@@ -361,7 +361,7 @@ msgid "No items"
 msgstr "在此视角下没东西"
 
 msgid "PLEASE WAIT"
-msgstr "请稍后"
+msgstr "请稍候"
 
 msgid "UPDATE"
 msgstr "更新"
@@ -404,6 +404,36 @@ msgstr "未发现可用的WIFI网络"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "正在查询WIFI网络"
 
+msgid "DEVICE OPTIONS"
+msgstr "设备选项"
+
+msgid "DISCONNECT"
+msgstr "断开连接"
+
+msgid "CONNECT"
+msgstr "连接"
+
+msgid "FORGET"
+msgstr "忘记"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr "你确定要忘记 '%s' 吗?"
+
+msgid "YES"
+msgstr "是"
+
+msgid "NO"
+msgstr "否"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr "您确定要连接到 '%s' 吗?"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr "您确定要断开 '%s' 的连接吗?"
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "按键到键盘映射设置"
 
@@ -437,9 +467,6 @@ msgstr "鼠标光标"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "模拟鼠标光标"
 
-msgid "NO"
-msgstr "否"
-
 msgid "LEFT ANALOG STICK"
 msgstr "左摇杆"
 
@@ -451,9 +478,6 @@ msgstr "编辑描述"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "是否确定删除？"
-
-msgid "YES"
-msgstr "是"
 
 msgid "DELETE MAPPING"
 msgstr "删除（按键/设备）映射"
@@ -517,6 +541,24 @@ msgstr "蒙特利尔"
 
 msgid "SAO PAULO"
 msgstr "圣保罗"
+
+msgid "CUSTOM"
+msgstr "定制"
+
+msgid "CUSTOM RELAY SERVER"
+msgstr "定制中继服务器"
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr "自动创建大厅"
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr "开始游戏时自动创建网络游戏大厅."
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr "仅显示中继服务器游戏"
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr "中继服务器游戏有更高机会成功进入."
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "显示不可用的游戏"
@@ -636,6 +678,25 @@ msgstr "从主菜单查看您的RetroAchievement统计数据！"
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "无法激活RetroAchievement:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr "蓝牙设备列表"
+
+msgid "REMOVE ALL"
+msgstr "移除所有"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "未发现蓝牙设备"
+
+msgid " (Connected)"
+msgstr " (已连接)"
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "已删除蓝牙设备。"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "你确定要移除 '%s' 吗?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "The Bezel Project"
@@ -778,14 +839,20 @@ msgstr "参数无效"
 msgid "fade"
 msgstr "淡出"
 
+msgid "fast fade"
+msgstr "快速消失"
+
 msgid "slide"
 msgstr "滑动"
 
-msgid "instant"
-msgstr "闪现"
+msgid "fast slide"
+msgstr "快速滑动"
 
 msgid "fade & slide"
 msgstr "淡入和滑动"
+
+msgid "instant"
+msgstr "闪现"
 
 msgid "System"
 msgstr "系统"
@@ -819,6 +886,39 @@ msgstr "CPU 最大频率"
 
 msgid "Cpu feature"
 msgstr "CPU 特征"
+
+msgid "Available Memory"
+msgstr "可用内存"
+
+msgid "Display Resolution"
+msgstr "显示分辨率"
+
+msgid "Display Refresh Rate"
+msgstr "显示刷新率"
+
+msgid "OpenGL Driver Version"
+msgstr "OpenGL驱动版本"
+
+msgid "Vulkan Driver Name"
+msgstr "Vulkan驱动名称"
+
+msgid "Vulkan Driver Version"
+msgstr "Vulkan驱动版本"
+
+msgid "Data Partition Format"
+msgstr "数据分区格式"
+
+msgid "Data Partition Available Space"
+msgstr "数据分区可用空间"
+
+msgid "Network IP Address"
+msgstr "网络IP地址"
+
+msgid "UEFI Boot"
+msgstr "UEFI启动"
+
+msgid "Secure Boot"
+msgstr "安全启动"
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -957,12 +1057,6 @@ msgstr "自动"
 msgid "dmd matrix size"
 msgstr "dmd矩阵大小"
 
-msgid "MATRIX"
-msgstr "矩阵"
-
-msgid "rgb dmd order"
-msgstr "rgb dmd顺序"
-
 msgid "BRIGHTNESS"
 msgstr "亮度"
 
@@ -1035,9 +1129,6 @@ msgstr "垂直同步"
 msgid "OVERSCAN"
 msgstr "过扫描"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr "为EmulationStation设置显示器分辨率。"
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "使用OMX播放器（硬件加速）"
 
@@ -1084,8 +1175,8 @@ msgstr "清理中"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "重置游戏列表使用数据"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
-msgstr "重置游玩时间、游玩次数和上次游玩时间元数据的值。"
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
+msgstr "重置GameTime、PlayCount和LastPlayed元数据值."
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "重置文件扩展名"
@@ -1164,6 +1255,9 @@ msgstr "循环画面转场"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "快速系统选择"
+
+msgid "QUICK JUMP LETTER"
+msgstr "快速跳转字母"
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "虚拟键盘"
@@ -1335,6 +1429,9 @@ msgstr "开机时进入KODI媒体中心"
 msgid "HARDWARE"
 msgstr "硬件"
 
+msgid "Sets the display's resolution for emulationstation."
+msgstr "为EmulationStation设置显示器分辨率。"
+
 msgid "AUDIO OUTPUT"
 msgstr "音频输出"
 
@@ -1496,7 +1593,7 @@ msgid "Current setting"
 msgstr "当前设置"
 
 msgid "UPDATE GAMELISTS"
-msgstr "更新游戏列表（放入ROM或者安装程序后操作）"
+msgstr "更新游戏列表"
 
 msgid "ACCOUNTS"
 msgstr "账户"
@@ -1732,6 +1829,12 @@ msgstr "显示光枪图标"
 
 msgid "SHOW WHEEL ICON"
 msgstr "显示方向盘图标"
+
+msgid "SHOW TRACKBALL ICON"
+msgstr "显示轨迹球图标"
+
+msgid "SHOW SPINNER ICON"
+msgstr "显示微调器图标"
 
 msgid "SHOW FILENAMES INSTEAD"
 msgstr "在列表中显示文件名"
@@ -2280,6 +2383,9 @@ msgstr "在合辑中显示隐藏游戏"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "显示空系统"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr "不显示仅包含一个系统的组"
+
 msgid "Loading..."
 msgstr "载入中..."
 
@@ -2394,22 +2500,6 @@ msgstr "刷新"
 msgid "NO MISSING BIOS"
 msgstr "未缺BIOS"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "解除配对的蓝牙设备"
-
-msgid "REMOVE ALL"
-msgstr "移除所有"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "未发现蓝牙设备"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "已删除蓝牙设备。"
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "你确定要移除 '%s' 吗?"
-
 msgid "ZOOM OUT"
 msgstr "缩小"
 
@@ -2455,6 +2545,12 @@ msgstr "相同的ROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "核心不可用"
+
+msgid "LAN GAMES"
+msgstr "局域网游戏"
+
+msgid "ONLINE GAMES"
+msgstr "在线游戏"
 
 msgid "AVAILABLE GAMES"
 msgstr "可用的游戏"
@@ -2534,6 +2630,15 @@ msgstr "显示控制器活动"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "显示手柄电池电量"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr "绘制枪的准星"
+
+msgid "BEHAVIOR"
+msgstr "行为"
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr "限制热键退出"
+
 msgid "default"
 msgstr "默认"
 
@@ -2566,6 +2671,9 @@ msgstr "边框颜色"
 
 msgid "WHITE"
 msgstr "白色"
+
+msgid "BORDER RATIO"
+msgstr "边框比率"
 
 msgid "CAMERA CONTRAST"
 msgstr "相机对比度"
@@ -2707,6 +2815,15 @@ msgstr "屏保使用 OMX 播放器"
 
 msgid "SHOW GAME INFO"
 msgstr "显示游戏信息"
+
+msgid "SHOW DATE TIME"
+msgstr "显示日期时间"
+
+msgid "DATE FORMAT"
+msgstr "日期格式"
+
+msgid "TIME FORMAT"
+msgstr "时间格式"
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "使用悬浮蒙版图片作为游戏信息"
@@ -2922,6 +3039,12 @@ msgstr "光枪"
 msgid "STEERING WHEEL"
 msgstr "方向盘"
 
+msgid "TRACKBALL"
+msgstr "轨迹球"
+
+msgid "SPINNER"
+msgstr "微调器"
+
 msgid "HAVING MEDIAS"
 msgstr "拥有媒体"
 
@@ -2946,8 +3069,8 @@ msgstr "更新游戏列表以应用更改。"
 msgid "Loading system config..."
 msgstr "正在载入系统配置..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "正在保存元数据。请稍候..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr "保存元数据中, 请稍候..."
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "模拟器意外退出"
@@ -2969,6 +3092,9 @@ msgstr "核心缺失"
 
 msgid "UKNOWN ERROR"
 msgstr "未知错误"
+
+msgid "Interlaced"
+msgstr "隔行扫描"
 
 msgid "all games"
 msgstr "所有游戏"
@@ -3002,6 +3128,12 @@ msgstr "光枪游戏"
 
 msgid "wheel games"
 msgstr "方向盘游戏"
+
+msgid "trackball games"
+msgstr "轨迹球游戏"
+
+msgid "spinner games"
+msgstr "微调游戏"
 
 msgid "collections"
 msgstr "合辑"
@@ -3400,6 +3532,39 @@ msgid ""
 msgstr ""
 "校准枪\n"
 "对准目标射击以进行校准"
+
+#~ msgid "SHOW NETPLAY OPTIONS WHEN LAUNCHING GAME"
+#~ msgstr "启动游戏时显示网络游戏选项"
+
+#~ msgid "Allows choice of online, offline, or joining another game."
+#~ msgstr "允许选择在线、离线或加入其他游戏."
+
+#~ msgid "Select a game lobby to create or join"
+#~ msgstr "选择要创建或加入的游戏大厅"
+
+#~ msgid "PLAY ONLINE AS HOST"
+#~ msgstr "以主机身份在线玩游戏"
+
+#~ msgid "PLAY OFFLINE"
+#~ msgstr "离线游玩"
+
+#~ msgid "JOIN EXISTING GAME"
+#~ msgstr "加入现有游戏"
+
+#~ msgid "MATRIX"
+#~ msgstr "矩阵"
+
+#~ msgid "rgb dmd order"
+#~ msgstr "rgb dmd顺序"
+
+#~ msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+#~ msgstr "重置游玩时间、游玩次数和上次游玩时间元数据的值。"
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "正在保存元数据。请稍候..."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "解除配对的蓝牙设备"
 
 #~ msgid "-10 for auto"
 #~ msgstr "自动为-10"

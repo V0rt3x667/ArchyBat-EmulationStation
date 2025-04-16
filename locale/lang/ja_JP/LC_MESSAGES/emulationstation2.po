@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v40b(2024/05/17)\n"
+"Project-Id-Version: batocera-es v42b(2025/03/01)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-05-17 20:42+0900\n"
+"PO-Revision-Date: 2025-03-19 06:02+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid "SCANNING BLUETOOTH"
 msgstr "BLUETOOTH 検出中"
@@ -406,13 +406,43 @@ msgstr "WI-FI ネットワークが見つかりません"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "WIFIネットワークの検索"
 
+msgid "DEVICE OPTIONS"
+msgstr "デバイスオプション"
+
+msgid "DISCONNECT"
+msgstr "接続解除"
+
+msgid "CONNECT"
+msgstr "接続"
+
+msgid "FORGET"
+msgstr "削除"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr "'%s' を削除しますか？"
+
+msgid "YES"
+msgstr "はい"
+
+msgid "NO"
+msgstr "いいえ"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr "'%s'に接続しますか?"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr "'%s'を接続解除しますか?"
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "パッドキー設定(キーボードをパッドに割り当てる)"
 
 msgid "SELECT ACTIONS TO CHANGE"
 msgstr ""
-"ボタン、キーを選択（決定はS、[同時押し]はNで決定だと次のキーを選択できる、最"
-"後のキー決定をS、キャンセルはWかE）"
+"キーを選択（決定はS、[同時押し]はNで決定-次のキーを選択、最後のキー決定をS、"
+"取消はWかE）"
 
 msgid "SAVE"
 msgstr "保存"
@@ -441,9 +471,6 @@ msgstr "マウスカーソル"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "マウスカーソルをエミュレート"
 
-msgid "NO"
-msgstr "いいえ"
-
 msgid "LEFT ANALOG STICK"
 msgstr "左アナログスティック"
 
@@ -454,10 +481,7 @@ msgid "EDIT DESCRIPTION"
 msgstr "説明を編集"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
-msgstr "この項目を削除してもよろしいですか？"
-
-msgid "YES"
-msgstr "はい"
+msgstr "削除してもよろしいですか？"
 
 msgid "DELETE MAPPING"
 msgstr "パッドキー設定を削除"
@@ -466,7 +490,7 @@ msgid "SAVE CHANGES?"
 msgstr "変更を保存しますか？"
 
 msgid "ARE YOU SURE?"
-msgstr "よろしいですか？"
+msgstr "確認チェック"
 
 msgid "INFORMATION"
 msgstr "情報"
@@ -521,6 +545,24 @@ msgstr "モントリオール"
 
 msgid "SAO PAULO"
 msgstr "サンパウロ"
+
+msgid "CUSTOM"
+msgstr "カスタム"
+
+msgid "CUSTOM RELAY SERVER"
+msgstr "カスタムリレーサーバー"
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr "ロビーを自動的に作成"
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr "ゲームを開始時に、自動的にネットプレイ ロビーを作成します"
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr "リレーサーバーゲームのみを表示"
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr "リレーサーバーゲームは参加に成功する可能性が高くなります"
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "利用不可ゲームを表示"
@@ -637,10 +679,29 @@ msgid "SHOW RETROACHIEVEMENTS ENTRY IN MAIN MENU"
 msgstr "メインメニューにRETROACHIEVEMENTSエントリを表示"
 
 msgid "View your RetroAchievement stats right from the main menu!"
-msgstr "メインメニューにRETROACHIEVEMENTSの統計を表示します!"
+msgstr "メニューにRETROACHIEVEMENTSの統計を表示します!"
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "RETROACHIEVEMENTSを有効にできません:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr "BLUETOOTH デバイスリスト"
+
+msgid "REMOVE ALL"
+msgstr "すべて削除"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "ペアリングしていません"
+
+msgid " (Connected)"
+msgstr "(接続中）"
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "BLUETOOTH デバイスを削除しました"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "'%s' を削除してもよろしいですか？"
 
 msgid "THE BEZEL PROJECT"
 msgstr "ベゼルプロジェクト"
@@ -677,8 +738,8 @@ msgid ""
 "UPGRADING COULD BREAK YOUR SYSTEM.\n"
 "DO YOU WANT TO UPDATE TO VERSION %s?"
 msgstr ""
-"非公式のシステムカスタマイズがされています\n"
-"更新すると、システムが破損する可能性があります\n"
+"非公式システムカスタマイズがされています\n"
+"更新するとシステム破損の可能性があります\n"
 "更新しますか?\n"
 "(バージョン %s)"
 
@@ -787,14 +848,20 @@ msgstr "無効なパラメーター"
 msgid "fade"
 msgstr "フェード"
 
+msgid "fast fade"
+msgstr "高速フェード"
+
 msgid "slide"
 msgstr "横"
 
-msgid "instant"
-msgstr "瞬時"
+msgid "fast slide"
+msgstr "高速スライド"
 
 msgid "fade & slide"
 msgstr "フェード & 横"
+
+msgid "instant"
+msgstr "瞬時"
 
 msgid "System"
 msgstr "システム"
@@ -828,6 +895,39 @@ msgstr "Cpu 最大周波数"
 
 msgid "Cpu feature"
 msgstr "CPU 機能"
+
+msgid "Available Memory"
+msgstr "使用可能メモリ/全容量"
+
+msgid "Display Resolution"
+msgstr "表示解像度"
+
+msgid "Display Refresh Rate"
+msgstr "表示リフレッシュレート"
+
+msgid "OpenGL Driver Version"
+msgstr "OpenGLドライババージョン"
+
+msgid "Vulkan Driver Name"
+msgstr "Vulkan ドライバ名"
+
+msgid "Vulkan Driver Version"
+msgstr "Vulkan ドライババージョン"
+
+msgid "Data Partition Format"
+msgstr "データパーティション形式"
+
+msgid "Data Partition Available Space"
+msgstr "データパーティション空き容量"
+
+msgid "Network IP Address"
+msgstr "ネットワークIPアドレス"
+
+msgid "UEFI Boot"
+msgstr "UEFI ブート"
+
+msgid "Secure Boot"
+msgstr "セキュア ブート"
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -966,12 +1066,6 @@ msgstr "自動"
 msgid "dmd matrix size"
 msgstr "DMDマトリクスサイズ"
 
-msgid "MATRIX"
-msgstr "マトリクス"
-
-msgid "rgb dmd order"
-msgstr "RGB DMD順"
-
 msgid "BRIGHTNESS"
 msgstr "輝度"
 
@@ -991,7 +1085,7 @@ msgid "BACKGLASS / INFORMATION SCREEN"
 msgstr "バックガラス / 情報画面"
 
 msgid "THEME"
-msgstr ""
+msgstr "テーマ"
 
 msgid "VIDEO OUTPUT"
 msgstr "映像出力"
@@ -1044,11 +1138,6 @@ msgstr "VSYNC(垂直同期)有効"
 msgid "OVERSCAN"
 msgstr "オーバースキャン"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr ""
-"Emulationstationで表示する解像度を設定します(自動＝最大)\n"
-"動作に問題がある場合は1920x1080以下を試してください"
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "OMX PLAYERを使用(ハードウェア)"
 
@@ -1099,9 +1188,8 @@ msgstr "クリーニング"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "ゲームリストの使用データをリセット"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
-msgstr ""
-"プレイ時間, プレイ回数, 最後にプレイしたゲーム名 のデータ値を初期化します"
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
+msgstr "プレイ時間, 回数, 最終プレイゲーム名 のデータ値を初期化します"
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "ファイル表示拡張子設定をリセット"
@@ -1163,8 +1251,8 @@ msgstr "ゲームリストを更新しない"
 
 msgid "Debug tool: Don't check if the ROMs actually exist. Can cause problems!"
 msgstr ""
-"デバッグツール：ROMがある場合はチェックしないでください。問題が出る場合があり"
-"ます！"
+"デバッグツール：ROM の有無をチェックしません\n"
+"問題が出る可能性があります！"
 
 msgid "SEARCH FOR LOCAL ART"
 msgstr "ローカルアートの検索"
@@ -1173,8 +1261,8 @@ msgid ""
 "If no image is specified in the gamelist, try to find media with the same "
 "filename to use."
 msgstr ""
-"ゲームリストにイメージ画像の指定が無い場合は、同じファイル名の画像を検索しま"
-"す"
+"gamelist.xmlにイメージ画像の指定が無い場合、\n"
+"同じファイル名の画像を検索し設定します"
 
 msgid "USER INTERFACE"
 msgstr "ユーザーインターフェイス"
@@ -1184,6 +1272,9 @@ msgstr "メニュー回転(カルーセル)効果"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "クイックシステム選択"
+
+msgid "QUICK JUMP LETTER"
+msgstr "前後の英数字に移動"
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "スクリーンキーボードを使用"
@@ -1247,7 +1338,8 @@ msgid ""
 "Reduces lag when scrolling through a fully scraped gamelist, increases boot "
 "time"
 msgstr ""
-"スクレイプ済みゲームリストのスクロール時のラグを減少(起動時間が長くなります)"
+"スクレイプ済みゲームリストのスクロール時のラグを減少\n"
+"(起動時間が長くなります)"
 
 msgid "THREADED LOADING"
 msgstr "スレッド読み込み(CPUコアが複数ある場合)"
@@ -1331,7 +1423,7 @@ msgid "USER INTERFACE MODE"
 msgstr "ユーザーインターフェイス モード"
 
 msgid "Lock down certain config menus for use with guest users/kids."
-msgstr "ゲストユーザー/子供が使用するために特定の設定メニューをロックします"
+msgstr "ゲストユーザー/子供用に特定の設定メニューをロックします"
 
 msgid ""
 "You are changing the user interface to a restricted mode:\n"
@@ -1358,6 +1450,11 @@ msgstr "起動時に KODI 実行"
 msgid "HARDWARE"
 msgstr "ハードウェア"
 
+msgid "Sets the display's resolution for emulationstation."
+msgstr ""
+"ESで表示する解像度を設定します(自動＝最大)\n"
+"問題がでる場合は1920x1080以下を試してください"
+
 msgid "AUDIO OUTPUT"
 msgstr "音声出力"
 
@@ -1365,7 +1462,7 @@ msgid "AUDIO PROFILE"
 msgstr "音声プロファイル"
 
 msgid "Available options can change depending on current audio output."
-msgstr "使用可能な設定は、現在の音声出力に応じて変わる可能性があります"
+msgstr "現在の音声出力設定に応じて設定項目が変わる場合があります"
 
 msgid "BOOT SPLASH"
 msgstr "ブートスプラッシュ映像"
@@ -1532,34 +1629,36 @@ msgid "SAVESTATES"
 msgstr "ステートセーブ"
 
 msgid "AUTO SAVE/LOAD"
-msgstr "自動ステート読込み"
+msgstr "自動ステートセーブ/読込み"
 
 msgid "Load latest savestate on game launch and savestate when exiting game."
-msgstr "ゲーム開始時に最新ステートを読込み、ゲーム終了時にステートセーブします"
+msgstr ""
+"開始時にステート読込み、終了時にステートセーブします\n"
+"(ステートセーブの方法－「ゲームごとにセーブ」を指定)"
 
 msgid "INCREMENTAL SAVESTATES"
-msgstr "ステートセーブ保存方法"
+msgstr "ステートセーブの方法"
 
 msgid "INCREMENT PER SAVE"
 msgstr "常に別スロットにセーブ"
 
 msgid "Never overwrite old savestates, always make new ones."
-msgstr "古いセーブに上書きせず、常に新しくセーブを保存"
+msgstr "古いセーブに上書きせず、常に新しくセーブをします"
 
 msgid "INCREMENT SLOT"
-msgstr "ゲームごとに別にセーブ"
+msgstr "ゲームごとにセーブ"
 
 msgid "Increment slot on a new game."
-msgstr "別の違うゲームの場合は、新しくセーブを保存"
+msgstr "違うゲームは、新しくセーブをします"
 
 msgid "DO NOT INCREMENT"
 msgstr "同一スロットにセーブ"
 
 msgid "Use current slot on a new game."
-msgstr "選択スロットにセーブを上書き保存"
+msgstr "選択スロットに上書きセーブをします"
 
 msgid "SHOW SAVESTATE MANAGER"
-msgstr "ステートセーブマネージャーの表示"
+msgstr "ステートマネージャの表示"
 
 msgid "ALWAYS"
 msgstr "常に"
@@ -1568,7 +1667,7 @@ msgid "IF NOT EMPTY"
 msgstr "セーブがある場合"
 
 msgid "Display savestate manager before launching a game."
-msgstr "ゲーム起動前にステートセーブマネージャを表示します"
+msgstr "ゲーム起動前にステートマネージャを表示します"
 
 msgid "DEFAULT GLOBAL SETTINGS"
 msgstr "グローバル基本設定"
@@ -1590,8 +1689,7 @@ msgid "REWIND"
 msgstr "巻き戻し"
 
 msgid "Store past states to rewind to in realtime, if the core supports it."
-msgstr ""
-"コアが対応している場合は、過去の状態を保存してリアルタイムで巻き戻します"
+msgstr "コアが対応している場合は、過去の状態を保存してすぐ巻き戻します"
 
 msgid "INTEGER SCALING (PIXEL PERFECT)"
 msgstr "整数スケール (ピクセルを正方形表示)"
@@ -1648,13 +1746,13 @@ msgid "AI GAME TRANSLATION"
 msgstr "AIゲーム翻訳"
 
 msgid "ENABLE AI TRANSLATION SERVICE"
-msgstr "AIゲーム翻訳サービスを有効"
+msgstr "AI 翻訳サービスを有効"
 
 msgid "TARGET LANGUAGE"
-msgstr "対象言語"
+msgstr "翻訳表示言語"
 
 msgid "AI TRANSLATION SERVICE URL"
-msgstr "AIゲーム翻訳サービス URL"
+msgstr "AI 翻訳サービス URL"
 
 msgid "PAUSE ON TRANSLATED SCREEN"
 msgstr "翻訳画面で一時停止"
@@ -1758,6 +1856,12 @@ msgstr "銃 アイコンを表示"
 msgid "SHOW WHEEL ICON"
 msgstr "ホイール(車)アイコンを表示"
 
+msgid "SHOW TRACKBALL ICON"
+msgstr "トラックボールアイコンを表示"
+
+msgid "SHOW SPINNER ICON"
+msgstr "スピナーアイコンを表示"
+
 msgid "SHOW FILENAMES INSTEAD"
 msgstr "リストにファイル名を表示"
 
@@ -1771,7 +1875,7 @@ msgid "APPEARANCE"
 msgstr "外観"
 
 msgid "THEME SET"
-msgstr "テーマ"
+msgstr "テーマ選択"
 
 msgid "video"
 msgstr "イメージ動画"
@@ -1858,7 +1962,7 @@ msgid "SOUNDS"
 msgstr "音響"
 
 msgid "ENABLE NAVIGATION SOUNDS"
-msgstr "ナビゲーションサウンドを有効"
+msgstr "操作音を有効"
 
 msgid "ENABLE VIDEO PREVIEW AUDIO"
 msgstr "デモ動画のBGMを有効"
@@ -1951,7 +2055,7 @@ msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
 msgstr "自動ステート読込みでゲームを開始"
 
 msgid "Load latest save state on game launch and save state when exiting game."
-msgstr "ゲーム開始時に最新ステートを読込み、ゲーム終了時にステートセーブします"
+msgstr "ゲーム開始時にステートを読込み、終了時にステートセーブします"
 
 msgid "SHOW CONTROLLER OVERLAYS"
 msgstr "コントローラーイメージを表示"
@@ -2060,7 +2164,7 @@ msgid "GAME"
 msgstr "ゲーム"
 
 msgid "SAVE STATES"
-msgstr "ステートセーブマネージャー"
+msgstr "ステートマネージャ"
 
 msgid "OPEN"
 msgstr "開く"
@@ -2099,7 +2203,7 @@ msgid ""
 "THIS WILL DELETE THE ACTUAL GAME FILE(S)!\n"
 "ARE YOU SURE?"
 msgstr ""
-"この操作は実際にファイルを削除します！\n"
+"これは実際にファイルを削除します！\n"
 "実行しますか？"
 
 msgid "COLLECTIONS"
@@ -2305,6 +2409,9 @@ msgstr "非表示システムにあるゲームをコレクションに表示"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "全てのシステムを表示"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr "システムが1つしかないグループは表示しない"
+
 msgid "Loading..."
 msgstr "読み込み中…"
 
@@ -2351,7 +2458,7 @@ msgid "UNINSTALLATION ADDED TO QUEUE"
 msgstr "アンインストールをキューに追加しました"
 
 msgid "SAVESTATE MANAGER"
-msgstr "ステートセーブマネージャー (西＞削除、ファイル上で北＞コピー)"
+msgstr "ステートマネージャ (西＞削除、北＞コピー)"
 
 msgid "START NEW GAME"
 msgstr "最初から開始"
@@ -2372,7 +2479,7 @@ msgid "VIEW OPTIONS"
 msgstr "表示設定"
 
 msgid "NAVIGATION"
-msgstr "ナビゲーション"
+msgstr "操作"
 
 msgid "OTHER FILTERS"
 msgstr "項目別ゲームフィルタ"
@@ -2418,22 +2525,6 @@ msgstr "リフレッシュ更新"
 
 msgid "NO MISSING BIOS"
 msgstr "BIOSは全てあります"
-
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "BLUETOOTH デバイスの削除"
-
-msgid "REMOVE ALL"
-msgstr "すべて削除"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "ペアリングしていません"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "BLUETOOTH デバイスを削除しました"
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "'%s' を削除してもよろしいですか？"
 
 msgid "ZOOM OUT"
 msgstr "縮小-"
@@ -2481,6 +2572,12 @@ msgstr "同じROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "利用できないコア"
+
+msgid "LAN GAMES"
+msgstr "LAN ゲーム"
+
+msgid "ONLINE GAMES"
+msgstr "オンライン ゲーム"
 
 msgid "AVAILABLE GAMES"
 msgstr "参加可能なゲーム"
@@ -2562,6 +2659,15 @@ msgstr "コントローラーアクティビティを表示"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "コントローラーバッテリーレベルを表示"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr "銃のクロスへア(照準)表示"
+
+msgid "BEHAVIOR"
+msgstr "動作"
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr "ホットキーの機能を制限(終了以外)"
+
 msgid "default"
 msgstr "標準"
 
@@ -2594,6 +2700,9 @@ msgstr "境界色"
 
 msgid "WHITE"
 msgstr "白"
+
+msgid "BORDER RATIO"
+msgstr "境界サイズ"
 
 msgid "CAMERA CONTRAST"
 msgstr "カメラ コントラスト"
@@ -2735,6 +2844,15 @@ msgstr "スクリーンセーバーにOMX PLAYERを使用"
 
 msgid "SHOW GAME INFO"
 msgstr "ゲーム情報を表示"
+
+msgid "SHOW DATE TIME"
+msgstr "日時を表示"
+
+msgid "DATE FORMAT"
+msgstr "日付表示形式"
+
+msgid "TIME FORMAT"
+msgstr "時刻表示形式"
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "ゲーム情報としてマーキーを使用"
@@ -2881,7 +2999,7 @@ msgid_plural "%i GAMES"
 msgstr[0] "ゲーム数 :%i"
 
 msgid "NAVIGATION BAR"
-msgstr "ナビケーションバー"
+msgstr "操作バー"
 
 msgid "FILES"
 msgstr "ファイル"
@@ -2891,8 +3009,7 @@ msgid ""
 "FORMAT.\n"
 "DO YOU WANT TO LAUNCH IT ANYWAY?"
 msgstr ""
-"警告：このゲームのファイル形式は、 現在のエミュレータ/コアでは対応していませ"
-"ん。\n"
+"警告：このファイル形式は、指定エミュレータ/コアが未対応です\n"
 "実行しますか?"
 
 msgid ""
@@ -2900,7 +3017,7 @@ msgid ""
 "CORRECTLY.\n"
 "DO YOU WANT TO LAUNCH IT ANYWAY?"
 msgstr ""
-"警告：システムにBIOSがなく、 ゲームが正しく機能しない可能性があります。\n"
+"警告：システムBIOSがなく、ゲームが動作しない可能性があります\n"
 "実行しますか?"
 
 msgid "Preloading UI"
@@ -2954,6 +3071,12 @@ msgstr "ライトガン(ガンコン)対応"
 msgid "STEERING WHEEL"
 msgstr "ステアリングホイール (ハンコン)"
 
+msgid "TRACKBALL"
+msgstr "トラックボール"
+
+msgid "SPINNER"
+msgstr "スピナー"
+
 msgid "HAVING MEDIAS"
 msgstr "メディア有り"
 
@@ -2978,8 +3101,8 @@ msgstr "「ゲームリストを更新」で変更を適用します"
 msgid "Loading system config..."
 msgstr "システム設定を読み込んでいます..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "メタ情報の保存中です。 お待ちください..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr "メタ情報の保存中。 お待ちください..."
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "エミュレータが予期せず終了しました"
@@ -3001,6 +3124,9 @@ msgstr "コアがありません"
 
 msgid "UKNOWN ERROR"
 msgstr "不明なエラー"
+
+msgid "Interlaced"
+msgstr "インターレース"
 
 msgid "all games"
 msgstr "すべてのゲーム"
@@ -3034,6 +3160,12 @@ msgstr "ガンコントローラ ゲーム"
 
 msgid "wheel games"
 msgstr "ステアリング　ゲーム"
+
+msgid "trackball games"
+msgstr "トラックボール ゲーム"
+
+msgid "spinner games"
+msgstr "スピナー ゲーム"
 
 msgid "collections"
 msgstr "コレクション"
@@ -3432,3 +3564,30 @@ msgid ""
 msgstr ""
 "銃キャリブレーション\n"
 "ターゲットに発射して較正"
+
+#~ msgid "SHOW NETPLAY OPTIONS WHEN LAUNCHING GAME"
+#~ msgstr "ゲーム起動時にネットプレイ オプションを表示"
+
+#~ msgid "Allows choice of online, offline, or joining another game."
+#~ msgstr "オンライン、オフライン、別のゲームへの参加を選択できます"
+
+#~ msgid "Select a game lobby to create or join"
+#~ msgstr "作成または参加するゲーム ロビーを選択"
+
+#~ msgid "PLAY ONLINE AS HOST"
+#~ msgstr "ホストとしてオンラインでプレイ"
+
+#~ msgid "PLAY OFFLINE"
+#~ msgstr "オフラインでプレイ"
+
+#~ msgid "JOIN EXISTING GAME"
+#~ msgstr "既存のゲームに参加"
+
+#~ msgid "MATRIX"
+#~ msgstr "マトリクス"
+
+#~ msgid "rgb dmd order"
+#~ msgstr "RGB DMD順"
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "BLUETOOTH デバイスの削除"

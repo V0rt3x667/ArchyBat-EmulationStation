@@ -402,6 +402,36 @@ msgstr "HARI GABEKO SARERIK EZ DA AURKITU"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "HARI GABEKO SAREAK BILATZEN"
 
+msgid "DEVICE OPTIONS"
+msgstr ""
+
+msgid "DISCONNECT"
+msgstr ""
+
+msgid "CONNECT"
+msgstr ""
+
+msgid "FORGET"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr ""
+
+msgid "YES"
+msgstr "BAI"
+
+msgid "NO"
+msgstr "EZ"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr ""
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "PAD-ETIK TEKLATURAKO KONFIGURAZIOA"
 
@@ -435,9 +465,6 @@ msgstr "XAGU KURTSOREA"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "EMULATU XAGU KURSOREA"
 
-msgid "NO"
-msgstr "EZ"
-
 msgid "LEFT ANALOG STICK"
 msgstr "EZKER STICK ANALOGIKOA"
 
@@ -449,9 +476,6 @@ msgstr "EDITATU DESKRIBAPENA"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "ZIUR AL ZAUDE ARTIKULU HAU EZABATU NAHI DUZULA"
-
-msgid "YES"
-msgstr "BAI"
 
 msgid "DELETE MAPPING"
 msgstr "EZABATU MAPEATZEA"
@@ -515,6 +539,24 @@ msgstr "MONTREAL"
 
 msgid "SAO PAULO"
 msgstr "SAO PAULO"
+
+msgid "CUSTOM"
+msgstr ""
+
+msgid "CUSTOM RELAY SERVER"
+msgstr ""
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr ""
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr ""
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "ERAKUTSI ESKURAGARRI EZ DAUDEN JOKOAK"
@@ -639,6 +681,25 @@ msgstr "Ikusi zure RetroAchivement egoera menu nagusitik zuzenean!"
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "EZIN IZAN DA RETROACHIVEMENTS AKTIBATU:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr ""
+
+msgid "REMOVE ALL"
+msgstr "KENDU DENAK"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "EZ DA BLUETOOTH GAILURIK AURKITU"
+
+msgid " (Connected)"
+msgstr ""
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "BLUETOOTH GAILUAK KENDU DIRA"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "ZIUR AL ZAUDE '%s' KENDU NAHI DUZULA"
 
 msgid "THE BEZEL PROJECT"
 msgstr "BEZEL PROIEKTUA"
@@ -782,14 +843,20 @@ msgstr "PARAMETRO EZEGOKIAK"
 msgid "fade"
 msgstr "ahuldu"
 
+msgid "fast fade"
+msgstr ""
+
 msgid "slide"
 msgstr "irristatu"
 
-msgid "instant"
-msgstr "unea"
+msgid "fast slide"
+msgstr ""
 
 msgid "fade & slide"
 msgstr "ahuldu eta irristatu"
+
+msgid "instant"
+msgstr "unea"
 
 msgid "System"
 msgstr "Sistema"
@@ -823,6 +890,39 @@ msgstr "PUZ-aren gehieneko frekuentzia"
 
 msgid "Cpu feature"
 msgstr "PUZ ezaugarria"
+
+msgid "Available Memory"
+msgstr ""
+
+msgid "Display Resolution"
+msgstr ""
+
+msgid "Display Refresh Rate"
+msgstr ""
+
+msgid "OpenGL Driver Version"
+msgstr ""
+
+msgid "Vulkan Driver Name"
+msgstr ""
+
+msgid "Vulkan Driver Version"
+msgstr ""
+
+msgid "Data Partition Format"
+msgstr ""
+
+msgid "Data Partition Available Space"
+msgstr ""
+
+msgid "Network IP Address"
+msgstr ""
+
+msgid "UEFI Boot"
+msgstr ""
+
+msgid "Secure Boot"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -961,12 +1061,6 @@ msgstr "AUTO"
 msgid "dmd matrix size"
 msgstr ""
 
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
-
 msgid "BRIGHTNESS"
 msgstr "DISTIRA"
 
@@ -1039,9 +1133,6 @@ msgstr "VSYNC"
 msgid "OVERSCAN"
 msgstr "OVERSCAN"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr "Pantailaren bereizmena ezartzen du emulationstation-entzat"
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "ERABILI OMX IKARKURLERA (HADRWARE BIDEZKO AZELERAZIOAREKIN)"
 
@@ -1090,7 +1181,7 @@ msgstr "Garbitzen"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr ""
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
 
 msgid "RESET FILE EXTENSIONS"
@@ -1175,6 +1266,9 @@ msgstr "KARRUSEL TRANSIZIOAK"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "SISTEMA AUKERATZE AZKARRA"
+
+msgid "QUICK JUMP LETTER"
+msgstr ""
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "PANTAILAKO TEKLATUA"
@@ -1353,6 +1447,9 @@ msgstr "HASI KODI ABIARAZTEAN"
 
 msgid "HARDWARE"
 msgstr "HARDWARE-A"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr "Pantailaren bereizmena ezartzen du emulationstation-entzat"
 
 msgid "AUDIO OUTPUT"
 msgstr "AUDIO IRTEERA"
@@ -1760,6 +1857,12 @@ msgid "SHOW GUN ICON"
 msgstr ""
 
 msgid "SHOW WHEEL ICON"
+msgstr ""
+
+msgid "SHOW TRACKBALL ICON"
+msgstr ""
+
+msgid "SHOW SPINNER ICON"
 msgstr ""
 
 msgid "SHOW FILENAMES INSTEAD"
@@ -2310,6 +2413,9 @@ msgstr "ERAKUTIS IKUSGAI EZ DIREN JOKOAK KOLEKZIOETAN "
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "ERAKUTIS SISTEMA HUTSAK"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr ""
+
 msgid "Loading..."
 msgstr "Kargatzen..."
 
@@ -2424,22 +2530,6 @@ msgstr ""
 msgid "NO MISSING BIOS"
 msgstr "EZ DA BIOS-IK FALTA"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "AHAZTU BLUETOOTH GAILUA"
-
-msgid "REMOVE ALL"
-msgstr "KENDU DENAK"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "EZ DA BLUETOOTH GAILURIK AURKITU"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "BLUETOOTH GAILUAK KENDU DIRA"
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "ZIUR AL ZAUDE '%s' KENDU NAHI DUZULA"
-
 msgid "ZOOM OUT"
 msgstr "KANPORAKO ZOOM-A"
 
@@ -2487,6 +2577,12 @@ msgstr "ROM BERDINA"
 
 msgid "UNAVAILABLE CORE"
 msgstr "NUKLEO ESKURAEZINA"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "JOKO ESKURAGARRIAK"
@@ -2568,6 +2664,15 @@ msgstr "ERAKUTSI KONTROLATZAILE AKTIBITATEA"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "ERAKUTSI KONTROLATZAILE BATERIA MAILA"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr ""
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "defektuz"
 
@@ -2600,6 +2705,9 @@ msgstr "ERTZ KOLOREA"
 
 msgid "WHITE"
 msgstr "ZURIA"
+
+msgid "BORDER RATIO"
+msgstr ""
 
 msgid "CAMERA CONTRAST"
 msgstr "KAMERAREN KONTRASTEA"
@@ -2741,6 +2849,15 @@ msgstr "ERABILI OMX IRAKURGAILUA PANTAILA BABESLEARENTZAT"
 
 msgid "SHOW GAME INFO"
 msgstr "ERAKUTSI JOKO INFORMAZIOA"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "ERABILI MARKESINA JOKO INFORMAZIO BEZALA"
@@ -2963,6 +3080,12 @@ msgstr "ARGIZKO PISTOLA"
 msgid "STEERING WHEEL"
 msgstr "BOLANTEA"
 
+msgid "TRACKBALL"
+msgstr ""
+
+msgid "SPINNER"
+msgstr ""
+
 msgid "HAVING MEDIAS"
 msgstr ""
 
@@ -2987,8 +3110,8 @@ msgstr "EGUNERATU JOKO LISTAK ALDAKETAK APLIKATZEKO."
 msgid "Loading system config..."
 msgstr "Kargatu sistemaren konfigurazioa..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "METADATUAK GORDETZEN. ITXOIN PISKA BAT MESEDEZ...."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr ""
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "EMULADOREA USTEKABEAK IRTEN DA"
@@ -3010,6 +3133,9 @@ msgstr "NUKLEOA EZ DAGO ESKURAGARRI"
 
 msgid "UKNOWN ERROR"
 msgstr "ERRORE EZEZAGUNA"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "joko guztiak"
@@ -3043,6 +3169,12 @@ msgstr "argizko pistola jokoak"
 
 msgid "wheel games"
 msgstr "gurpil jokoak"
+
+msgid "trackball games"
+msgstr ""
+
+msgid "spinner games"
+msgstr ""
 
 msgid "collections"
 msgstr "kolekzioak"
@@ -3447,6 +3579,12 @@ msgid ""
 "CALIBRATING GUN\n"
 "Fire on targets to calibrate"
 msgstr "PISTOLA KALIBRATZENItuei tiro egin kalibratzeko"
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "METADATUAK GORDETZEN. ITXOIN PISKA BAT MESEDEZ...."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "AHAZTU BLUETOOTH GAILUA"
 
 #~ msgid "Achievements won"
 #~ msgstr "Lorpenak irabazita"

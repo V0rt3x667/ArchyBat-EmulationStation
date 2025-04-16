@@ -51,6 +51,8 @@ static std::map<std::string, std::function<BindableProperty(FileData*)>> propert
 	{ "kidGame",			[](FileData* file) { return file->getKidGame(); } },
 	{ "gunGame",			[](FileData* file) { return file->isLightGunGame(); } },
 	{ "wheelGame",			[](FileData* file) { return file->isWheelGame(); } },
+	{ "trackballGame",			[](FileData* file) { return file->isTrackballGame(); } },
+	{ "spinnerGame",			[](FileData* file) { return file->isSpinnerGame(); } },
 	{ "cheevos",			[](FileData* file) { return file->hasCheevos(); } },
 	{ "genre",			    [](FileData* file) { return file->getGenre(); } },
 	{ "hasKeyboardMapping", [](FileData* file) { return file->hasKeyboardMapping(); } },	
@@ -443,6 +445,18 @@ const bool FileData::isWheelGame()
 	//return Genres::genreExists(&getMetadata(), GENRE_WHEEL);
 }
 
+const bool FileData::isTrackballGame()
+{
+	return MameNames::getInstance()->isTrackball(Utils::FileSystem::getStem(getPath()), mSystem->getName(), mSystem && mSystem->hasPlatformId(PlatformIds::ARCADE));
+	//return Genres::genreExists(&getMetadata(), GENRE_TRACKBALL);
+}
+
+const bool FileData::isSpinnerGame()
+{
+	return MameNames::getInstance()->isSpinner(Utils::FileSystem::getStem(getPath()), mSystem->getName(), mSystem && mSystem->hasPlatformId(PlatformIds::ARCADE));
+	//return Genres::genreExists(&getMetadata(), GENRE_SPINNER);
+}
+
 FileData* FileData::getSourceFileData()
 {
 	return this;
@@ -469,15 +483,17 @@ std::string FileData::getlaunchCommand(LaunchGameOptions& options, bool includeC
 	// must really;-) be done before window->deinit while it closes joysticks
 	std::string controllersConfig = InputManager::getInstance()->configureEmulators();
 
-#if WIN32
 	if (gameToUpdate->isLightGunGame())
-#else
-	if (InputManager::getInstance()->getGuns().size() && gameToUpdate->isLightGunGame())
-#endif
 		controllersConfig = controllersConfig + "-lightgun ";
 
         if (gameToUpdate->isWheelGame())
 		controllersConfig = controllersConfig + "-wheel ";
+
+        if (gameToUpdate->isTrackballGame())
+		controllersConfig = controllersConfig + "-trackball ";
+
+        if (gameToUpdate->isSpinnerGame())
+		controllersConfig = controllersConfig + "-spinner ";
 
 	std::string systemName = system->getName();
 	std::string emulator = getEmulator();
@@ -571,6 +587,12 @@ std::string FileData::getlaunchCommand(LaunchGameOptions& options, bool includeC
 	if (options.netPlayMode != DISABLED && (forceCore || gameToUpdate->isNetplaySupported()) && command.find("%NETPLAY%") == std::string::npos)
 		command = command + " %NETPLAY%"; // Add command line parameter if the netplay option is defined at <core netplay="true"> level
 
+	if (SystemConf::getInstance()->get("global.netplay.nickname").empty())
+	{
+		SystemConf::getInstance()->set("global.netplay.nickname", ApiSystem::getInstance()->getApplicationName() + " Player");
+		SystemConf::getInstance()->saveSystemConf();
+	}
+
 	if (options.netPlayMode == CLIENT || options.netPlayMode == SPECTATOR)
 	{
 		std::string mode = (options.netPlayMode == SPECTATOR ? "spectator" : "client");
@@ -640,6 +662,7 @@ std::string FileData::getMessageFromExitCode(int exitCode)
 	case 205:
 		return _("CORE IS MISSING");
 	case 299:
+	case 250:
 		{
 	#if WIN32
 			std::string messageFile = Utils::FileSystem::combine(Utils::FileSystem::getTempPath(), "launch_error.log");
@@ -722,7 +745,7 @@ bool FileData::launchGame(Window* window, LaunchGameOptions options)
 		ResourceManager::getInstance()->reloadAll();
 		window->deinit();
 		window->init();
-		window->setCustomSplashScreen(gameToUpdate->getImagePath(), gameToUpdate->getName());
+		window->setCustomSplashScreen(gameToUpdate->getImagePath(), gameToUpdate->getName(), gameToUpdate);
 	}
 	else
 		window->init(hideWindow);
@@ -1097,7 +1120,7 @@ const std::vector<FileData*> FolderData::getChildrenListToDisplay()
 		bool foldersFirst = Settings::ShowFoldersFirst();
 		bool favoritesFirst = getSystem()->getShowFavoritesFirst();
 
-		std::sort(ret.begin(), ret.end(), [sort, foldersFirst, favoritesFirst](const FileData* file1, const FileData* file2) -> bool
+		std::stable_sort(ret.begin(), ret.end(), [sort, foldersFirst, favoritesFirst](const FileData* file1, const FileData* file2) -> bool
 			{
 				if (favoritesFirst && file1->getFavorite() != file2->getFavorite())
 					return file1->getFavorite();
@@ -1293,20 +1316,38 @@ void FolderData::removeChild(FileData* file)
 	assert(file->getParent() == this);
 #endif
 
-	for (auto it = mChildren.cbegin(); it != mChildren.cend(); it++)
+	auto it = std::find(mChildren.begin(), mChildren.end(), file);
+	if (it != mChildren.end())
 	{
-		if (*it == file)
-		{
-			file->setParent(NULL);
-			mChildren.erase(it);
-			return;
-		}
+		file->setParent(nullptr);
+		std::iter_swap(it, mChildren.end() - 1);
+		mChildren.pop_back();
 	}
 
 	// File somehow wasn't in our children.
 #if DEBUG
 	assert(false);
 #endif
+}
+
+void FolderData::bulkRemoveChildren(std::vector<FileData*>& mChildren, const std::unordered_set<FileData*>& filesToRemove)
+{
+	mChildren.erase(
+		std::remove_if(
+			mChildren.begin(),
+			mChildren.end(),
+			[&filesToRemove](FileData* file)
+			{
+				if (filesToRemove.count(file))
+				{
+					file->setParent(nullptr);
+					return true;
+				}
+				return false;
+			}
+		),
+		mChildren.end()
+	);
 }
 
 FileData* FolderData::FindByPath(const std::string& path)
@@ -1486,23 +1527,26 @@ void FileData::detectLanguageAndRegion(bool overWrite)
 		mMetadata.set(MetaDataId::Region, info.region);
 }
 
-void FolderData::removeVirtualFolders()
-{
+void FolderData::removeVirtualFolders() {
 	if (!mOwnsChildrens)
 		return;
 
-	for (int i = mChildren.size() - 1; i >= 0; i--)
+	std::unordered_set<FileData*> filesToRemove;
+
+	for (auto file : mChildren)
 	{
-		auto file = mChildren.at(i);
 		if (file->getType() != FOLDER)
 			continue;
 
-		if (((FolderData*)file)->mOwnsChildrens)
-			continue;
-
-		removeChild(file);
-		delete file;
+		auto folder = static_cast<FolderData*>(file);
+		if (!folder->mOwnsChildrens)
+			filesToRemove.insert(file);
 	}
+
+	bulkRemoveChildren(mChildren, filesToRemove);
+
+	for (auto file : filesToRemove)
+		delete file;
 }
 
 void FileData::checkCrc32(bool force)
@@ -1706,14 +1750,13 @@ FolderData::~FolderData()
 	clear();
 }
 
-void FolderData::clear()
-{
+void FolderData::clear() {
 	if (mOwnsChildrens)
-	{
-		for (int i = mChildren.size() - 1; i >= 0; i--)
-			delete mChildren.at(i);
-	}
-
+		for (auto* child : mChildren)
+		{
+			child->setParent(nullptr); // prevent each child from inefficiently removing itself from our mChildren vector, since we're about to clear it anyway
+			delete child;
+		}
 	mChildren.clear();
 }
 

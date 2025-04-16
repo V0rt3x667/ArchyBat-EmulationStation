@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-05-21 16:24+0000\n"
+"PO-Revision-Date: 2025-03-17 20:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -407,6 +407,36 @@ msgstr "KEINE WIFI-NETZWERKE GEFUNDEN"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "SUCHE NACH WIFI-NETZWERKEN"
 
+msgid "DEVICE OPTIONS"
+msgstr "GERÄTEOPTIONEN"
+
+msgid "DISCONNECT"
+msgstr "VERBINDUNG TRENNEN"
+
+msgid "CONNECT"
+msgstr "VERBINDEN"
+
+msgid "FORGET"
+msgstr "VERGESSEN"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr "SIND SIE SICHER, DASS SIE '%s' VERGESSEN WOLLEN?"
+
+msgid "YES"
+msgstr "JA"
+
+msgid "NO"
+msgstr "NEIN"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr "EINE VERBINDUNG ZU '%s' HERSTELLEN?"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr "DIE VERBINDUNG ZU '%s' TRENNEN?"
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "PAD TO KEYBOARD KONFIGURATION"
 
@@ -440,9 +470,6 @@ msgstr "MAUSZEIGER"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "MAUSZEIGER EMULIEREN"
 
-msgid "NO"
-msgstr "NEIN"
-
 msgid "LEFT ANALOG STICK"
 msgstr "LINKER ANALOG-STICK"
 
@@ -454,9 +481,6 @@ msgstr "BESCHREIBUNG ANPASSEN"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "SIND SIE SICHER, DASS SIE DIESES ELEMENT ENTFERNEN MÖCHTEN?"
-
-msgid "YES"
-msgstr "JA"
 
 msgid "DELETE MAPPING"
 msgstr "ZUORDNUNG LÖSCHEN"
@@ -521,6 +545,25 @@ msgstr "MONTREAL"
 msgid "SAO PAULO"
 msgstr "SAO PAULO"
 
+msgid "CUSTOM"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "CUSTOM RELAY SERVER"
+msgstr "BENUTZERDEFINIERTER RELAY-SERVER"
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr "AUTOMATISCH LOBBY ERSTELLEN"
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr "Erstellt beim Start eines Spiels automatisch eine Netplay-Lobby."
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr "NUR RELAY-SERVER-SPIELE ANZEIGEN"
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr ""
+"Relaisserver-Spiele haben eine höhere Chance auf eine erfolgreiche Teilnahme."
+
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "NICHT VERFÜGBARE SPIELE ANZEIGEN"
 
@@ -529,7 +572,7 @@ msgstr ""
 "Räume für Spiele anzeigen, die auf dieser Maschine nicht vorhanden sind."
 
 msgid "GAME INDEXES"
-msgstr "SPIEL-INDIZES"
+msgstr "SPIEL-INDEXE"
 
 msgid "INDEX NEW GAMES AT STARTUP"
 msgstr "BEIM START NEUE SPIELE INDEXIEREN"
@@ -646,6 +689,25 @@ msgstr ""
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "RETROACHIEVEMENTS KÖNNEN NICHT AKTIVIERT WERDEN:"
 
+msgid "BLUETOOTH DEVICE LIST"
+msgstr "BLUETOOTH GERÄTELISTE"
+
+msgid "REMOVE ALL"
+msgstr "ALLE ENTFERNEN"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "KEINE BLUETOOTH-GERÄTE GEFUNDEN"
+
+msgid " (Connected)"
+msgstr " (Verbunden)"
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "BLUETOOTH-GERÄTE WURDEN GELÖSCHT."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "SIND SIE SICHER, DASS SIE '%s' ENTFERNEN MÖCHTEN?"
+
 msgid "THE BEZEL PROJECT"
 msgstr "THE BEZEL PROJECT"
 
@@ -654,7 +716,7 @@ msgstr "BEZELS ZUM INSTALLIEREN/ENTFERNEN AUSWÄHLEN"
 
 #, c-format
 msgid "UPDATING %s"
-msgstr "UPDATE %s"
+msgstr "UPDATING %s"
 
 msgid "UPDATE IS READY"
 msgstr "UPDATE IST BEREIT"
@@ -788,14 +850,20 @@ msgstr "UNGÜLTIGE PARAMETER"
 msgid "fade"
 msgstr "Überblenden"
 
+msgid "fast fade"
+msgstr "Schnelles Überblenden"
+
 msgid "slide"
 msgstr "Gleiten"
 
-msgid "instant"
-msgstr "Sofort"
+msgid "fast slide"
+msgstr "Schnelles Gleiten"
 
 msgid "fade & slide"
 msgstr "Überblenden & Gleiten"
+
+msgid "instant"
+msgstr "Sofort"
 
 msgid "System"
 msgstr "System"
@@ -829,6 +897,39 @@ msgstr "CPU max Frequenz"
 
 msgid "Cpu feature"
 msgstr "CPU Eigenschaft"
+
+msgid "Available Memory"
+msgstr "Verfügbarer Speicher"
+
+msgid "Display Resolution"
+msgstr "Bildschirmauflösung"
+
+msgid "Display Refresh Rate"
+msgstr "Bildwiederholfrequenz"
+
+msgid "OpenGL Driver Version"
+msgstr "OpenGL-Treiberversion"
+
+msgid "Vulkan Driver Name"
+msgstr "Vulkan-Treibername"
+
+msgid "Vulkan Driver Version"
+msgstr "Vulkan-Treiberversion"
+
+msgid "Data Partition Format"
+msgstr "Datenpartition Format"
+
+msgid "Data Partition Available Space"
+msgstr "Verfügbarer Speicherplatz für die Partition"
+
+msgid "Network IP Address"
+msgstr "Netzwerk-IP-Adresse"
+
+msgid "UEFI Boot"
+msgstr "UEFI Boot"
+
+msgid "Secure Boot"
+msgstr "Secure Boot"
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -941,58 +1042,52 @@ msgid "SERVICES"
 msgstr "SERVICES"
 
 msgid "DMD"
-msgstr ""
+msgstr "DMD"
 
 msgid "SERVER"
-msgstr ""
+msgstr "SERVER"
 
 msgid "DISABLED"
 msgstr "DEAKTIVIERT"
 
 msgid "DMDSERVER (for real dmd)"
-msgstr ""
+msgstr "DMDSERVER (für echtes DMD)"
 
 msgid "SIMULATOR (for web dmd)"
-msgstr ""
+msgstr "SIMULATOR (für Web-DMD)"
 
 msgid "dmd server"
-msgstr ""
+msgstr "DMD-Server"
 
 msgid "FORMAT"
-msgstr ""
+msgstr "FORMAT"
 
 msgid "AUTO"
 msgstr "AUTO"
 
 msgid "dmd matrix size"
-msgstr ""
-
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
+msgstr "DMD-Matrix Größe"
 
 msgid "BRIGHTNESS"
 msgstr "HELLIGKEIT"
 
 msgid "DMDSERVER stopped"
-msgstr ""
+msgstr "DMDSERVER gestoppt"
 
 msgid "DMDSERVER restarted"
-msgstr ""
+msgstr "DMDSERVER neu gestartet"
 
 msgid "DMDSERVER started"
-msgstr ""
+msgstr "DMDSERVER gestartet"
 
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "MULTISCREENS"
 
 msgid "BACKGLASS / INFORMATION SCREEN"
-msgstr ""
+msgstr "BACKGLASS / INFORMATIONS-SCREEN"
 
 msgid "THEME"
-msgstr ""
+msgstr "THEME"
 
 msgid "VIDEO OUTPUT"
 msgstr "VIDEOAUSGANG"
@@ -1001,10 +1096,10 @@ msgid "VIDEO MODE"
 msgstr "VIDEOMODUS"
 
 msgid "Sets the display's resolution."
-msgstr ""
+msgstr "Legt die Auflösung des Displays fest."
 
 msgid "ROTATION"
-msgstr ""
+msgstr "ROTATION"
 
 msgid "0 DEGREES"
 msgstr "0 GRAD"
@@ -1022,7 +1117,7 @@ msgid "SCREEN ROTATION"
 msgstr "BILDSCHIRMANZEIGE DREHEN"
 
 msgid "DMD SCREEN"
-msgstr ""
+msgstr "DMD-BILDSCHIRM"
 
 msgid "FRONTEND DEVELOPER OPTIONS"
 msgstr "FRONTEND ENTWICKLEROPTIONEN"
@@ -1045,9 +1140,6 @@ msgstr "VSYNC"
 
 msgid "OVERSCAN"
 msgstr "OVERSCAN"
-
-msgid "Sets the display's resolution for emulationstation."
-msgstr "Legt die Auflösung für Emulationstation fest."
 
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "OMX PLAYER VERWENDEN (HARDWARE-BESCHLEUNIGT)"
@@ -1098,10 +1190,10 @@ msgstr "Bereinige"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "NUTZUNGSDATEN DER SPIELELISTEN ZURÜCKSETZEN"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
-"Zurücksetzen der Werte der Metadaten Spieldauer, Spielezähler und Zuletzt "
-"gespielt."
+"Setzt die Werte der Metadaten „GameTime“, „PlayCount“ und „LastPlayed“ "
+"zurück."
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "DATEIERWEITERUNGEN ZURÜCKSETZEN"
@@ -1189,6 +1281,9 @@ msgstr "KARUSSEL-ÜBERGÄNGE"
 msgid "QUICK SYSTEM SELECT"
 msgstr "SYSTEM SCHNELLAUSWAHL"
 
+msgid "QUICK JUMP LETTER"
+msgstr "ZUM ANFANGSBUCHSTABEN SPRINGEN"
+
 msgid "ON-SCREEN KEYBOARD"
 msgstr "BILDSCHIRMTASTATUR"
 
@@ -1224,10 +1319,10 @@ msgid "GUN MOVE TOLERENCE"
 msgstr "WAFFENBEWEGUNG TOLERANZ"
 
 msgid "ENABLE PS3 CONTROLLER SUPPORT"
-msgstr ""
+msgstr "PS3-CONTROLLER-UNTERSTÜTZUNG AKTIVIEREN"
 
 msgid "Might have negative impact on security."
-msgstr ""
+msgstr "Könnte negative Auswirkungen auf die Sicherheit haben."
 
 msgid "ENABLE HID JOYSTICK DRIVERS"
 msgstr "HID-JOYSTICK TREIBER AKTIVIEREN"
@@ -1367,6 +1462,9 @@ msgstr "KODI BEIM BOOTVORGANG STARTEN"
 msgid "HARDWARE"
 msgstr "HARDWARE"
 
+msgid "Sets the display's resolution for emulationstation."
+msgstr "Legt die Auflösung für Emulationstation fest."
+
 msgid "AUDIO OUTPUT"
 msgstr "AUDIOAUSGANG"
 
@@ -1447,7 +1545,7 @@ msgid "OVERCLOCK"
 msgstr "ÜBERTAKTEN"
 
 msgid "LED HARDWARE"
-msgstr ""
+msgstr "LED-HARDWARE"
 
 msgid "RED"
 msgstr "ROT"
@@ -1459,7 +1557,7 @@ msgid "BLUE"
 msgstr "BLAU"
 
 msgid "LED BRIGHTNESS"
-msgstr ""
+msgstr "LED-HELLIGKEIT"
 
 msgid "STORAGE"
 msgstr "DATENSPEICHER"
@@ -1778,6 +1876,12 @@ msgstr "WAFFEN SYMBOL ANZEIGEN"
 msgid "SHOW WHEEL ICON"
 msgstr "RAD SYMBOL ANZEIGEN"
 
+msgid "SHOW TRACKBALL ICON"
+msgstr "TRACKBALL-SYMBOL ANZEIGEN"
+
+msgid "SHOW SPINNER ICON"
+msgstr "SPINNER-SYMBOL ANZEIGEN"
+
 msgid "SHOW FILENAMES INSTEAD"
 msgstr "DATEINAMEN IN LISTEN ANZEIGEN"
 
@@ -2085,10 +2189,10 @@ msgid "SAVE STATES"
 msgstr "SPEICHERSTÄNDE"
 
 msgid "OPEN"
-msgstr "OFFEN"
+msgstr "ÖFFNEN"
 
 msgid "START A NETPLAY GAME"
-msgstr "NETPLAY-SPIEL STARTEN"
+msgstr "STARTE EIN NETPLAY-SPIEL"
 
 msgid "NETPLAY"
 msgstr "NETPLAY"
@@ -2097,7 +2201,7 @@ msgid "START GAME"
 msgstr "SPIEL STARTEN"
 
 msgid "HOST A NETPLAY GAME"
-msgstr "NEUES NETPLAY-SPIEL HOSTEN"
+msgstr "HOSTE EIN NETPLAY-SPIEL"
 
 msgid "PUBLICLY ANNOUNCE GAME"
 msgstr "SPIEL ÖFFENTLICH ANKÜNDIGEN"
@@ -2211,7 +2315,7 @@ msgid "PREFERED REGION"
 msgstr "BEVORZUGTE REGION"
 
 msgid "OVERWRITE NAMES"
-msgstr ""
+msgstr "ÜBERSCHREIBE NAMEN"
 
 msgid "OVERWRITE DESCRIPTIONS"
 msgstr "ÜBERSCHREIBE BESCHREIBUNGEN"
@@ -2220,7 +2324,7 @@ msgid "OVERWRITE MEDIAS"
 msgstr "ÜBERSCHREIBE MEDIEN"
 
 msgid "SCRAPE FOR"
-msgstr "SCRAPEN FÜR"
+msgstr "SCRAPEN VON"
 
 msgid "SHORT NAME"
 msgstr "KURZBEZEICHNUNG"
@@ -2326,6 +2430,9 @@ msgstr "SPIELE VON VERSTECKTEN SYSTEMEN IN SAMMLUNGEN ANZEIGEN"
 
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "LEERE SYSTEME ANZEIGEN"
+
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr "ZEIGE KEINE GRUPPEN MIT NUR EINEM SYSTEM"
 
 msgid "Loading..."
 msgstr "Lade..."
@@ -2441,22 +2548,6 @@ msgstr "aktualisieren"
 msgid "NO MISSING BIOS"
 msgstr "KEIN FEHLENDES BIOS"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "BLUETOOTH-GERÄT ENTFERNEN"
-
-msgid "REMOVE ALL"
-msgstr "ALLE ENTFERNEN"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "KEINE BLUETOOTH-GERÄTE GEFUNDEN"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "BLUETOOTH-GERÄTE WURDEN GELÖSCHT."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "SIND SIE SICHER, DASS SIE '%s' ENTFERNEN MÖCHTEN?"
-
 msgid "ZOOM OUT"
 msgstr "HERAUSZOOMEN"
 
@@ -2503,6 +2594,12 @@ msgstr "GLEICHE ROM-DATEI"
 
 msgid "UNAVAILABLE CORE"
 msgstr "NICHT VERFÜGBARER CORE"
+
+msgid "LAN GAMES"
+msgstr "LAN-SPIELE"
+
+msgid "ONLINE GAMES"
+msgstr "ONLINE-SPIELE"
 
 msgid "AVAILABLE GAMES"
 msgstr "VERFÜGBARE SPIELE"
@@ -2568,7 +2665,7 @@ msgid "BLUETOOTH"
 msgstr "BLUETOOTH"
 
 msgid "ENABLE BLUETOOTH"
-msgstr ""
+msgstr "BLUETOOTH AKTIVIEREN"
 
 msgid "PAIR BLUETOOTH PADS AUTOMATICALLY"
 msgstr "BLUETOOTH-GAMEPADS AUTOMATISCH KOPPELN"
@@ -2577,13 +2674,22 @@ msgid "PAIR A BLUETOOTH DEVICE MANUALLY"
 msgstr "BLUETOOTH-GERÄT MANUELL KOPPELN"
 
 msgid "SHOW CONTROLLER NOTIFICATIONS"
-msgstr ""
+msgstr "CONTROLLER-BENACHRICHTIGUNGEN ANZEIGEN"
 
 msgid "SHOW CONTROLLER ACTIVITY"
 msgstr "CONTROLLER-AKTIVITÄT ANZEIGEN"
 
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "CONTROLLER AKKUSTAND ANZEIGEN"
+
+msgid "DRAW GUN CROSSHAIR"
+msgstr "FADENKREUZ ANZEIGEN"
+
+msgid "BEHAVIOR"
+msgstr "VERHALTEN"
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr "HOTKEYS ZUM BEENDEN EINSCHRÄNKEN"
 
 msgid "default"
 msgstr "Standard"
@@ -2617,6 +2723,9 @@ msgstr "RAHMENFARBE"
 
 msgid "WHITE"
 msgstr "WEISS"
+
+msgid "BORDER RATIO"
+msgstr "RAHMENVERHÄLTNIS"
 
 msgid "CAMERA CONTRAST"
 msgstr "KAMERA KONTRAST"
@@ -2758,6 +2867,15 @@ msgstr "OMX PLAYER FÜR BILDSCHIRMSCHONER VERWENDEN"
 
 msgid "SHOW GAME INFO"
 msgstr "SPIELINFORMATIONEN ANZEIGEN"
+
+msgid "SHOW DATE TIME"
+msgstr "ZEIGE DATUM/UHRZEIT"
+
+msgid "DATE FORMAT"
+msgstr "DATUMSFORMAT"
+
+msgid "TIME FORMAT"
+msgstr "ZEITFORMAT"
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "BANNER ALS SPIELINFO VERWENDEN"
@@ -2980,6 +3098,12 @@ msgstr "LIGHTGUN"
 msgid "STEERING WHEEL"
 msgstr "LENKRAD"
 
+msgid "TRACKBALL"
+msgstr "TRACKBALL"
+
+msgid "SPINNER"
+msgstr "SPINNER"
+
 msgid "HAVING MEDIAS"
 msgstr "VORHANDENE MEDIEN"
 
@@ -3004,8 +3128,8 @@ msgstr "SPIELELISTEN UPDATEN, UM ÄNDERUNGEN ZU ÜBERNEHMEN."
 msgid "Loading system config..."
 msgstr "Lade Systemkonfiguration..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "SICHERE METADATEN. BITTE WARTEN..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr "METADATEN WERDEN GESPEICHERT. BITTE WARTEN..."
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "DER EMULATOR WURDE UNERWARTET BEENDET"
@@ -3027,6 +3151,9 @@ msgstr "CORE FEHLT"
 
 msgid "UKNOWN ERROR"
 msgstr "UNBEKANNTER FEHLER"
+
+msgid "Interlaced"
+msgstr "Interlaced"
 
 msgid "all games"
 msgstr "alle Spiele"
@@ -3060,6 +3187,12 @@ msgstr "Lightgun-Spiele"
 
 msgid "wheel games"
 msgstr "Lenkrad-Spiele"
+
+msgid "trackball games"
+msgstr "Trackball-Spiele"
+
+msgid "spinner games"
+msgstr "Spinner-Spiele"
 
 msgid "collections"
 msgstr "Sammlungen"

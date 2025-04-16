@@ -407,6 +407,36 @@ msgstr "NO S’HA TROBAR CAP XARXA WIFI"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "BUSCANT XARXES WIFI"
 
+msgid "DEVICE OPTIONS"
+msgstr ""
+
+msgid "DISCONNECT"
+msgstr ""
+
+msgid "CONNECT"
+msgstr ""
+
+msgid "FORGET"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr ""
+
+msgid "YES"
+msgstr "SÍ"
+
+msgid "NO"
+msgstr "NO"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr ""
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "CONFIGURACIÓ DE COMANDAMENT A TECLAT"
 
@@ -440,9 +470,6 @@ msgstr "CURSOR DE RATOLÍ"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "EMULAR EL CURSOR DEL RATOLÍ"
 
-msgid "NO"
-msgstr "NO"
-
 msgid "LEFT ANALOG STICK"
 msgstr "STICK ANALÒGIC ESQUERRE"
 
@@ -454,9 +481,6 @@ msgstr "EDITAR DESCRIPCIÓ"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "ESTÀS SEGUR QUE VOLS ESBORRAR AQUEST ELEMENT?"
-
-msgid "YES"
-msgstr "SÍ"
 
 msgid "DELETE MAPPING"
 msgstr "ELIMINA EL MAPATGE"
@@ -520,6 +544,24 @@ msgstr "MONTREAL"
 
 msgid "SAO PAULO"
 msgstr "SAO PAULO"
+
+msgid "CUSTOM"
+msgstr ""
+
+msgid "CUSTOM RELAY SERVER"
+msgstr ""
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr ""
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr ""
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "MOSTRAR JOCS NO DISPONIBLES"
@@ -646,6 +688,25 @@ msgstr ""
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "NO ES PODEN ACTIVAR ELS RETROACHIEVEMENTS:"
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr ""
+
+msgid "REMOVE ALL"
+msgstr "DESVINCULAR TOT"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "NO S’HA TROBAT CAP DISPOSITIU BLUETOOTH"
+
+msgid " (Connected)"
+msgstr ""
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "ELS DISPOSITIUS BLUETOOTH S'HAN ELIMINAT."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "ESTEU SEGURS DE VOLER ELIMINAR ‘%s’?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "THE BEZEL PROJECT (MOTLLURES)"
@@ -789,14 +850,20 @@ msgstr "VALORS NO VÀLIDS"
 msgid "fade"
 msgstr "esvair"
 
+msgid "fast fade"
+msgstr ""
+
 msgid "slide"
 msgstr "lliscar"
 
-msgid "instant"
-msgstr "instantani"
+msgid "fast slide"
+msgstr ""
 
 msgid "fade & slide"
 msgstr "esvair i lliscar"
+
+msgid "instant"
+msgstr "instantani"
 
 msgid "System"
 msgstr "Sistema"
@@ -830,6 +897,39 @@ msgstr "Freqüència màxima del processador"
 
 msgid "Cpu feature"
 msgstr "Característica del processador"
+
+msgid "Available Memory"
+msgstr ""
+
+msgid "Display Resolution"
+msgstr ""
+
+msgid "Display Refresh Rate"
+msgstr ""
+
+msgid "OpenGL Driver Version"
+msgstr ""
+
+msgid "Vulkan Driver Name"
+msgstr ""
+
+msgid "Vulkan Driver Version"
+msgstr ""
+
+msgid "Data Partition Format"
+msgstr ""
+
+msgid "Data Partition Available Space"
+msgstr ""
+
+msgid "Network IP Address"
+msgstr ""
+
+msgid "UEFI Boot"
+msgstr ""
+
+msgid "Secure Boot"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -968,12 +1068,6 @@ msgstr "AUTO"
 msgid "dmd matrix size"
 msgstr ""
 
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
-
 msgid "BRIGHTNESS"
 msgstr "LLUENTOR"
 
@@ -1046,9 +1140,6 @@ msgstr "SINCRONITZACIÓ VERTICAL"
 msgid "OVERSCAN"
 msgstr "SOBRE-EXPLORACIÓ"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr "Estableix la resolució de pantalla per emulestation"
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "USAR REPRODUCTOR OMX (ACCELERAT PER MAQUINARI)"
 
@@ -1099,9 +1190,8 @@ msgstr "Netejant"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "RESTABLEIX LES DADES D'ÚS DE LES LISTES DE JOCS"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
-"Restableix els valors de les metadades GameTime, PlayCount i LastPlayed."
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "REINICIAR EXTENSIONS D'ARXIU"
@@ -1186,6 +1276,9 @@ msgstr "CARRUSEL DE TRANSICIONS"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "SELECCIÓ RÀPIDA DEL SISTEMA"
+
+msgid "QUICK JUMP LETTER"
+msgstr ""
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "TECLAT EN PANTALLA"
@@ -1366,6 +1459,9 @@ msgstr "INICIAR KODI A L'INICIAR EL SISTEMA"
 
 msgid "HARDWARE"
 msgstr "MAQUINARI"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr "Estableix la resolució de pantalla per emulestation"
 
 msgid "AUDIO OUTPUT"
 msgstr "SORTIDA D'ÀUDIO"
@@ -1774,6 +1870,12 @@ msgid "SHOW GUN ICON"
 msgstr ""
 
 msgid "SHOW WHEEL ICON"
+msgstr ""
+
+msgid "SHOW TRACKBALL ICON"
+msgstr ""
+
+msgid "SHOW SPINNER ICON"
 msgstr ""
 
 msgid "SHOW FILENAMES INSTEAD"
@@ -2324,6 +2426,9 @@ msgstr "MOSTRAR JOCS OCULTS A COL·LECCIONS"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "MOSTRAR SISTEMES BUITS"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr ""
+
 msgid "Loading..."
 msgstr "Carregant..."
 
@@ -2438,22 +2543,6 @@ msgstr "actualitzar"
 msgid "NO MISSING BIOS"
 msgstr "NO FALTEN BIOS"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "OBLIDAR UN DISPOSITIU BLUETOOTH"
-
-msgid "REMOVE ALL"
-msgstr "DESVINCULAR TOT"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "NO S’HA TROBAT CAP DISPOSITIU BLUETOOTH"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "ELS DISPOSITIUS BLUETOOTH S'HAN ELIMINAT."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "ESTEU SEGURS DE VOLER ELIMINAR ‘%s’?"
-
 msgid "ZOOM OUT"
 msgstr "ALLUNYAR"
 
@@ -2500,6 +2589,12 @@ msgstr "LA ROM ÉS IGUAL"
 
 msgid "UNAVAILABLE CORE"
 msgstr "NUCLI NO DISPONIBLE"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "JOCS DISPONIBLES"
@@ -2581,6 +2676,15 @@ msgstr "MOSTRAR L'ACTIVITAT DEL COMANDAMENT"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "MOSTRAR EL NIVELL DE BATERIA DEL COMANDAMENT"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr ""
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "per defecte"
 
@@ -2613,6 +2717,9 @@ msgstr "COLOR DE LES VORES"
 
 msgid "WHITE"
 msgstr "BLANC"
+
+msgid "BORDER RATIO"
+msgstr ""
 
 msgid "CAMERA CONTRAST"
 msgstr "CONTRAST DE CÀMERA"
@@ -2754,6 +2861,15 @@ msgstr "UTILITZAR REPRODUCTOR OMX A L’ESTALVI DE PANTALLA"
 
 msgid "SHOW GAME INFO"
 msgstr "MOSTRAR INFORMACIÓ DEL JOC"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "UTILITZAR MARQUESINA COM A INFORMACIÓ DEL JOC"
@@ -2975,6 +3091,12 @@ msgstr "PISTOLA DE LLUM"
 msgid "STEERING WHEEL"
 msgstr "VOLANT"
 
+msgid "TRACKBALL"
+msgstr ""
+
+msgid "SPINNER"
+msgstr ""
+
 msgid "HAVING MEDIAS"
 msgstr ""
 
@@ -2999,8 +3121,8 @@ msgstr "ACTUALITZI LES GAMELISTS PER A APLICAR ELS CANVIS."
 msgid "Loading system config..."
 msgstr "Carregant configuració de sistema..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "DESANT METADADES. SI US PLAU ESPERI..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr ""
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "LA EMULACIÓ S'HA INTERROMPUT DE MANERA INESPERADA"
@@ -3022,6 +3144,9 @@ msgstr "NUCLI INEXISTENT"
 
 msgid "UKNOWN ERROR"
 msgstr "ERROR DESCONEGUT"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "tots el jocs"
@@ -3056,6 +3181,12 @@ msgstr "jocs de pistola lightgun"
 # Maybe Wheel is like "roulette"?
 msgid "wheel games"
 msgstr "jocs de conducció"
+
+msgid "trackball games"
+msgstr ""
+
+msgid "spinner games"
+msgstr ""
 
 msgid "collections"
 msgstr "col·leccions"
@@ -3462,6 +3593,16 @@ msgid ""
 msgstr ""
 "CALIBRANT PISTOLA\n"
 "Dispari als objectius per a calibrar"
+
+#~ msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+#~ msgstr ""
+#~ "Restableix els valors de les metadades GameTime, PlayCount i LastPlayed."
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "DESANT METADADES. SI US PLAU ESPERI..."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "OBLIDAR UN DISPOSITIU BLUETOOTH"
 
 #~ msgid "Achievements won"
 #~ msgstr "Trofeus guanyats"

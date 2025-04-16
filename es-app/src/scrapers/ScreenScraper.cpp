@@ -94,7 +94,7 @@ const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
 	{ PLAYSTATION, 57 },
 	{ PLAYSTATION_2, 58 },
 	{ PLAYSTATION_3, 59 },
-	// missing Sony Playstation 4 ?
+	{ PLAYSTATION_4, 60 },
 	{ PLAYSTATION_VITA, 62 },
 	{ PLAYSTATION_PORTABLE, 61 },
 	{ SUPER_NINTENDO, 4 },
@@ -107,6 +107,7 @@ const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
 	{ VECTREX, 102 },
 	{ TRS80_COLOR_COMPUTER, 144 },
 	{ TANDY, 144 },
+	{ DRAGON32, 91 },
 	{ SUPERGRAFX, 105 },
 	{ GP32, 101},
 
@@ -181,8 +182,11 @@ const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
 	{ CAMPUTER_LYNX, 88 },
 	{ EPOCH_GAMEPOCKET, 95 },
 	{ WASM4, 262 },
+	{ VIRCON32, 272 },
 	{ GAMATE, 266 },
-	{ ARDUBOY, 263 }
+	{ ARDUBOY, 263 },
+	{ LOWRESNX, 244 },
+	{ VC4000, 281 }
 };
 
 const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()

@@ -410,6 +410,36 @@ msgstr "WI-FI VERKKOJA EI LÖYTYNYT"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "ETSITÄÄN WI-FI VERKKOJA"
 
+msgid "DEVICE OPTIONS"
+msgstr ""
+
+msgid "DISCONNECT"
+msgstr ""
+
+msgid "CONNECT"
+msgstr ""
+
+msgid "FORGET"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr ""
+
+msgid "YES"
+msgstr "KYLLÄ"
+
+msgid "NO"
+msgstr "EI"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr ""
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "OHJAIMESTA-NÄPPÄIMISTÖÖN ASETUKSET"
 
@@ -443,9 +473,6 @@ msgstr "HIIREN KURSORI"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "EMULOI HIIREN KURSORIA"
 
-msgid "NO"
-msgstr "EI"
-
 msgid "LEFT ANALOG STICK"
 msgstr "VASEN ANALOGINEN SAUVA"
 
@@ -457,9 +484,6 @@ msgstr "MUOKKAA KUVAUSTA"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "OLETKO VARMA ETTÄ HALUAT POISTAA TÄMÄN KOHTEEN?"
-
-msgid "YES"
-msgstr "KYLLÄ"
 
 msgid "DELETE MAPPING"
 msgstr "POISTA KARTOITUS"
@@ -523,6 +547,24 @@ msgstr "MONTREAL"
 
 msgid "SAO PAULO"
 msgstr "SAO PAULO"
+
+msgid "CUSTOM"
+msgstr ""
+
+msgid "CUSTOM RELAY SERVER"
+msgstr ""
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr ""
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr ""
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "NÄYTÄ EI SAATAVILLA OLEVAT PELIT"
@@ -644,6 +686,25 @@ msgstr ""
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr ""
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr ""
+
+msgid "REMOVE ALL"
+msgstr "POISTA KAIKKI"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "BLUETOOTH-LAITTEITA EI LÖYTYNYT"
+
+msgid " (Connected)"
+msgstr ""
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "BLUETOOTH-LAITTEET ON POISTETTU."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "OLETKO VARMA, ETTÄ HALUAT POISTAA '%s' ?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "KEHYSPROJEKTI"
@@ -784,14 +845,20 @@ msgstr "VIRHEELLISET ARVOT"
 msgid "fade"
 msgstr "häivytä"
 
+msgid "fast fade"
+msgstr ""
+
 msgid "slide"
 msgstr "liu'uta"
 
-msgid "instant"
-msgstr "välittömästi"
+msgid "fast slide"
+msgstr ""
 
 msgid "fade & slide"
 msgstr "häivytä ja liu'uta"
+
+msgid "instant"
+msgstr "välittömästi"
 
 msgid "System"
 msgstr "Järjestelmä"
@@ -824,6 +891,39 @@ msgid "Cpu max frequency"
 msgstr "Prosessorin maksimi taajuus"
 
 msgid "Cpu feature"
+msgstr ""
+
+msgid "Available Memory"
+msgstr ""
+
+msgid "Display Resolution"
+msgstr ""
+
+msgid "Display Refresh Rate"
+msgstr ""
+
+msgid "OpenGL Driver Version"
+msgstr ""
+
+msgid "Vulkan Driver Name"
+msgstr ""
+
+msgid "Vulkan Driver Version"
+msgstr ""
+
+msgid "Data Partition Format"
+msgstr ""
+
+msgid "Data Partition Available Space"
+msgstr ""
+
+msgid "Network IP Address"
+msgstr ""
+
+msgid "UEFI Boot"
+msgstr ""
+
+msgid "Secure Boot"
 msgstr ""
 
 msgctxt "game_options"
@@ -963,12 +1063,6 @@ msgstr "AUTOMAATTINEN"
 msgid "dmd matrix size"
 msgstr ""
 
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
-
 msgid "BRIGHTNESS"
 msgstr "KIRKKAUS"
 
@@ -1042,9 +1136,6 @@ msgstr "VSYNC"
 msgid "OVERSCAN"
 msgstr "YLISKANNAUS"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr ""
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "KÄYTÄ OMX-SOITINTA (LAITTEISTO KIIHDYTETTY)"
 
@@ -1092,7 +1183,7 @@ msgstr "Siivotaan"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr ""
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
 
 msgid "RESET FILE EXTENSIONS"
@@ -1172,6 +1263,9 @@ msgid "CAROUSEL TRANSITIONS"
 msgstr "KARUSELLI SIIRTYMÄT"
 
 msgid "QUICK SYSTEM SELECT"
+msgstr ""
+
+msgid "QUICK JUMP LETTER"
 msgstr ""
 
 msgid "ON-SCREEN KEYBOARD"
@@ -1347,6 +1441,9 @@ msgstr "KÄYNNISTÄ KODI KÄYNNISTYESSÄ"
 
 msgid "HARDWARE"
 msgstr "LAITTEISTO"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr ""
 
 msgid "AUDIO OUTPUT"
 msgstr "ÄÄNEN ULOSTULO"
@@ -1751,6 +1848,12 @@ msgid "SHOW GUN ICON"
 msgstr ""
 
 msgid "SHOW WHEEL ICON"
+msgstr ""
+
+msgid "SHOW TRACKBALL ICON"
+msgstr ""
+
+msgid "SHOW SPINNER ICON"
 msgstr ""
 
 msgid "SHOW FILENAMES INSTEAD"
@@ -2302,6 +2405,9 @@ msgstr "NÄYTÄ PIILOTETTUJEN JÄRJESTELMIEN PELIT KOKOELMISSA"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "NÄYTÄ TYHJÄT JÄRJESTELMÄT"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr ""
+
 msgid "Loading..."
 msgstr "Ladataan..."
 
@@ -2416,22 +2522,6 @@ msgstr ""
 msgid "NO MISSING BIOS"
 msgstr "EI PUUTTUVAA BIOS:TA"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "UNOHDA BLUETOOTH-LAITE"
-
-msgid "REMOVE ALL"
-msgstr "POISTA KAIKKI"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "BLUETOOTH-LAITTEITA EI LÖYTYNYT"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "BLUETOOTH-LAITTEET ON POISTETTU."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "OLETKO VARMA, ETTÄ HALUAT POISTAA '%s' ?"
-
 msgid "ZOOM OUT"
 msgstr ""
 
@@ -2478,6 +2568,12 @@ msgstr "SAMA ROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "YDIN EI SAATAVILLA"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "SAATAVILLA OLEVAT PELIT"
@@ -2554,6 +2650,15 @@ msgstr "NÄYTÄ OHJAIMEN AKTIIVISUUS"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "NÄYTÄ OHJAIMEN AKUNTASO"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr ""
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "oletus"
 
@@ -2586,6 +2691,9 @@ msgstr ""
 
 msgid "WHITE"
 msgstr "VALKOINEN"
+
+msgid "BORDER RATIO"
+msgstr ""
 
 msgid "CAMERA CONTRAST"
 msgstr "KAMERAN KONTRASTI"
@@ -2727,6 +2835,15 @@ msgstr ""
 
 msgid "SHOW GAME INFO"
 msgstr "NÄYTÄ PELIN TIEDOT"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr ""
@@ -2948,6 +3065,12 @@ msgstr "VALOASE"
 msgid "STEERING WHEEL"
 msgstr ""
 
+msgid "TRACKBALL"
+msgstr ""
+
+msgid "SPINNER"
+msgstr ""
+
 msgid "HAVING MEDIAS"
 msgstr ""
 
@@ -2972,7 +3095,7 @@ msgstr ""
 msgid "Loading system config..."
 msgstr ""
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
+msgid "SAVING METADATA. PLEASE WAIT..."
 msgstr ""
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
@@ -2995,6 +3118,9 @@ msgstr "YDIN PUUTTUU"
 
 msgid "UKNOWN ERROR"
 msgstr "TUNTEMATON VIRHE"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "kaikki pelit"
@@ -3027,6 +3153,12 @@ msgid "lightgun games"
 msgstr "valoasepelit"
 
 msgid "wheel games"
+msgstr ""
+
+msgid "trackball games"
+msgstr ""
+
+msgid "spinner games"
 msgstr ""
 
 msgid "collections"
@@ -3430,6 +3562,9 @@ msgid ""
 "CALIBRATING GUN\n"
 "Fire on targets to calibrate"
 msgstr ""
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "UNOHDA BLUETOOTH-LAITE"
 
 #~ msgid "SELECT THEME FOLDER"
 #~ msgstr "VALITSE TEEMAN KANSIO"

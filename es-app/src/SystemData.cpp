@@ -50,6 +50,8 @@ static std::map<std::string, std::function<BindableProperty(SystemData*)>> prope
 	{ "showFavorites",      [] (SystemData* sys) { return sys->getShowFavoritesIcon(); } },
 	{ "showGun",            [] (SystemData* sys) { return sys->getBoolSetting("ShowGunIconOnGames"); } },
 	{ "showWheel",          [] (SystemData* sys) { return sys->getBoolSetting("ShowWheelIconOnGames"); } },
+	{ "showTrackball",      [] (SystemData* sys) { return sys->getBoolSetting("ShowTrackballIconOnGames"); } },
+	{ "showSpinner",      [] (SystemData* sys) { return sys->getBoolSetting("ShowSpinnerIconOnGames"); } },
 	{ "showParentFolder",   [] (SystemData* sys) { return sys->getShowParentFolder(); } },
 	{ "hasKeyboardMapping", [] (SystemData* sys) { return sys->hasKeyboardMapping(); } },
 	{ "isCheevosSupported", [] (SystemData* sys) { return sys->isCheevosSupported(); } },
@@ -402,6 +404,13 @@ void SystemData::createGroupedSystems()
 
 	for (auto item : map)
 	{	
+		// Don't group if system count is only 1 		
+		if (item.second.size() == 1 && Settings::getInstance()->HideUniqueGroups())
+		{
+			item.second[0]->getSystemEnvData()->mGroup = "";
+			continue;
+		}
+		
 		SystemData* system = nullptr;
 		bool existingSystem = false;
 
@@ -427,7 +436,7 @@ void SystemData::createGroupedSystems()
 			md.fullName = item.first;
 			md.themeFolder = item.first;
 
-			// Check if the system is described in es_systems but empty, to import metadatas )
+			// Check if the system is described in es_systems but empty, to import metadata )
 			auto sourceSystem = SystemData::loadSystem(item.first, false);
 			if (sourceSystem != nullptr)
 			{
@@ -1667,9 +1676,10 @@ bool SystemData::isCheevosSupported()
 			const std::set<std::string> cheevosSystems = {
 				"megadrive", "n64", "snes", "gb", "gba", "gbc", "nes", "fds", "pcengine", "segacd", "sega32x", "mastersystem",
 				"atarilynx", "lynx", "ngp", "gamegear", "pokemini", "atari2600", "fbneo", "fbn", "virtualboy", "pcfx", "tg16", "famicom", "msx1",
-				"psx", "sg-1000", "sg1000", "coleco", "colecovision", "atari7800", "wonderswan", "pc88", "saturn", "3do", "apple2", "neogeo", "arcade", "mame",
-				"nds", "arcade", "megadrive-japan", "pcenginecd", "supergrafx", "supervision", "snes-msu1", "amstradcpc",
-				"dreamcast", "psp", "jaguar", "intellivision", "vectrex", "megaduck", "arduboy", "wasm4", "ps2", "gamecube", "wii" };
+				"psx", "sg-1000", "sg1000", "coleco", "colecovision", "atari7800", "wonderswan", "pc88", "saturn", "3do", "apple2", "neogeo",
+				"arcade", "mame", "nds", "arcade", "megadrive-japan", "pcenginecd", "supergrafx", "supervision", "snes-msu1", "amstradcpc",
+				"dreamcast", "psp", "jaguar", "intellivision", "vectrex", "megaduck", "arduboy", "wasm4", "ps2", "gamecube", "wii", "channelf",
+				"o2em", "uzebox" };
 
 			if (cheevosSystems.find(getName()) != cheevosSystems.cend())
 				mIsCheevosSupported = 1;

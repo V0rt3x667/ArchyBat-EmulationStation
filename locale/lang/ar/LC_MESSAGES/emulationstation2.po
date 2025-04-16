@@ -8,7 +8,7 @@
 #               <Discord: the_username_is_ahmed>
 #               Jul 12, 2023 AD
 #               Dhul Hijjah 24, 1444 AH
-#               
+#
 # 3.
 #
 # 4.
@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: BATOCERA.LINUX\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2024-04-06 08:43+0300\n"
+"PO-Revision-Date: 2025-01-09 18:25+0100\n"
 "Last-Translator: Ahmed Essam <Ahmed4Communication@gmail.com>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
 "&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
 "X-Loco-Source-Locale: en\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Poedit 3.5\n"
 "X-Loco-Project-Id: 90894\n"
 "X-Loco-Api-Version: 1.0.24 20200519-1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -51,7 +51,7 @@ msgid "SCANNING BLUETOOTH"
 msgstr "بحث بلوتوث"
 
 msgid "Searching for devices..."
-msgstr "جار البحث عن وحدة تحكم..."
+msgstr "البحث عن وحدة تحكم..."
 
 msgid "BLUETOOTH SCAN IS ALREADY RUNNING."
 msgstr "بحث البلوتوث يعمل حاليا."
@@ -63,10 +63,10 @@ msgid "Formatting"
 msgstr "تهيئة"
 
 msgid "A REBOOT IS REQUIRED TO COMPLETE THE OPERATION"
-msgstr "يرجى اعادة تشغيل النظام لتتم اكتمال العملية"
+msgstr "يلزم إعادة التشغيل لإكمال العملية"
 
 msgid "A DRIVE IS ALREADY BEING FORMATTED."
-msgstr "تتم تهيئة جهاز حاليا."
+msgstr "تم تهيئة الجهاز بالفعل."
 
 msgid "Name"
 msgstr "الاسم"
@@ -102,7 +102,7 @@ msgid "Video"
 msgstr "فيديو المعاينة"
 
 msgid "enter path to video"
-msgstr "أدخل مسار الفيديو"
+msgstr "أدخل مسار فيديو المعاينة"
 
 msgid "Logo"
 msgstr "الشعار"
@@ -147,10 +147,10 @@ msgid "enter path to map"
 msgstr "أدخل مسار الخريطة"
 
 msgid "Bezel (16:9)"
-msgstr "الحواف (٩:١٦)"
+msgstr "الإطار المحيط (16:9)"
 
 msgid "enter path to bezel (16:9)"
-msgstr "أدخل مسار حواف (٩:١٦)"
+msgstr "أدخل مسار الاطار المحيط (16:9)"
 
 msgid "Cartridge"
 msgstr "خرطوشة"
@@ -165,10 +165,10 @@ msgid "enter path to alt boxart"
 msgstr "أدخل مسار الغلاف البديل"
 
 msgid "Box backside"
-msgstr "الغلاف من الخلف"
+msgstr "الغلاف الخلفي"
 
 msgid "enter path to box background"
-msgstr "أدخل مسار خلفية الغلاف"
+msgstr "أدخل مسار الغلاف الخلفي"
 
 msgid "Wheel"
 msgstr "عجلة"
@@ -177,7 +177,7 @@ msgid "enter path to wheel"
 msgstr "أدخل مسار العجلة"
 
 msgid "Mix"
-msgstr "مشكل"
+msgstr "دمج"
 
 msgid "enter path to mix"
 msgstr "ادخل المسار للدمج"
@@ -189,7 +189,7 @@ msgid "enter rating"
 msgstr "أدخل التقييم"
 
 msgid "Release date"
-msgstr "الإصدار"
+msgstr "تاريخ الإصدار"
 
 msgid "enter release date"
 msgstr "أدخل تاريخ الإصدار"
@@ -264,7 +264,7 @@ msgid "Last played"
 msgstr "آخر ما لعب"
 
 msgid "enter last played date"
-msgstr "ادخل تاريخ آخر ما لعب"
+msgstr "ادخل تاريخ آخر مرة لعب"
 
 msgid "Crc32"
 msgstr "Crc32"
@@ -303,7 +303,7 @@ msgid "Cheevos checksum"
 msgstr "تحقيق مجموع تشيفوس"
 
 msgid "Cheevos Game ID"
-msgstr "رقم تعريف اللعبة في تشيفوس"
+msgstr "ر.ت اللعبة في تشيفوس"
 
 msgid "Screenscraper Game ID"
 msgstr "ر.ت لعبة جالِب الشاشة"
@@ -443,6 +443,36 @@ msgstr "لم يتم العثور على شبكة وايفاي"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "جارِ البحث عن شبكة WIFI"
 
+msgid "DEVICE OPTIONS"
+msgstr "إعدادات الجهاز"
+
+msgid "DISCONNECT"
+msgstr "قطع الاتصال"
+
+msgid "CONNECT"
+msgstr "اتصال"
+
+msgid "FORGET"
+msgstr "نسيان"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr "هل أنت متأكد أنك تريد أن تنسى '%s' ؟"
+
+msgid "YES"
+msgstr "نعم"
+
+msgid "NO"
+msgstr "لا"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr "هل أنت متأكد أنك تريد الاتصال بـ '%s'؟"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr "هل أنت متأكد أنك تريد فصل '%s'؟"
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "إعدادات لوحة تحكم إلى لوحة مفاتيح"
 
@@ -456,16 +486,16 @@ msgid "DELETE"
 msgstr "حذف"
 
 msgid "PLAYER 1"
-msgstr "لاعب ١"
+msgstr "لاعب 1"
 
 msgid "PLAYER 2"
-msgstr "لاعب ٢"
+msgstr "لاعب 2"
 
 msgid "PLAYER 3"
-msgstr "لاعب ٣"
+msgstr "لاعب 3"
 
 msgid "PLAYER 4"
-msgstr "لاعب ٤"
+msgstr "لاعب 4"
 
 msgid "COMBINATIONS"
 msgstr "الأمزِجة"
@@ -475,9 +505,6 @@ msgstr "مؤشر الفأرة"
 
 msgid "EMULATE MOUSE CURSOR"
 msgstr "محاكاة مؤشر الفأرة"
-
-msgid "NO"
-msgstr "لا"
 
 msgid "LEFT ANALOG STICK"
 msgstr "عصا الأنالوج اليسرى"
@@ -490,9 +517,6 @@ msgstr "تعديل التفاصيل"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "أمتأكد أنك ترغب في حذف هذا العنصر ؟"
-
-msgid "YES"
-msgstr "نعم"
 
 msgid "DELETE MAPPING"
 msgstr "إزالة ضبط الأزرار"
@@ -556,6 +580,24 @@ msgstr "مونريال"
 
 msgid "SAO PAULO"
 msgstr "ساو باولو"
+
+msgid "CUSTOM"
+msgstr "مخصص"
+
+msgid "CUSTOM RELAY SERVER"
+msgstr "خادم التتابع المخصص"
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr "عرض ألعاب خادم التتابع فقط"
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr "تتمتع ألعاب خادم التتابع بفرصة أعلى للدخول الناجح."
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "عرض الألعاب الغير موجودة"
@@ -676,6 +718,25 @@ msgstr "عرض إحصائيات إنجازاتك للريترو من القائ�
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "تعثر تفعيل انجازات الريترو:"
 
+msgid "BLUETOOTH DEVICE LIST"
+msgstr "قائمة أجهزة البلوتوث"
+
+msgid "REMOVE ALL"
+msgstr "إزالة الكل"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "لا توجد أي أجهزة بلوتوث"
+
+msgid " (Connected)"
+msgstr "(متصل)"
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "تمت إزالة أجهزة البلوتوث."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "أترغب حقا في إزالة '%s' ؟"
+
 msgid "THE BEZEL PROJECT"
 msgstr "مشروع حواف الشاشة"
 
@@ -759,13 +820,13 @@ msgid "LAST WEEK"
 msgstr "آخر أسبوع"
 
 msgid "LAST 15 DAYS"
-msgstr "آخر ١٥ يوما"
+msgstr "آخر 15 يوما"
 
 msgid "LAST MONTH"
 msgstr "آخر شهر"
 
 msgid "LAST 3 MONTHS"
-msgstr "آخر ٣ أشهر"
+msgstr "آخر 3 أشهر"
 
 msgid "LAST YEAR"
 msgstr "آخر سنة"
@@ -818,14 +879,20 @@ msgstr "معلمات غير صالحة"
 msgid "fade"
 msgstr "تلاشي"
 
-msgid "slide"
-msgstr "شريحة"
+msgid "fast fade"
+msgstr "تلاشي سريع"
 
-msgid "instant"
-msgstr "فوري"
+msgid "slide"
+msgstr "انزلاق"
+
+msgid "fast slide"
+msgstr "انزلاق سريع"
 
 msgid "fade & slide"
 msgstr "تلاشي وانزلاق"
+
+msgid "instant"
+msgstr "فوري"
 
 msgid "System"
 msgstr "النظام"
@@ -859,6 +926,39 @@ msgstr "التردد الأقصى للمعالج"
 
 msgid "Cpu feature"
 msgstr "ميزة المعالج"
+
+msgid "Available Memory"
+msgstr "الذاكرة المتاحة"
+
+msgid "Display Resolution"
+msgstr "دقة العرض"
+
+msgid "Display Refresh Rate"
+msgstr "معدل تحديث الشاشة"
+
+msgid "OpenGL Driver Version"
+msgstr "إصدار تعريف OpenGL"
+
+msgid "Vulkan Driver Name"
+msgstr "اسم تعريف Vulkan"
+
+msgid "Vulkan Driver Version"
+msgstr "إصدار تعريف Vulkan"
+
+msgid "Data Partition Format"
+msgstr "تنسيق قسم البيانات"
+
+msgid "Data Partition Available Space"
+msgstr "Data Partition Available Space"
+
+msgid "Network IP Address"
+msgstr "عنوان IP للشبكة"
+
+msgid "UEFI Boot"
+msgstr "تمهيد UEFI"
+
+msgid "Secure Boot"
+msgstr "التمهيد الآمن"
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -908,10 +1008,10 @@ msgid "ANY EXTERNAL"
 msgstr "أي قرص خارجي"
 
 msgid "maximum 1920x1080"
-msgstr "أقصى ١٩٢٠x١٠٨٠"
+msgstr "أقصى 1920x1080"
 
 msgid "maximum 640x480"
-msgstr "أقصى ٦٤٠x٤٨٠"
+msgstr "أقصى 640x480"
 
 msgid "MAIN MENU"
 msgstr "القائمة الرئيسية"
@@ -997,12 +1097,6 @@ msgstr "تلقائي"
 msgid "dmd matrix size"
 msgstr "حجم مصفوفة دي ام دي"
 
-msgid "MATRIX"
-msgstr "مصفوفة"
-
-msgid "rgb dmd order"
-msgstr "طلب RGB دي ام دي"
-
 msgid "BRIGHTNESS"
 msgstr "الوضوح"
 
@@ -1016,13 +1110,13 @@ msgid "DMDSERVER started"
 msgstr "بدء تشغيل خادم دي ام دي"
 
 msgid "MULTISCREENS"
-msgstr ""
+msgstr "شاشات متعددة"
 
 msgid "BACKGLASS / INFORMATION SCREEN"
-msgstr ""
+msgstr "الزجاج الخلفي / شاشة المعلومات"
 
 msgid "THEME"
-msgstr ""
+msgstr "النمط"
 
 msgid "VIDEO OUTPUT"
 msgstr "مخرج الفيديو"
@@ -1031,28 +1125,28 @@ msgid "VIDEO MODE"
 msgstr "وضع الفيديو"
 
 msgid "Sets the display's resolution."
-msgstr ""
+msgstr "تعيين دقة العرض."
 
 msgid "ROTATION"
-msgstr ""
+msgstr "تناوب"
 
 msgid "0 DEGREES"
-msgstr "٠ درجة"
+msgstr "0 درجة"
 
 msgid "90 DEGREES"
-msgstr "٩٠ درجة"
+msgstr "90 درجة"
 
 msgid "180 DEGREES"
-msgstr "١٨٠ درجة"
+msgstr "180 درجة"
 
 msgid "270 DEGREES"
-msgstr "٢٧٠ درجة"
+msgstr "270 درجة"
 
 msgid "SCREEN ROTATION"
 msgstr "تدوير الشاشة"
 
 msgid "DMD SCREEN"
-msgstr ""
+msgstr "شاشة دي ام دي"
 
 msgid "FRONTEND DEVELOPER OPTIONS"
 msgstr "خيارات مطور الواجهة الأمامية"
@@ -1074,9 +1168,6 @@ msgstr "التزامن العمودي Vsync"
 
 msgid "OVERSCAN"
 msgstr "فائض الشاشة"
-
-msgid "Sets the display's resolution for emulationstation."
-msgstr "يضبط دقة العرض لمحطة المحاكاة"
 
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "استعمال القارئ أوه أم أكس (يستعمل الجهاز للتسريع)"
@@ -1124,10 +1215,8 @@ msgstr "تنظيف"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "إعادة تعيين بيانات استخدام قوائم الألعاب"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
-msgstr ""
-"إعادة تعيين قيم وقت اللعبة وعدد مرات اللعب والبيانات الوصفية لآخر مرة تم "
-"تشغيلها."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
+msgstr "إعادة تعيين قيم بيانات وقت اللعب ،عدد اللاعبين وآخر مرة تم لعبها"
 
 msgid "RESET FILE EXTENSIONS"
 msgstr "اعادة تعيين امتدادات الملف"
@@ -1207,6 +1296,9 @@ msgstr "تنقل دائري"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "تحديد نظام سريع"
+
+msgid "QUICK JUMP LETTER"
+msgstr "حرف القفز السريع"
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "لوحة مفاتيح على الشاشة"
@@ -1332,7 +1424,7 @@ msgid "TIME ZONE"
 msgstr "المنطقة الزمنية"
 
 msgid "SHOW CLOCK IN 12-HOUR FORMAT"
-msgstr "عرض الساعة بنمط ١٢ بدل ٢٤"
+msgstr "عرض الساعة بنمط 12 بدل 24"
 
 msgid "POWER SAVING MODE"
 msgstr "اقتصاد الطاقة"
@@ -1382,6 +1474,9 @@ msgstr "تشغيل كودي خلال الإقلاع"
 
 msgid "HARDWARE"
 msgstr "العتاد"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr "ضبط دقة العرض لمحطة المحاكاة."
 
 msgid "AUDIO OUTPUT"
 msgstr "مخرج الصوت"
@@ -1462,7 +1557,7 @@ msgid "OVERCLOCK"
 msgstr "كسر السرعة"
 
 msgid "LED HARDWARE"
-msgstr ""
+msgstr "أجهزة LED"
 
 msgid "RED"
 msgstr "أحمر"
@@ -1474,7 +1569,7 @@ msgid "BLUE"
 msgstr "أزرق"
 
 msgid "LED BRIGHTNESS"
-msgstr ""
+msgstr "سطوع LED"
 
 msgid "STORAGE"
 msgstr "التخزين"
@@ -1608,9 +1703,8 @@ msgid ""
 "Sets the display's resolution. Does not affect the rendering resolution."
 msgstr "تغيير دقة الشاشة.لن يؤثر على دقة شاشة التَّصيِيِر."
 
-#, fuzzy
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
-msgstr "نعومة وتجانس (مُصَفٍّي الإقحام الخطي المزدوج)"
+msgstr "الألعاب السلسة (التصفية الخطية الثنائية)"
 
 msgid "REWIND"
 msgstr "الترجيع"
@@ -1631,7 +1725,7 @@ msgid "DECORATIONS"
 msgstr "التزيينات"
 
 msgid "STRETCH BEZELS (4K & ULTRAWIDE)"
-msgstr "تمديد الحواف (جودة ٤K وَ ULTRAWIDE)"
+msgstr "تمديد الحواف (جودة 4K وَ ULTRAWIDE)"
 
 msgid "SHOW TATTOO OVER BEZEL"
 msgstr "عرض الوشم على الحواف"
@@ -1778,10 +1872,16 @@ msgid "SHOW RETROACHIEVEMENTS ICON"
 msgstr "إظهار أيقونة RETROACHIEVEMENTS"
 
 msgid "SHOW GUN ICON"
-msgstr "إظهار أيقونة GUN"
+msgstr "إظهار أيقونة البندقية"
 
 msgid "SHOW WHEEL ICON"
-msgstr "إظهار أيقونة WHEEL"
+msgstr "إظهار أيقونة المِقْوَد"
+
+msgid "SHOW TRACKBALL ICON"
+msgstr "إظهار أيقونة كرة التتبع"
+
+msgid "SHOW SPINNER ICON"
+msgstr "إظهار رمز الدوار"
 
 msgid "SHOW FILENAMES INSTEAD"
 msgstr "عرض اسم الملف في القائمة"
@@ -2115,7 +2215,7 @@ msgid "FIND SIMILAR GAMES..."
 msgstr "أوجد ألعاب مماثلة..."
 
 msgid "DELETE ITEM"
-msgstr "حذف الـ"
+msgstr "حذف العنصر"
 
 msgid "DELETE GAME"
 msgstr "حذف اللعبة"
@@ -2184,10 +2284,10 @@ msgid "TITLE SCREENSHOT"
 msgstr "عنوان لقطة شاشة"
 
 msgid "MIX V1"
-msgstr "مكس ١"
+msgstr "مكس 1"
 
 msgid "MIX V2"
-msgstr "مكس ٢"
+msgstr "مكس 2"
 
 msgid "BOX 2D"
 msgstr "صندوق ثنائي البعد"
@@ -2214,7 +2314,7 @@ msgid "PREFERED REGION"
 msgstr "المنطقة المفضلة"
 
 msgid "OVERWRITE NAMES"
-msgstr ""
+msgstr "استبدال الأسماء"
 
 msgid "OVERWRITE DESCRIPTIONS"
 msgstr "الكتابة فوق الأوصاف"
@@ -2238,7 +2338,7 @@ msgid "FANART"
 msgstr "تصاميم الهواة"
 
 msgid "BEZEL (16:9)"
-msgstr "حواف (٩:١٦)"
+msgstr "الإطار المحيط (16:9)"
 
 msgid "BOX BACKSIDE"
 msgstr "الغلاف من الخلف"
@@ -2329,6 +2429,9 @@ msgstr "عرض ألعاب الأنظمة المخفية، في المجموعا�
 
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "عرض الأنظمة الفارغة (بدون ألعاب)"
+
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr "لا تعرض المجموعات التي تستخدم نظامًا واحدًا فقط"
 
 msgid "Loading..."
 msgstr "جارِ التنزيل..."
@@ -2444,22 +2547,6 @@ msgstr "تحديث"
 msgid "NO MISSING BIOS"
 msgstr "لا يوجد BIOS مفقود"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "نسيان جهاز بلوتوث"
-
-msgid "REMOVE ALL"
-msgstr "إزالة الكل"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "لا توجد أي أجهزة بلوتوث"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "تمت إزالة أجهزة البلوتوث."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "أترغب حقا في إزالة '%s' ؟"
-
 msgid "ZOOM OUT"
 msgstr "تصغير"
 
@@ -2504,7 +2591,13 @@ msgid "SAME ROM"
 msgstr "نفس الروم"
 
 msgid "UNAVAILABLE CORE"
-msgstr "CORE غير متوفر"
+msgstr "النواة غير متوفرة"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "ألعاب متوفرة"
@@ -2585,6 +2678,15 @@ msgstr "عرض نشاط وحدة التحكم"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "عرض نسبة بطارية وحدة التحكم"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr "رسم تصويب البندقية"
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "افتراضي"
 
@@ -2598,7 +2700,7 @@ msgid "MEDIUM"
 msgstr "متوسط"
 
 msgid "BIG"
-msgstr "ثخين"
+msgstr "كبير"
 
 msgid "BORDER MODE"
 msgstr "نمط الإطار"
@@ -2618,47 +2720,50 @@ msgstr "لون الإطار"
 msgid "WHITE"
 msgstr "أبيض"
 
+msgid "BORDER RATIO"
+msgstr "نسبة الحدود"
+
 msgid "CAMERA CONTRAST"
 msgstr "تباين الكاميرا"
 
 msgid "Daytime/Bright Sunlight (40)"
-msgstr "النّهار/سطوع (٤٠)"
+msgstr "النّهار/سطوع (40)"
 
 msgid "Default (50)"
-msgstr "الإفتراضي (٥٠)"
+msgstr "الإفتراضي (50)"
 
 msgid "Dim Display/Evening (60)"
-msgstr "تعتيم الشاشة/المساء (٦٠)"
+msgstr "تعتيم الشاشة/المساء (60)"
 
 msgid "CAMERA BRIGHTNESS"
 msgstr "سطوع الكاميرا"
 
 msgid "Daytime/Bright Sunlight (80)"
-msgstr "النّهار/سطوع (٨٠)"
+msgstr "النّهار/سطوع (80)"
 
 msgid "Default (100)"
-msgstr "الإفتراضي (١٠٠)"
+msgstr "افتراضي (100)"
 
 msgid "Dim Display/Evening (120)"
-msgstr "تعتيم الشاشة/المساء (١٢٠)"
+msgstr "تعتيم الشاشة/المساء (1)"
 
 msgid "CAMERA EXPOSURE"
 msgstr "تعرض الكاميرا للضوء"
 
 msgid "Projector/CRT (-5)"
-msgstr "جهاز العرض/تلفاز قديم (٥-)"
+msgstr "جهاز العرض/تلفاز قديم (5-)"
 
 msgid "Projector/CRT (-6)"
-msgstr "جهاز العرض/تلفاز قديم (٦-)"
+msgstr "جهاز العرض/تلفاز قديم (6-)"
 
 msgid "Default (-7)"
-msgstr "الإفتراضي (٧-)"
+msgstr "افتراضي (7-)"
 
 msgid "Other (-8)"
-msgstr "أخرى (٨-)"
+msgstr "أخرى (8-)"
 
 msgid "Other (-9)"
-msgstr "أخرى (٩-)"
+msgstr "أخرى (9-)"
 
 msgid "RECOIL"
 msgstr "ارتداد"
@@ -2758,6 +2863,15 @@ msgstr "استخدم مشغل OMX لشاشة التوقف"
 
 msgid "SHOW GAME INFO"
 msgstr "عرض معلومات اللعبة"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "استخدم الشاشة الأسمية  كمعلومات للعبة"
@@ -2993,6 +3107,12 @@ msgstr "المسدس"
 msgid "STEERING WHEEL"
 msgstr "عجلة القيادة"
 
+msgid "TRACKBALL"
+msgstr "كرة التتبع"
+
+msgid "SPINNER"
+msgstr "دوارة"
+
 msgid "HAVING MEDIAS"
 msgstr "الوسائط الموجودة"
 
@@ -3017,8 +3137,8 @@ msgstr "قم بتحديث قائمة الألعاب لتطبيق التغيير�
 msgid "Loading system config..."
 msgstr "جار تحميل إعدادات النظام..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "جار حفظ البيانات الوصفية, المرجو الإنتظار..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr "حفظ البيانات الوصفية. الرجاء الانتظار..."
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "المحاكي أقفِلَ بشكل غير متوقع"
@@ -3040,6 +3160,9 @@ msgstr "النواة مفقودة"
 
 msgid "UKNOWN ERROR"
 msgstr "خطأ مجهول"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "كل الألعاب"
@@ -3073,6 +3196,12 @@ msgstr "ألعاب المسدس الضوئي"
 
 msgid "wheel games"
 msgstr "العاب سيارات"
+
+msgid "trackball games"
+msgstr "كرة تتبع الألعاب"
+
+msgid "spinner games"
+msgstr "دوارة الألعاب"
 
 msgid "collections"
 msgstr "مجموعات"
@@ -3511,6 +3640,43 @@ msgid ""
 msgstr ""
 "معايرة المسدس\n"
 "أطلق النار على الأهداف للمعايرة"
+
+#~ msgid "SHOW NETPLAY OPTIONS WHEN LAUNCHING GAME"
+#~ msgstr "إظهار خيارات نت بلاي عند تشغيل اللعبة"
+
+#~ msgid "Allows choice of online, offline, or joining another game."
+#~ msgstr ""
+#~ "يسمح باختيار اللعب عبر الإنترنت، أو اللعب دون اتصال بالإنترنت، أو "
+#~ "الانضمام إلى لعبة أخرى."
+
+#~ msgid "Select a game lobby to create or join"
+#~ msgstr "حدد مجموعة ألعاب لإنشائها أو الانضمام إليها"
+
+#~ msgid "PLAY ONLINE AS HOST"
+#~ msgstr "العب عبر الإنترنت كمضيف"
+
+#~ msgid "PLAY OFFLINE"
+#~ msgstr "العب بلا اتصال بالإنترنت"
+
+#~ msgid "JOIN EXISTING GAME"
+#~ msgstr "انضم إلى اللعبة الحالية"
+
+#~ msgid "MATRIX"
+#~ msgstr "مصفوفة"
+
+#~ msgid "rgb dmd order"
+#~ msgstr "طلب RGB دي ام دي"
+
+#~ msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+#~ msgstr ""
+#~ "إعادة تعيين قيم وقت اللعبة وعدد مرات اللعب والبيانات الوصفية لآخر مرة تم "
+#~ "تشغيلها."
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "جار حفظ البيانات الوصفية, المرجو الإنتظار..."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "نسيان جهاز بلوتوث"
 
 #~ msgid "-10 for auto"
 #~ msgstr "-10 تلقائي"

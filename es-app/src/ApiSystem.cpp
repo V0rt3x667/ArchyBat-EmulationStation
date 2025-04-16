@@ -357,10 +357,10 @@ bool ApiSystem::ping()
 	if (!executeScript("timeout 1 ping -c 1 -t 255 google.com"))
 	{
 		// ping Google DNS
-		if (!executeScript("timeout 1 ping -c 1 -t 255 8.8.8.8"))
+		if (!executeScript("timeout 1 ping -c 1 -t 255 dns.google"))
 		{
-			// ping Google secondary DNS & give 2 seconds, return this one's status
-			return executeScript("timeout 2 ping -c 1 -t 255 8.8.4.4");
+			// ping Cloudflare DNS & give 2 seconds, return this one's status
+			return executeScript("timeout 2 ping -c 1 -t 255 one.one.one.one");
 		}
 	}
 
@@ -479,11 +479,11 @@ bool ApiSystem::disableWifi()
 	return executeScript("batocera-wifi disable");
 }
 
-std::string ApiSystem::getIpAdress() 
+std::string ApiSystem::getIpAddress()
 {
-	LOG(LogDebug) << "ApiSystem::getIpAdress";
+	LOG(LogDebug) << "ApiSystem::getIpAddress";
 	
-	std::string result = Utils::Platform::queryIPAdress(); // platform.h
+	std::string result = Utils::Platform::queryIPAddress(); // platform.h
 	if (result.empty())
 		return "NOT CONNECTED";
 
@@ -515,6 +515,16 @@ bool ApiSystem::pairBluetoothDevice(const std::string& deviceName)
 	return executeScript("batocera-bluetooth trust " + deviceName);
 }
 
+bool ApiSystem::connectBluetoothDevice(const std::string& deviceName)
+{
+	return executeScript("batocera-bluetooth connect " + deviceName);
+}
+
+bool ApiSystem::disconnectBluetoothDevice(const std::string& deviceName)
+{
+	return executeScript("batocera-bluetooth disconnect " + deviceName);
+}
+
 bool ApiSystem::removeBluetoothDevice(const std::string& deviceName)
 {
 	return executeScript("batocera-bluetooth remove " + deviceName);
@@ -529,7 +539,6 @@ std::vector<std::string> ApiSystem::getPairedBluetoothDeviceList()
 {
 	return executeEnumerationScript("batocera-bluetooth list");
 }
-
 
 std::vector<std::string> ApiSystem::getAvailableStorageDevices() 
 {
@@ -1413,10 +1422,13 @@ bool ApiSystem::getLED(int& red, int& green, int& blue)
         std::getline(ss, token);
         blue = std::stoi(token);
 
-		LOG(LogInfo) << "ApiSystem::getLED > LED colours are:" << red << " " << green << " " << blue;
+        executeScript("batocera-led-handheld block_color_changes"); // temporarily prevent changes from external daemon
+        LOG(LogInfo) << "ApiSystem::getLED > LED colours are:" << red << " " << green << " " << blue;
 
         return true;
     }
+
+	return false;
 }
 
 void ApiSystem::getLEDColours(int& red, int& green, int& blue)
@@ -2062,18 +2074,21 @@ std::vector<std::string> ApiSystem::getTimezones()
 	{
 		for (auto continent : Utils::FileSystem::getDirContent(folder, false))
 		{
-			for (auto file : Utils::FileSystem::getDirContent(continent, false))
+			std::string short_continent = continent.substr(continent.find_last_of('/') + 1);
+			if (short_continent == "Africa" || short_continent == "America"
+				|| short_continent == "Antarctica" || short_continent == "Asia"
+				|| short_continent == "Atlantic" || short_continent == "Australia"
+				|| short_continent == "Etc" || short_continent == "Europe"
+				|| short_continent == "Indian" || short_continent == "Pacific")
 			{
-				std::string short_continent = continent.substr(continent.find_last_of('/') + 1, -1);
-				if (short_continent == "Africa" || short_continent == "America"
-					|| short_continent == "Antarctica" || short_continent == "Asia"
-					|| short_continent == "Atlantic" || short_continent == "Australia"
-					|| short_continent == "Etc" || short_continent == "Europe"
-					|| short_continent == "Indian" || short_continent == "Pacific")
+				for (auto file : Utils::FileSystem::getDirContent(continent, false))
 				{
-					auto tz = Utils::FileSystem::getFileName(file);
-					if (std::find(ret.cbegin(), ret.cend(), tz) == ret.cend())
-						  ret.push_back(short_continent + "/" + tz);
+					if (!Utils::FileSystem::isDirectory(file))
+					{
+						auto tz = Utils::FileSystem::getFileName(file);
+						if (std::find(ret.cbegin(), ret.cend(), tz) == ret.cend())
+						ret.push_back(short_continent + "/" + tz);
+					}
 				}
 			}
 		}

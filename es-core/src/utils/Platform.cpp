@@ -21,6 +21,8 @@
 #include "Log.h"
 #include "Scripting.h"
 #include "Paths.h"
+#include <fstream>
+#include <string>
 
 // #define DEVTEST
 
@@ -142,12 +144,16 @@ namespace Utils
 
 			return 1;
 #else
-			std::string cmdOutput = " 2> " + Utils::FileSystem::combine(Paths::getLogPath(), stderrFilename) + " | head -300 > " + Utils::FileSystem::combine(Paths::getLogPath(), stdoutFilename);
+			// getting the output when in a pipe is not easy...
+			// https://stackoverflow.com/questions/1221833/pipe-output-and-capture-exit-status-in-bash
+			std::string cmdOutput = "((((" + cmd_utf8 + " 2> " + Utils::FileSystem::combine(Paths::getLogPath(), stderrFilename) + " ; echo $? >&3) | head -300 > " + Utils::FileSystem::combine(Paths::getLogPath(), stdoutFilename) + ") 3>&1) | (read xs; exit $xs))";
 			if (!Log::enabled())
-				cmdOutput = " 2> /dev/null | head -300 > /dev/null";
+			  cmdOutput = "((((" + cmd_utf8 + " 2> /dev/null ; echo $? >&3) | head -300 > /dev/null) 3>&1) | (read xs; exit $xs))";
 
-			if (waitForExit)
-				return system((cmd_utf8 + cmdOutput).c_str());
+			if (waitForExit) {
+			  int n = system(cmdOutput.c_str());
+			  return WEXITSTATUS(n);
+			}
 
 			// fork the current process
 			pid_t ret = fork();
@@ -156,7 +162,7 @@ namespace Utils
 				ret = fork();
 				if (ret == 0)
 				{
-					execl("/bin/sh", "sh", "-c", (cmd_utf8 + cmdOutput).c_str(), (char *) NULL);
+					execl("/bin/sh", "sh", "-c", cmdOutput.c_str(), (char *) NULL);
 					_exit(1); // execl failed
 				}
 				_exit(0); // exit the child process
@@ -263,7 +269,7 @@ namespace Utils
 			return quitMode == QuitMode::FAST_REBOOT || quitMode == QuitMode::FAST_SHUTDOWN;
 		}
 
-		std::string queryIPAdress()
+		std::string queryIPAddress()
 		{
 #ifdef DEVTEST
 			return "127.0.0.1";
@@ -316,7 +322,7 @@ namespace Utils
 					inet_ntop(AF_INET, tmpAddrPtr, addressBuffer, INET_ADDRSTRLEN);
 
 					std::string ifName = ifa->ifa_name;
-					if (ifName.find("eth") != std::string::npos || ifName.find("wlan") != std::string::npos || ifName.find("mlan") != std::string::npos || ifName.find("en") != std::string::npos || ifName.find("wl") != std::string::npos || ifName.find("p2p") != std::string::npos)
+					if (ifName.find("eth") != std::string::npos || ifName.find("wlan") != std::string::npos || ifName.find("mlan") != std::string::npos || ifName.find("en") != std::string::npos || ifName.find("wl") != std::string::npos || ifName.find("p2p") != std::string::npos || ifName.find("usb") != std::string::npos)
 					{
 						result = std::string(addressBuffer);
 						break;
@@ -339,7 +345,7 @@ namespace Utils
 						inet_ntop(AF_INET6, tmpAddrPtr, addressBuffer, INET6_ADDRSTRLEN);
 
 						std::string ifName = ifa->ifa_name;
-						if (ifName.find("eth") != std::string::npos || ifName.find("wlan") != std::string::npos || ifName.find("mlan") != std::string::npos || ifName.find("en") != std::string::npos || ifName.find("wl") != std::string::npos || ifName.find("p2p") != std::string::npos)
+						if (ifName.find("eth") != std::string::npos || ifName.find("wlan") != std::string::npos || ifName.find("mlan") != std::string::npos || ifName.find("en") != std::string::npos || ifName.find("wl") != std::string::npos || ifName.find("p2p") != std::string::npos || ifName.find("usb") != std::string::npos)
 						{
 							result = std::string(addressBuffer);
 							break;
@@ -413,6 +419,10 @@ namespace Utils
 					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
 						batteryRootPath = file;
 
+					// Qualcomm devices use "qcom-battery"
+					if ((Utils::String::toLower(file).find("/qcom-battery") != std::string::npos) && (batteryRootPath.empty()))
+						batteryRootPath = file;
+
 					if ((Utils::String::toLower(file).find("fuel") != std::string::npos) && (fuelgaugeRootPath.empty()))
 						fuelgaugeRootPath = file;
 
@@ -470,7 +480,27 @@ namespace Utils
 					}
 				}
 				else
-					ret.level = Utils::String::toInteger(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
+				{
+					std::ifstream file(batteryCapacityPath);
+					if (file.is_open())
+					{
+						std::string buffer;
+						std::getline(file, buffer);
+						file.close();
+						if (!buffer.empty())
+						{
+							ret.level = Utils::String::toInteger(buffer);
+						}
+						else
+						{
+							LOG(LogError) << "Error reading: " << batteryCapacityPath;
+						}
+					}
+					else
+					{
+						LOG(LogError) << "Error opening: " << batteryCapacityPath;
+					}
+				}
 			}
 
 			return ret;

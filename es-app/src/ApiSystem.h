@@ -166,13 +166,15 @@ public:
     bool enableWifi(std::string ssid, std::string key);
     bool disableWifi();
 
-	virtual std::string getIpAdress();
+	virtual std::string getIpAddress();
 
 	bool enableBluetooth();
 	bool disableBluetooth();
 	void startBluetoothLiveDevices(const std::function<void(const std::string)>& func);
 	void stopBluetoothLiveDevices();
 	bool pairBluetoothDevice(const std::string& deviceName);
+	bool connectBluetoothDevice(const std::string& deviceName);
+	bool disconnectBluetoothDevice(const std::string& deviceName);
 	bool removeBluetoothDevice(const std::string& deviceName);
 
 	std::vector<std::string> getPairedBluetoothDeviceList();

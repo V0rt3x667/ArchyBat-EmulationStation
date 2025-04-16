@@ -408,6 +408,36 @@ msgstr "לא נמצאו רשתות אלחוטיות"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "סורק רשתות אלחוטיות"
 
+msgid "DEVICE OPTIONS"
+msgstr ""
+
+msgid "DISCONNECT"
+msgstr ""
+
+msgid "CONNECT"
+msgstr ""
+
+msgid "FORGET"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr ""
+
+msgid "YES"
+msgstr "כן"
+
+msgid "NO"
+msgstr "לא"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr ""
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "תצורת מקלדת למשטח"
 
@@ -441,9 +471,6 @@ msgstr "סמן העכבר"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "דימוי סמן עכבר"
 
-msgid "NO"
-msgstr "לא"
-
 msgid "LEFT ANALOG STICK"
 msgstr "ג'ויסטיק ימין"
 
@@ -455,9 +482,6 @@ msgstr "עריכת תיאור"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "?האם אתה בטוח שאתה רוצה למחוק פריט זה"
-
-msgid "YES"
-msgstr "כן"
 
 msgid "DELETE MAPPING"
 msgstr "מחיקת מיפוי"
@@ -520,6 +544,24 @@ msgid "MONTREAL"
 msgstr ""
 
 msgid "SAO PAULO"
+msgstr ""
+
+msgid "CUSTOM"
+msgstr ""
+
+msgid "CUSTOM RELAY SERVER"
+msgstr ""
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr ""
+
+msgid "Relay server games have a higher chance of successful entry."
 msgstr ""
 
 msgid "SHOW UNAVAILABLE GAMES"
@@ -640,6 +682,25 @@ msgstr ""
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr ""
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr ""
+
+msgid "REMOVE ALL"
+msgstr "הסר הכל"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "לא נמצא התקן בלו-טות'"
+
+msgid " (Connected)"
+msgstr ""
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "התקן בלו-טות' נמחק."
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "האם אתה בטוח שאתה רוצה למחוק את '%s'?"
 
 msgid "THE BEZEL PROJECT"
 msgstr "פרויקט BEZEL"
@@ -775,14 +836,20 @@ msgstr "ערכים לא חוקיים"
 msgid "fade"
 msgstr "עמעום"
 
+msgid "fast fade"
+msgstr ""
+
 msgid "slide"
 msgstr "מעבר"
 
-msgid "instant"
-msgstr "מיידי"
+msgid "fast slide"
+msgstr ""
 
 msgid "fade & slide"
 msgstr "עמעום ומעבר"
+
+msgid "instant"
+msgstr "מיידי"
 
 msgid "System"
 msgstr "מערכת"
@@ -816,6 +883,39 @@ msgstr "תדר שיא למעבד"
 
 msgid "Cpu feature"
 msgstr "מאפיין מעבד"
+
+msgid "Available Memory"
+msgstr ""
+
+msgid "Display Resolution"
+msgstr ""
+
+msgid "Display Refresh Rate"
+msgstr ""
+
+msgid "OpenGL Driver Version"
+msgstr ""
+
+msgid "Vulkan Driver Name"
+msgstr ""
+
+msgid "Vulkan Driver Version"
+msgstr ""
+
+msgid "Data Partition Format"
+msgstr ""
+
+msgid "Data Partition Available Space"
+msgstr ""
+
+msgid "Network IP Address"
+msgstr ""
+
+msgid "UEFI Boot"
+msgstr ""
+
+msgid "Secure Boot"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -954,12 +1054,6 @@ msgstr "אוטומטי"
 msgid "dmd matrix size"
 msgstr ""
 
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
-
 msgid "BRIGHTNESS"
 msgstr "בהירות"
 
@@ -1032,9 +1126,6 @@ msgstr "VSYNC"
 msgid "OVERSCAN"
 msgstr "OVERSCAN"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr ""
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr ""
 
@@ -1081,7 +1172,7 @@ msgstr "מנקה"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr ""
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
 
 msgid "RESET FILE EXTENSIONS"
@@ -1161,6 +1252,9 @@ msgstr "מעברי קרוסלה"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "בחירת מערכת מהירה"
+
+msgid "QUICK JUMP LETTER"
+msgstr ""
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr ""
@@ -1328,6 +1422,9 @@ msgstr "הפעל את קודי בהפעלה"
 
 msgid "HARDWARE"
 msgstr "חומרה"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr ""
 
 msgid "AUDIO OUTPUT"
 msgstr "פלט שמע"
@@ -1724,6 +1821,12 @@ msgid "SHOW GUN ICON"
 msgstr ""
 
 msgid "SHOW WHEEL ICON"
+msgstr ""
+
+msgid "SHOW TRACKBALL ICON"
+msgstr ""
+
+msgid "SHOW SPINNER ICON"
 msgstr ""
 
 msgid "SHOW FILENAMES INSTEAD"
@@ -2271,6 +2374,9 @@ msgstr "הצג משחקים של מערכות נסתרות באוספי משחק
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "הצג מערכות ללא משחקים"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr ""
+
 msgid "Loading..."
 msgstr "טוען..."
 
@@ -2385,22 +2491,6 @@ msgstr ""
 msgid "NO MISSING BIOS"
 msgstr "אין חוסר BIOS"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "שכח התקן בלו-טות'"
-
-msgid "REMOVE ALL"
-msgstr "הסר הכל"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "לא נמצא התקן בלו-טות'"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "התקן בלו-טות' נמחק."
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "האם אתה בטוח שאתה רוצה למחוק את '%s'?"
-
 msgid "ZOOM OUT"
 msgstr ""
 
@@ -2444,6 +2534,12 @@ msgstr "אותו ה ROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "ליבה לא זמינה"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "משחקים זמנים"
@@ -2520,6 +2616,15 @@ msgstr "הצגת פעילות בקר"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "הצגת רמת סוללה לבקר"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr ""
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "ברירת מחדל"
 
@@ -2551,6 +2656,9 @@ msgid "BORDER COLOR"
 msgstr ""
 
 msgid "WHITE"
+msgstr ""
+
+msgid "BORDER RATIO"
 msgstr ""
 
 msgid "CAMERA CONTRAST"
@@ -2693,6 +2801,15 @@ msgstr "שימוש בנגן OMX לשומר מסך"
 
 msgid "SHOW GAME INFO"
 msgstr "הצגת מידע על משחק"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "השתמש בדגל במידע על משחק"
@@ -2915,6 +3032,12 @@ msgstr ""
 msgid "STEERING WHEEL"
 msgstr ""
 
+msgid "TRACKBALL"
+msgstr ""
+
+msgid "SPINNER"
+msgstr ""
+
 msgid "HAVING MEDIAS"
 msgstr ""
 
@@ -2939,7 +3062,7 @@ msgstr ""
 msgid "Loading system config..."
 msgstr "טוען הגדרות מערכת"
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
+msgid "SAVING METADATA. PLEASE WAIT..."
 msgstr ""
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
@@ -2961,6 +3084,9 @@ msgid "CORE IS MISSING"
 msgstr ""
 
 msgid "UKNOWN ERROR"
+msgstr ""
+
+msgid "Interlaced"
 msgstr ""
 
 msgid "all games"
@@ -2994,6 +3120,12 @@ msgid "lightgun games"
 msgstr "משחקי אקדח"
 
 msgid "wheel games"
+msgstr ""
+
+msgid "trackball games"
+msgstr ""
+
+msgid "spinner games"
 msgstr ""
 
 msgid "collections"
@@ -3413,6 +3545,9 @@ msgid ""
 "CALIBRATING GUN\n"
 "Fire on targets to calibrate"
 msgstr ""
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "שכח התקן בלו-טות'"
 
 #~ msgid "Achievements won"
 #~ msgstr "זכייה בהישגים"

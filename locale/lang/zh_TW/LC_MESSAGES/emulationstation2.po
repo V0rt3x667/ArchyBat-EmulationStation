@@ -406,6 +406,36 @@ msgstr "沒有找到 WI-FI 網路"
 msgid "SEARCHING WI-FI NETWORKS"
 msgstr "搜尋 WI-FI 網路"
 
+msgid "DEVICE OPTIONS"
+msgstr ""
+
+msgid "DISCONNECT"
+msgstr ""
+
+msgid "CONNECT"
+msgstr ""
+
+msgid "FORGET"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO FORGET '%s' ?"
+msgstr ""
+
+msgid "YES"
+msgstr "是"
+
+msgid "NO"
+msgstr "否"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO CONNECT TO '%s' ?"
+msgstr ""
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO DISCONNECT '%s' ?"
+msgstr ""
+
 msgid "PAD TO KEYBOARD CONFIGURATION"
 msgstr "手把轉鍵盤設定"
 
@@ -439,9 +469,6 @@ msgstr "滑鼠游標"
 msgid "EMULATE MOUSE CURSOR"
 msgstr "模擬滑鼠游標"
 
-msgid "NO"
-msgstr "否"
-
 msgid "LEFT ANALOG STICK"
 msgstr "左類比搖桿"
 
@@ -453,9 +480,6 @@ msgstr "編輯簡介"
 
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS ITEM?"
 msgstr "您確定要刪除這個項目嗎？"
-
-msgid "YES"
-msgstr "是"
 
 msgid "DELETE MAPPING"
 msgstr "刪除映射"
@@ -519,6 +543,24 @@ msgstr "蒙特婁"
 
 msgid "SAO PAULO"
 msgstr "聖保羅"
+
+msgid "CUSTOM"
+msgstr ""
+
+msgid "CUSTOM RELAY SERVER"
+msgstr ""
+
+msgid "AUTOMATICALLY CREATE LOBBY"
+msgstr ""
+
+msgid "Automatically creates a Netplay lobby when starting a game."
+msgstr ""
+
+msgid "SHOW RELAY SERVER GAMES ONLY"
+msgstr ""
+
+msgid "Relay server games have a higher chance of successful entry."
+msgstr ""
 
 msgid "SHOW UNAVAILABLE GAMES"
 msgstr "顯示無法使用的遊戲"
@@ -638,6 +680,25 @@ msgstr "從主選單直接檢視您的 RetroAchievement 狀態！"
 
 msgid "UNABLE TO ACTIVATE RETROACHIEVEMENTS:"
 msgstr "無法啟用 RETROACHIEVEMENTS："
+
+msgid "BLUETOOTH DEVICE LIST"
+msgstr ""
+
+msgid "REMOVE ALL"
+msgstr "移除全部"
+
+msgid "NO BLUETOOTH DEVICES FOUND"
+msgstr "沒有發現藍牙裝置"
+
+msgid " (Connected)"
+msgstr ""
+
+msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
+msgstr "藍牙裝置已被刪除。"
+
+#, c-format
+msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
+msgstr "您確定要移除「%s」嗎？"
 
 msgid "THE BEZEL PROJECT"
 msgstr "框體專案"
@@ -780,14 +841,20 @@ msgstr "無效的參數"
 msgid "fade"
 msgstr "淡化"
 
+msgid "fast fade"
+msgstr ""
+
 msgid "slide"
 msgstr "滑動"
 
-msgid "instant"
-msgstr "瞬間"
+msgid "fast slide"
+msgstr ""
 
 msgid "fade & slide"
 msgstr "淡出 & 滑動"
+
+msgid "instant"
+msgstr "瞬間"
 
 msgid "System"
 msgstr "系統"
@@ -821,6 +888,39 @@ msgstr "CPU 最高頻率"
 
 msgid "Cpu feature"
 msgstr "CPU 功能"
+
+msgid "Available Memory"
+msgstr ""
+
+msgid "Display Resolution"
+msgstr ""
+
+msgid "Display Refresh Rate"
+msgstr ""
+
+msgid "OpenGL Driver Version"
+msgstr ""
+
+msgid "Vulkan Driver Name"
+msgstr ""
+
+msgid "Vulkan Driver Version"
+msgstr ""
+
+msgid "Data Partition Format"
+msgstr ""
+
+msgid "Data Partition Available Space"
+msgstr ""
+
+msgid "Network IP Address"
+msgstr ""
+
+msgid "UEFI Boot"
+msgstr ""
+
+msgid "Secure Boot"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHARP-BILINEAR-SIMPLE"
@@ -959,12 +1059,6 @@ msgstr "自動"
 msgid "dmd matrix size"
 msgstr ""
 
-msgid "MATRIX"
-msgstr ""
-
-msgid "rgb dmd order"
-msgstr ""
-
 msgid "BRIGHTNESS"
 msgstr "亮度"
 
@@ -1037,9 +1131,6 @@ msgstr "垂直同步"
 msgid "OVERSCAN"
 msgstr "過掃瞄 (OVERSCAN)"
 
-msgid "Sets the display's resolution for emulationstation."
-msgstr "設定模擬器的顯示器像素"
-
 msgid "USE OMX PLAYER (HARDWARE ACCELERATED)"
 msgstr "使用 OMX 播放器（硬體加速）"
 
@@ -1086,7 +1177,7 @@ msgstr "清理中"
 msgid "RESET GAMELISTS USAGE DATA"
 msgstr "重設遊戲清單使用記錄"
 
-msgid "Reset values of GameTime, PlayCount and LastPlayed metadatas."
+msgid "Reset values of GameTime, PlayCount and LastPlayed metadata."
 msgstr ""
 
 msgid "RESET FILE EXTENSIONS"
@@ -1166,6 +1257,9 @@ msgstr "循環轉場效果"
 
 msgid "QUICK SYSTEM SELECT"
 msgstr "快速遊戲平台選擇"
+
+msgid "QUICK JUMP LETTER"
+msgstr ""
 
 msgid "ON-SCREEN KEYBOARD"
 msgstr "螢幕虛擬鍵盤"
@@ -1336,6 +1430,9 @@ msgstr "開機時啟動 KODI"
 
 msgid "HARDWARE"
 msgstr "硬體"
+
+msgid "Sets the display's resolution for emulationstation."
+msgstr "設定模擬器的顯示器像素"
 
 msgid "AUDIO OUTPUT"
 msgstr "聲音輸出"
@@ -1732,6 +1829,12 @@ msgid "SHOW GUN ICON"
 msgstr ""
 
 msgid "SHOW WHEEL ICON"
+msgstr ""
+
+msgid "SHOW TRACKBALL ICON"
+msgstr ""
+
+msgid "SHOW SPINNER ICON"
 msgstr ""
 
 msgid "SHOW FILENAMES INSTEAD"
@@ -2281,6 +2384,9 @@ msgstr "在合輯中顯示已隱藏的遊戲平台的遊戲"
 msgid "SHOW EMPTY SYSTEMS"
 msgstr "顯示空的遊戲平台"
 
+msgid "DON'T SHOW GROUPS WITH ONLY ONE SYSTEM"
+msgstr ""
+
 msgid "Loading..."
 msgstr "載入中..."
 
@@ -2395,22 +2501,6 @@ msgstr ""
 msgid "NO MISSING BIOS"
 msgstr "沒有缺少 BIOS"
 
-msgid "FORGET A BLUETOOTH DEVICE"
-msgstr "忘記藍牙裝置"
-
-msgid "REMOVE ALL"
-msgstr "移除全部"
-
-msgid "NO BLUETOOTH DEVICES FOUND"
-msgstr "沒有發現藍牙裝置"
-
-msgid "BLUETOOTH DEVICES HAVE BEEN DELETED."
-msgstr "藍牙裝置已被刪除。"
-
-#, c-format
-msgid "ARE YOU SURE YOU WANT TO REMOVE '%s' ?"
-msgstr "您確定要移除「%s」嗎？"
-
 msgid "ZOOM OUT"
 msgstr "縮小"
 
@@ -2456,6 +2546,12 @@ msgstr "相同的 ROM"
 
 msgid "UNAVAILABLE CORE"
 msgstr "無法使用的核心"
+
+msgid "LAN GAMES"
+msgstr ""
+
+msgid "ONLINE GAMES"
+msgstr ""
 
 msgid "AVAILABLE GAMES"
 msgstr "可以執行的遊戲"
@@ -2535,6 +2631,15 @@ msgstr "顯示控制器活動狀態"
 msgid "SHOW CONTROLLER BATTERY LEVEL"
 msgstr "顯示遊戲控制器的電池電量"
 
+msgid "DRAW GUN CROSSHAIR"
+msgstr ""
+
+msgid "BEHAVIOR"
+msgstr ""
+
+msgid "RESTRICT HOTKEYS TO EXIT"
+msgstr ""
+
 msgid "default"
 msgstr "預設值"
 
@@ -2567,6 +2672,9 @@ msgstr "邊框顏色"
 
 msgid "WHITE"
 msgstr "白色"
+
+msgid "BORDER RATIO"
+msgstr ""
 
 msgid "CAMERA CONTRAST"
 msgstr "相機對比度"
@@ -2708,6 +2816,15 @@ msgstr "螢幕保護程式使用 OMX 播放器"
 
 msgid "SHOW GAME INFO"
 msgstr "顯示遊戲資訊"
+
+msgid "SHOW DATE TIME"
+msgstr ""
+
+msgid "DATE FORMAT"
+msgstr ""
+
+msgid "TIME FORMAT"
+msgstr ""
 
 msgid "USE MARQUEE AS GAME INFO"
 msgstr "使用跑馬燈作為遊戲資訊"
@@ -2922,6 +3039,12 @@ msgstr "光線槍"
 msgid "STEERING WHEEL"
 msgstr ""
 
+msgid "TRACKBALL"
+msgstr ""
+
+msgid "SPINNER"
+msgstr ""
+
 msgid "HAVING MEDIAS"
 msgstr ""
 
@@ -2946,8 +3069,8 @@ msgstr "更新遊戲清單來套用變更。"
 msgid "Loading system config..."
 msgstr "正在載入系統設定..."
 
-msgid "SAVING METADATAS. PLEASE WAIT..."
-msgstr "正在儲存中繼資料。請稍後..."
+msgid "SAVING METADATA. PLEASE WAIT..."
+msgstr ""
 
 msgid "THE EMULATOR EXITED UNEXPECTEDLY"
 msgstr "模擬器未預期的退出了"
@@ -2969,6 +3092,9 @@ msgstr "核心遺失"
 
 msgid "UKNOWN ERROR"
 msgstr "未知的錯誤"
+
+msgid "Interlaced"
+msgstr ""
 
 msgid "all games"
 msgstr "所有遊戲"
@@ -3001,6 +3127,12 @@ msgid "lightgun games"
 msgstr "光線槍遊戲"
 
 msgid "wheel games"
+msgstr ""
+
+msgid "trackball games"
+msgstr ""
+
+msgid "spinner games"
 msgstr ""
 
 msgid "collections"
@@ -3400,6 +3532,12 @@ msgid ""
 msgstr ""
 "校準光線槍\n"
 "對準目標開火來校準"
+
+#~ msgid "SAVING METADATAS. PLEASE WAIT..."
+#~ msgstr "正在儲存中繼資料。請稍後..."
+
+#~ msgid "FORGET A BLUETOOTH DEVICE"
+#~ msgstr "忘記藍牙裝置"
 
 #~ msgid "Achievements won"
 #~ msgstr "贏得成就"

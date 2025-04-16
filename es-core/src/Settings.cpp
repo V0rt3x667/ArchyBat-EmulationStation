@@ -189,6 +189,8 @@ void Settings::setDefaults()
 
 	mBoolMap["GameOptionsAtNorth"] = false;
 	mBoolMap["LoadEmptySystems"] = false;
+	mBoolMap["HideUniqueGroups"] = true;
+	mBoolMap["DrawGunCrosshair"] = true;
 	
 	mIntMap["RecentlyScrappedFilter"] = 3;
 	
@@ -223,7 +225,10 @@ void Settings::setDefaults()
 	mStringMap["ScrapperLogoSrc"] = "wheel";
 	mBoolMap["ScrapeVideos"] = false;
 	mBoolMap["ScrapeShortTitle"] = false;
-	
+
+	mBoolMap["ScreenSaverDateTime"] = false;
+	mStringMap["ScreenSaverDateFormat"] = "%Y-%m-%d";
+	mStringMap["ScreenSaverTimeFormat"] = "%H:%M:%S";
 	mBoolMap["ScreenSaverMarquee"] = true;
 	mBoolMap["ScreenSaverControls"] = true;
 	mStringMap["ScreenSaverGameInfo"] = "never";
@@ -245,6 +250,8 @@ void Settings::setDefaults()
 
 	mBoolMap["ShowWheelIconOnGames"] = true;
 	mBoolMap["ShowGunIconOnGames"] = true;
+	mBoolMap["ShowTrackballIconOnGames"] = true;
+	mBoolMap["ShowSpinnerIconOnGames"] = true;
 
 	mBoolMap["SlideshowScreenSaverCustomVideoSource"] = false;
 	mStringMap["SlideshowScreenSaverVideoFilter"] = ".mp4,.avi";
@@ -350,6 +357,8 @@ void Settings::setDefaults()
 	mIntMap["audio.display_titles_time"] = 10;
 
 	mBoolMap["NetPlayCheckIndexesAtStart"] = false;
+	mBoolMap["NetPlayAutomaticallyCreateLobby"] = false;
+	mBoolMap["NetPlayShowOnlyRelayServerGames"] = false;
 	mBoolMap["NetPlayShowMissingGames"] = false;
 	
 	mBoolMap["CheevosCheckIndexesAtStart"] = false;	
@@ -545,4 +554,40 @@ bool Settings::setString(const std::string& name, const std::string& value)
 	}
 
 	return false;
+}
+
+SettingType Settings::getSettingType(const std::string& name)
+{
+	if (mStringMap.find(name) != mStringMap.cend())
+		return SettingType::String;
+
+	if (mBoolMap.find(name) != mBoolMap.cend())
+		return SettingType::Bool;
+
+	if (mIntMap.find(name) != mIntMap.cend())
+		return SettingType::Int;
+
+	if (mFloatMap.find(name) != mFloatMap.cend())
+		return SettingType::Float;
+
+	return SettingType::Unknown;
+}
+
+std::vector<std::string> Settings::getSettingsNames()
+{
+	std::vector<std::string> ret;
+	
+	for (auto item : mStringMap)
+		ret.push_back(item.first);
+
+	for (auto item : mBoolMap)
+		ret.push_back(item.first);
+
+	for (auto item : mIntMap)
+		ret.push_back(item.first);
+
+	for (auto item : mFloatMap)
+		ret.push_back(item.first);
+
+	return ret;
 }
